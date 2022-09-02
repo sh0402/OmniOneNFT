@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif !important;
+  color: #727272;
+}
+
+html, body {
+  height: 100%;
+  height: 100%;
+  font-family: "Inter", "Noto Sans KR", Arial, sans-serif !important;
+  font-weight: 400;
+  color: #727272;
+}
+
+a {
+  text-decoration: none;
+  color: #727272;
+}
+
+.primary-color {
+  background: #ED671B;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.white-color {
+  background: #fff;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.black-color {
+  background: #222;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+button {
+  display: block;
+  padding: 0 2rem;
+  height: 3.25rem;
+  background: #ED671B;
+  color: #fff;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+}
+
+/*# sourceMappingURL=common.scss.map */
+/*# sourceMappingURL=common.scss.map */
+
+/*# sourceMappingURL=common.scss.map */

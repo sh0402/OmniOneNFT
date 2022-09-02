@@ -1,0 +1,5 @@
+*.log
+*.bak
+*.zip
+*.vscode
+/참고자료
