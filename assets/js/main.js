@@ -30,57 +30,93 @@ function headerFixed() {
 }
 
 
-new Swiper(".heroSwiper", {
+new Swiper('.heroSwiper', {
   slidesPerView: 1,
   spaceBetween: 24,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
-    el: "#hero-swiper .swiper-pagination",
+    el: '#hero-swiper .swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: "#hero-swiper .swiper-button-next",
-    prevEl: "#hero-swiper .swiper-button-prev",
+    nextEl: '#hero-swiper .swiper-button-next',
+    prevEl: '#hero-swiper .swiper-button-prev',
   },
 });
 
-new Swiper(".cardSwiper", {
+new Swiper('.cardSwiper', {
   slidesPerView: 4,
   spaceBetween: 24,
   slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
-    el: "#card-swiper .swiper-pagination",
+    el: '#card-swiper .swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: "#card-swiper .swiper-button-next",
-    prevEl: "#card-swiper .swiper-button-prev",
+    nextEl: '#card-swiper .swiper-button-next',
+    prevEl: '#card-swiper .swiper-button-prev',
   },
 });
 
-new Swiper(".prodSwiper", {
+new Swiper('.prodSwiper', {
   slidesPerView: 3,
   spaceBetween: 24,
   slidesPerGroup: 1,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
-    el: "#prod-swiper .swiper-pagination",
+    el: '#prod-swiper .swiper-pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: "#prod-swiper .swiper-button-next",
-    prevEl: "#prod-swiper .swiper-button-prev",
+    nextEl: '#prod-swiper .swiper-button-next',
+    prevEl: '#prod-swiper .swiper-button-prev',
   },
 });
 
-document.addEventListener('click', function(){
-  const select = document.getElementById('select');
 
-  
+// SELECT BOX 함수
+const selectBoxElements = document.querySelectorAll('#select');
+
+function toggleSelectBox(selectBox) {
+  selectBox.classList.toggle('active');
+}
+
+// OPTION VALUE 선택 함수
+function selectOption(optionElement) {
+  const selectBox = optionElement.closest('#select');
+  const selectedElement = selectBox.querySelector('.selected-value');
+  selectedElement.textContent = optionElement.textContent;
+}
+
+selectBoxElements.forEach(selectBoxElement => {
+  selectBoxElement.addEventListener('click', function (e) {
+    const targetElement = e.target;
+    const isOptionElement = targetElement.classList.contains('option');
+
+    if (isOptionElement) {
+      selectOption(targetElement);
+    }
+
+    toggleSelectBox(selectBoxElement);
+  });
 });
 
+// SELECT CLOSE 함수
+document.addEventListener('click', function (e) {
+  const targetElement = e.target;
+  const isSelect = targetElement.classList.contains('select') || targetElement.closest('#select');
 
+  if (isSelect) {
+    return;
+  }
+
+  const allSelectBoxElements = document.querySelectorAll('#select');
+
+  allSelectBoxElements.forEach(boxElement => {
+    boxElement.classList.remove('active');
+  });
+});
