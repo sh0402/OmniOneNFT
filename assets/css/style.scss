@@ -86,7 +86,7 @@ section {
           font-size: 3rem;
         }
 
-        button {
+        > button {
           margin-top: 3rem;
         }
       }
@@ -303,6 +303,9 @@ section {
 }
 
 footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
   background: #ED671B;
 
   .footer-lnb {
@@ -325,7 +328,7 @@ footer {
       li {
         color: #fff;
         opacity: 0.8;
-        line-height: 1.6;
+        line-height: 1.5;
 
         a {
           color: #fff;

@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 :root {
   --primary: #ed671b;
+  --primary-hover: #ff974d;
   --secondary: #0d1732;
+  --beige: rgba(200, 176, 140, 0.15);
   --info: #2f80ed;
   --success: #27ae60;
   --warning: #eec035;
@@ -12,6 +14,7 @@
   --grey04: #8d8d8d;
   --grey05: #656565;
   --black: #2d2d2d;
+  --white: #ffffff;
   --elevation-default: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   --elevation-hover: 0 24px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -23,7 +26,6 @@
   font-size: 16px;
   font-weight: normal;
   font-family: "Inter", "Noto Sans KR", Arial, sans-serif !important;
-  color: #727272;
 }
 
 html,
@@ -35,6 +37,7 @@ body {
   color: #727272;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  color: #727272;
 }
 
 h1,
@@ -46,6 +49,34 @@ h6,
 h7 {
   font-weight: 900;
   line-height: 1.6;
+}
+
+.h1 {
+  font-size: 3.5rem;
+}
+
+.h2 {
+  font-size: 3rem;
+}
+
+.h3 {
+  font-size: 2.5rem;
+}
+
+.h4 {
+  font-size: 2rem;
+}
+
+.h5 {
+  font-size: 1.5rem;
+}
+
+.h6 {
+  font-size: 1.375rem;
+}
+
+.h7 {
+  font-size: 1.25rem;
 }
 
 a {
@@ -60,7 +91,7 @@ a {
 }
 
 .white-color {
-  background: #fff;
+  background: var(--white);
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -71,107 +102,29 @@ a {
   -webkit-background-clip: text;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font-size: inherit;
-  font-family: inherit;
-  border: 0;
-  margin: 0;
-  background: transparent;
+#search,
+#select,
+#checkBox,
+#radioBtn,
+#switch {
+  padding: 1rem 0;
 }
 
-button,
-select {
-  text-transform: none;
+#search {
+  display: flex;
+  flex-direction: column;
 }
-
-input,
-textarea,
-select {
-  outline: none;
-  caret-color: var(--primary);
-}
-
-button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  height: auto;
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
-input[type=search] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-button {
-  display: block;
-  padding: 0 2rem;
-  height: 3.25rem;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 1rem;
-  font-size: 1.25rem;
-  overflow: visible;
-}
-
-input,
-textarea {
-  box-sizing: border-box;
-  line-height: normal;
+#search input {
   border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
   border-radius: 0.75rem;
   width: 100%;
 }
-input:focus,
-textarea:focus {
-  border: 1px solid var(--primary);
+#search input:focus {
+  outline: 1px solid var(--primary);
 }
-input::placeholder,
-textarea::placeholder {
+#search input::placeholder {
   color: var(--grey03);
-}
-
-input[type=text],
-textarea[type=text] {
-  padding: 1rem 1.5rem;
 }
 
 #select {
@@ -196,7 +149,7 @@ textarea[type=text] {
 }
 #select ul {
   position: absolute;
-  background-color: #fff;
+  background-color: var(--white);
   width: 100%;
   left: 0;
   margin-top: 0.5rem;
@@ -213,7 +166,7 @@ textarea[type=text] {
 }
 #select ul li:hover {
   background: var(--secondary);
-  color: #fff;
+  color: var(--white);
   animation: opacityAni 0.3s;
 }
 
@@ -221,6 +174,7 @@ textarea[type=text] {
   transform: rotate(180deg);
 }
 #select.active ul {
+  border: 1px solid var(--grey02);
   display: initial;
   opacity: 1;
 }
@@ -334,6 +288,146 @@ textarea[type=text] {
   border-radius: 50%;
   background: var(--secondary);
   opacity: 1;
+}
+
+#switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+  cursor: pointer;
+}
+#switch .slider {
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 2rem;
+}
+#switch .slider:hover .slider:first-child {
+  border-color: var(--secondary);
+}
+#switch .slider .round {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: var(--white);
+  transition: 0.4s;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+#switch .slider.in-txt {
+  width: 5rem;
+}
+#switch .slider.in-txt .round {
+  width: 3rem;
+}
+#switch input {
+  position: absolute;
+  visibility: hidden;
+}
+#switch input:checked + .switch .slider {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+#switch input:checked + .switch .slider .round {
+  transform: translateX(1.5rem);
+}
+#switch .slider.round {
+  border-radius: 2rem;
+}
+#switch .slider.round:before {
+  border-radius: 50%;
+}
+
+button {
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+button .btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button p {
+  margin-left: 0.5rem;
+}
+
+button.btn-default,
+button.btn-secondary button.btn-min {
+  margin: 1rem 1rem 1rem 0rem;
+}
+
+button.btn-default {
+  background: var(--secondary);
+}
+button.btn-default:hover {
+  background: var(--primary);
+}
+button.btn-default:active {
+  background: var(--primary-hover);
+}
+button.btn-default svg,
+button.btn-default p {
+  color: var(--white);
+}
+
+button.btn-secondary {
+  background: var(--white);
+  border: 1px solid var(--grey02);
+}
+button.btn-secondary:hover {
+  border: 1px solid var(--secondary);
+}
+button.btn-secondary:active {
+  background: var(--beige);
+}
+
+button.btn-min {
+  background: transparent;
+}
+button.btn-min:hover {
+  background: var(--white);
+}
+button.btn-min:active {
+  background: var(--beige);
+}
+button.btn-min svg,
+button.btn-min p {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.btn-sm {
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+.btn-sm svg,
+.btn-sm p {
+  font-size: 0.75rem;
+}
+
+.btn-md {
+  height: 3rem;
+  padding: 0 1.5rem;
+}
+.btn-md svg,
+.btn-md p {
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  height: 3.5rem;
+  padding: 0 1.75rem;
+}
+.btn-lg svg,
+.btn-lg p {
+  font-size: 1rem;
 }
 
 @keyframes opacityAni {
