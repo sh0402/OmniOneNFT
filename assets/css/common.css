@@ -17,6 +17,8 @@
   --white: #ffffff;
   --elevation-default: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   --elevation-hover: 0 24px 16px 0 rgba(0, 0, 0, 0.2);
+  --elevation-figma: 0px 8px 40px rgba(9, 44, 76, 0.16);
+  --modalbg: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -47,8 +49,8 @@ h4,
 h5,
 h6,
 h7 {
-  font-weight: 900;
-  line-height: 1.6;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .h1 {
@@ -102,6 +104,19 @@ a {
   -webkit-background-clip: text;
 }
 
+.text-center {
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
 #search,
 #select,
 #checkBox,
@@ -132,7 +147,6 @@ a {
   transition: all 0.3s ease;
   display: inline-block;
   width: 100%;
-  z-index: 9;
 }
 #select i {
   transition: all ease 0.1s;
@@ -346,7 +360,9 @@ a {
 }
 
 button {
-  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 button .btn-group {
@@ -354,32 +370,40 @@ button .btn-group {
   justify-content: space-between;
   align-items: center;
 }
-button p {
-  margin-left: 0.5rem;
+
+button.default {
+  border-radius: 0.75rem;
 }
 
-button.btn-default,
-button.btn-secondary button.btn-min {
-  margin: 1rem 1rem 1rem 0rem;
+button.round {
+  border-radius: 5rem;
 }
 
-button.btn-default {
+button.btn-primary,
+button.btn-secondary,
+button.btn-minimal {
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+}
+
+button.btn-primary {
   background: var(--secondary);
+  color: var(--white);
 }
-button.btn-default:hover {
+button.btn-primary:hover {
   background: var(--primary);
 }
-button.btn-default:active {
+button.btn-primary:active {
   background: var(--primary-hover);
 }
-button.btn-default svg,
-button.btn-default p {
+button.btn-primary svg,
+button.btn-primary p {
   color: var(--white);
 }
 
 button.btn-secondary {
   background: var(--white);
   border: 1px solid var(--grey02);
+  color: var(--black);
 }
 button.btn-secondary:hover {
   border: 1px solid var(--secondary);
@@ -388,19 +412,45 @@ button.btn-secondary:active {
   background: var(--beige);
 }
 
-button.btn-min {
+button.btn-minimal {
   background: transparent;
 }
-button.btn-min:hover {
+button.btn-minimal:hover {
   background: var(--white);
 }
-button.btn-min:active {
+button.btn-minimal:active {
   background: var(--beige);
 }
-button.btn-min svg,
-button.btn-min p {
+button.btn-minimal:focus svg,
+button.btn-minimal:focus p {
+  color: var(--primary);
+}
+button.btn-minimal svg,
+button.btn-minimal p {
   color: var(--black);
   font-weight: 700;
+}
+
+button.btn-close {
+  border-radius: 50%;
+  background: var(--grey02);
+  height: 100%;
+  padding: 0.25rem;
+}
+button.btn-close .svg-inline--fa {
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  color: var(--white);
+}
+button.btn-close:hover {
+  background: var(--grey03);
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .btn-sm {
@@ -428,6 +478,31 @@ button.btn-min p {
 .btn-lg svg,
 .btn-lg p {
   font-size: 1rem;
+}
+
+#dialog {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modalbg);
+}
+
+.modal-dialog {
+  position: fixed;
+  z-index: 1055;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  margin: 0 auto;
+  border-radius: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--grey02);
+  box-shadow: var(--elevation-figma);
+  padding: 2rem;
 }
 
 @keyframes opacityAni {
