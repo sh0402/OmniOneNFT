@@ -52,6 +52,7 @@ h6,
 h7 {
   font-weight: 600;
   line-height: 1.5;
+  color: var(--black);
 }
 
 .h1 {
@@ -432,6 +433,10 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 }
 
@@ -561,23 +566,24 @@ button.btn-close {
   }
 }
 
-#dialog {
+#dialog,
+#progress {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: var(--modalbg);
 }
 
 .modal-dialog {
   position: fixed;
   z-index: 1055;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25rem;
   margin: 0 auto;
   border-radius: 1.25rem;
   background: var(--white);
@@ -585,6 +591,7 @@ button.btn-close {
   box-shadow: var(--elevation-figma);
   padding: 2rem;
 }
+
 
 // #dialog {
 //   position: fixed;
@@ -667,6 +674,14 @@ button.btn-close {
   50% {
     transform: scale(0.9);
   }
+}
+
+.fade {
+  transition: opacity .15s linear;
+}
+
+.fade:not(.show) {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=common.scss.map */

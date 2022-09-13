@@ -51,6 +51,7 @@ h6,
 h7 {
   font-weight: 600;
   line-height: 1.5;
+  color: var(--black);
 }
 
 .h1 {
@@ -370,6 +371,9 @@ button .btn-group {
   justify-content: space-between;
   align-items: center;
 }
+button .btn-group svg {
+  margin-right: 0.5rem;
+}
 
 button.default {
   border-radius: 0.75rem;
@@ -480,23 +484,24 @@ button.btn-close:hover {
   font-size: 1rem;
 }
 
-#dialog {
+#dialog,
+#progress {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: var(--modalbg);
 }
 
 .modal-dialog {
   position: fixed;
   z-index: 1055;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25rem;
   margin: 0 auto;
   border-radius: 1.25rem;
   background: var(--white);
@@ -533,6 +538,14 @@ button.btn-close:hover {
     transform: scale(0.9);
   }
 }
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
 /*# sourceMappingURL=common.scss.map */
 
 /*# sourceMappingURL=common.css.map */

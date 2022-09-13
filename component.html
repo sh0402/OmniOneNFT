@@ -314,15 +314,27 @@
         Dialog-2
       </button>
 
+      <button class="btn-md btn-primary default btn-modal" data-bs-toggle="modal" data-bs-target=".modal-03">
+        Dialog-3
+      </button>
+
+      <button class="btn-md btn-primary default btn-modal" data-bs-toggle="modal" data-bs-target=".modal-04">
+        Dialog-4
+      </button>
+
+      <button class="btn-md btn-secondary default btn-modal" data-bs-toggle="modal" data-bs-target=".progress-01">
+        Progress-1
+      </button>
+
     </div>
   </div>
 
-  <div class="modal modal-01" id="dialog" tabindex="-1" aria-hidden="true">
+  <div id="dialog" class="modal fade modal-01" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
 
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h4>New message</h4>
+          <h5 class="h5">New message</h5>
         </div>
 
         <div class="modal-body text-center">
@@ -338,7 +350,7 @@
     </div>
   </div>
 
-  <div class="modal modal-02" id="dialog" tabindex="-1" aria-hidden="true">
+  <div id="dialog" class="modal fade modal-02" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
 
       <div class="modal-content">
@@ -350,6 +362,68 @@
         <div class="modal-footer">
           <button type="button" class="btn-md btn-secondary default" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn-md btn-primary default">Accept</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="dialog" class="modal fade modal-03" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-headern text-center">
+          <h5 class="h5">New message</h5>
+        </div>
+
+        <div class="modal-body text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est lectus placerat vel blandit.
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-primary default">Accept</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="dialog" class="modal fade modal-04" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-body text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est lectus placerat vel blandit.
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-primary default">Accept</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="progress" class="modal fade progress-01" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="h5">New message</h5>
+          <button class="btn-close" data-bs-dismiss="modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing.doc
+        </div>
+
+        <div class="modal-footer">
+          progress
         </div>
       </div>
 

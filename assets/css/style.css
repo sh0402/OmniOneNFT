@@ -130,6 +130,23 @@ section {
   margin: 0 1rem;
 }
 
+#user-thumb {
+  position: absolute;
+  bottom: 5rem;
+  right: 1.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--grey02);
+  border-radius: 1.5rem;
+  z-index: 2;
+  outline: none;
+  border: none;
+}
+#user-thumb img {
+  outline: none;
+  border: none;
+}
+
 #card-swiper,
 #prod-swiper {
   position: relative;
@@ -150,29 +167,65 @@ section {
 }
 #card-swiper .swiper-slide,
 #prod-swiper .swiper-slide {
+  position: relative;
   display: inline-block;
-  width: 100%;
-  background: #dedede;
   border-radius: 1.5rem;
   transition: all 0.2s ease;
-  overflow: hidden;
   box-shadow: var(--elevation-default);
+  cursor: pointer;
 }
 #card-swiper .swiper-slide:hover,
 #prod-swiper .swiper-slide:hover {
   transform: translateY(-24px);
   box-shadow: var(--elevation-hover);
 }
+#card-swiper .swiper-slide .issuer-linear,
+#card-swiper .swiper-slide .issuer-item,
+#prod-swiper .swiper-slide .issuer-linear,
+#prod-swiper .swiper-slide .issuer-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+}
+#card-swiper .swiper-slide .issuer-linear,
+#prod-swiper .swiper-slide .issuer-linear {
+  z-index: 1;
+}
+#card-swiper .swiper-slide .gold,
+#prod-swiper .swiper-slide .gold {
+  background: linear-gradient(360deg, #AF9042 20%, rgba(110, 120, 70, 0) 100%, #AC9A6C 100%);
+}
+#card-swiper .swiper-slide .not,
+#prod-swiper .swiper-slide .not {
+  background: linear-gradient(360deg, #3D3D3D 20%, rgba(110, 120, 70, 0) 100%, #AC9A6C 100%);
+}
+#card-swiper .swiper-slide img,
+#prod-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
 #card-swiper .swiper-slide .txt-group,
 #prod-swiper .swiper-slide .txt-group {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  z-index: 1;
+  color: var(--white);
+}
+#card-swiper .swiper-slide .txt-group h5,
+#prod-swiper .swiper-slide .txt-group h5 {
+  color: var(--white);
 }
 #card-swiper .swiper-slide .txt-group p,
 #prod-swiper .swiper-slide .txt-group p {
   font-size: 1rem;
+  opacity: 0.6;
 }
 #card-swiper .swiper-pagination,
 #prod-swiper .swiper-pagination {
@@ -261,23 +314,46 @@ section {
   margin-bottom: 1rem;
 }
 
-#dialog .modal-header {
+#dialog .modal-header,
+#progress .modal-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
 }
-#dialog .modal-body {
+#dialog .modal-body,
+#progress .modal-body {
+  font-size: 1rem;
   line-height: 1.5rem;
-  margin-bottom: 1.5rem;
   overflow-y: auto;
 }
-#dialog .modal-footer {
+#dialog .modal-footer,
+#progress .modal-footer {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#dialog .modal-footer button {
+#dialog .modal-footer button,
+#progress .modal-footer button {
   width: 100%;
+}
+
+#dialog .modal-dialog {
+  max-width: 25rem;
+}
+#dialog .modal-header {
+  margin-bottom: 1.5rem;
+}
+#dialog .modal-body {
+  margin-bottom: 1.5rem;
+}
+
+#progress .modal-dialog {
+  width: 45rem;
+}
+#progress .modal-header {
+  margin-bottom: 0.5rem;
+}
+#progress .modal-body {
+  margin-bottom: 1.5rem;
 }
 
 footer {

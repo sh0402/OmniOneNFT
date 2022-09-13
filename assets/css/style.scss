@@ -86,7 +86,7 @@ section {
           font-size: 3rem;
         }
 
-        > button {
+        >button {
           margin-top: 3rem;
         }
       }
@@ -104,6 +104,7 @@ section {
         opacity: 0.7;
         border-radius: 1rem;
       }
+
       .swiper-pagination-bullet-active {
         width: 2.5rem;
       }
@@ -148,6 +149,24 @@ section {
   }
 }
 
+#user-thumb {
+  position: absolute;
+  bottom: 5rem;
+  right: 1.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--grey02);
+  border-radius: 1.5rem;
+  z-index: 2;
+  outline: none;
+  border: none;
+
+  img {
+    outline: none;
+    border: none;
+  }
+}
+
 #card-swiper,
 #prod-swiper {
   position: relative;
@@ -156,12 +175,12 @@ section {
   .swiper {
     padding: 2rem;
     -webkit-mask-image: linear-gradient(
-      to left,
-      transparent,
-      black 24px,
-      black calc(100% - 24px),
-      transparent
-    );
+        to left,
+        transparent,
+        black 24px,
+        black calc(100% - 24px),
+        transparent
+      );
   }
 
   .cardSwiper {
@@ -177,27 +196,62 @@ section {
   }
 
   .swiper-slide {
+    position: relative;
     display: inline-block;
-    width: 100%;
-    background: #dedede;
     border-radius: 1.5rem;
     transition: all 0.2s ease;
-    overflow: hidden;
     box-shadow: var(--elevation-default);
+    cursor: pointer;
 
     &:hover {
       transform: translateY(-24px);
       box-shadow: var(--elevation-hover);
     }
 
+    .issuer-linear,
+    .issuer-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+    }
+
+    .issuer-linear {
+      z-index: 1;
+    }
+
+    .gold {
+      background: linear-gradient(360deg, #AF9042 20%, rgba(110, 120, 70, 0) 100%, #AC9A6C 100%);
+    }
+    
+    .not {
+      background: linear-gradient(360deg, #3D3D3D 20%, rgba(110, 120, 70, 0) 100%, #AC9A6C 100%);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1.5rem;
+    }
+
     .txt-group {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      bottom: 0;
+      left: 0;
+      padding: 1.5rem;
+      z-index: 1;
+      color: var(--white);
+
+      h5 {
+        color: var(--white);
+      }
 
       p {
         font-size: 1rem;
+        opacity: 0.6;
       }
     }
   }
@@ -208,14 +262,10 @@ section {
     .swiper-pagination-bullet {
       border-radius: 1rem;
       margin: 0;
-      width: var(
-        --swiper-pagination-bullet-width,
-        var(--swiper-pagination-bullet-size, 112px)
-      );
-      height: var(
-        --swiper-pagination-bullet-height,
-        var(--swiper-pagination-bullet-size, 4px)
-      );
+      width: var(--swiper-pagination-bullet-width,
+          var(--swiper-pagination-bullet-size, 112px));
+      height: var(--swiper-pagination-bullet-height,
+          var(--swiper-pagination-bullet-size, 4px));
       background: var(--secondary);
       opacity: 0.08;
     }
@@ -225,6 +275,7 @@ section {
       opacity: 1;
     }
   }
+
   .swiper-button-next,
   .swiper-button-prev {
     border-radius: 20px;
@@ -239,21 +290,19 @@ section {
   }
 
   .swiper-button-next {
-    background: url("/assets/image/icon/icon-arrow-right.svg") no-repeat center
-        center,
+    background: url("/assets/image/icon/icon-arrow-right.svg") no-repeat center center,
       var(--secondary);
   }
 
   .swiper-button-prev {
-    background: url("/assets/image/icon/icon-arrow-left.svg") no-repeat center
-        center,
+    background: url("/assets/image/icon/icon-arrow-left.svg") no-repeat center center,
       var(--secondary);
   }
 }
 
 #midBanner-cont {
-  margin-bottom: 6rem; 
-  
+  margin-bottom: 6rem;
+
   .midBanner-container {
     display: flex;
     justify-content: space-between;
@@ -266,9 +315,11 @@ section {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
+
     p {
       font-size: 1.5rem;
     }
+
     button {
       margin-top: 4rem;
     }
@@ -283,14 +334,14 @@ section {
 }
 
 #imgBanner-cont {
-  margin-bottom: 6rem; 
-  
+  margin-bottom: 6rem;
+
   .img-group {
     width: 100%;
     height: 20rem;
     background: #f2f2f2;
     border-radius: 1.5rem;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -302,16 +353,16 @@ section {
   }
 }
 
-#dialog {
+#dialog,
+#progress {
   .modal-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
   }
 
   .modal-body {
+    font-size: 1rem;
     line-height: 1.5rem;
-    margin-bottom: 1.5rem;
     overflow-y: auto;
   }
 
@@ -321,9 +372,36 @@ section {
     align-items: center;
 
     button {
-      
       width: 100%;
     }
+  }
+}
+
+#dialog {
+  .modal-dialog {
+    max-width: 25rem;
+  }
+
+  .modal-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-body {
+    margin-bottom: 1.5rem;
+  }
+}
+
+#progress {
+  .modal-dialog {
+    width: 45rem;
+  }
+
+  .modal-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-body {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -336,7 +414,7 @@ footer {
 
   .footer-lnb {
     padding-top: 2rem;
-    
+
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr 3fr 1fr;
@@ -376,8 +454,8 @@ footer {
     border-top: 1px solid #fff;
     opacity: 0.4;
     padding: 2rem 0;
-    
-    
+
+
     .container {
       display: flex;
       justify-content: space-between;
