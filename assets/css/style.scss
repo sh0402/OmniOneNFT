@@ -12,7 +12,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  background: #f2f2f2;
+  background: transparent;
   height: 6rem;
   font-size: 1.25rem;
 
@@ -34,7 +34,14 @@ header {
     display: flex;
     align-items: center;
     font-weight: bold;
-    padding-right: 2rem;
+    padding-right: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--white);
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
   }
 
   .gnb {
@@ -44,9 +51,23 @@ header {
     li {
       display: flex;
       align-items: center;
-      padding: 0 2rem;
+      padding: 0 1rem;
       height: 3.25rem;
+      font-weight: 700;
+
+      a {
+        color: var(--grey04);
+
+        &:hover {
+          color: var(--grey05);
+          transition: all 0.3s ease;
+        }
+      }
     }
+  }
+
+  .button-group {
+    display: flex;
   }
 }
 
@@ -54,8 +75,11 @@ header.fixed {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 5rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  background: var(--white);
   z-index: 9999;
+  transition: all 0.5s ease;
 
   .header-container {
     max-width: 1320px;
@@ -68,6 +92,7 @@ header.fixed {
 
 section {
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #hero-swiper {  
@@ -281,6 +306,10 @@ section {
     height: 22rem;
   }
 
+  #user-thumb {
+    right: 1.5rem;
+  }
+
   .txt-group {
     bottom: 0;
     left: 50%;
@@ -304,6 +333,10 @@ section {
     height: 40rem;
   }
 
+  #user-thumb {
+    left: 1.5rem;
+  }
+
   .txt-group {
     bottom: 0;
     left: 50%;
@@ -318,6 +351,7 @@ section {
       p {
         padding: 1rem 0;
         font-weight: 700;
+        text-align: right;
       }
     }
 
@@ -346,7 +380,6 @@ section {
 #user-thumb {
   position: absolute;
   bottom: 22%;
-  right: 1.5rem;
   width: 4.5rem;
   height: 4.5rem;
   background-color: var(--grey02);
@@ -404,38 +437,6 @@ section {
   }
 }
 
-// #banner.wide-banner {
-//   .banner-inner {
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   .txt-group {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-
-//     h2 {
-//       font-weight: 800;
-//     }
-//   }
-
-//   .img-group {
-//     height: 25rem;
-//     background: #f2f2f2;
-//     border-radius: var(--border-radius-md);
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       object-fit: cover;
-//       border-radius: var(--border-radius-md);
-//     }
-//   }
-// }
-
 #wide-banner {
   margin-bottom: 6rem;
 
@@ -443,7 +444,6 @@ section {
     position: relative;
     display: flex;
     align-items: center;
-    
   }
 
   .txt-group {
@@ -451,9 +451,21 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h4 {
       color: var(--white);
+
+      span {
+        color: var(--primary);
+      }
+    }
+
+    .button-group {
+      display: flex;
     }
   }
   
@@ -497,6 +509,105 @@ section {
   }
 }
 
+#detail {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem ;
+  
+
+  #user-thumb {
+    position: initial;
+    margin-right: 1rem;
+  }
+
+  .item-thumb,
+  .item-info {
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .item-info {
+    height: fit-content;
+    border: 1px solid var(--grey02);
+    padding: 1.5rem;    
+  }
+
+  .item-detail {
+    
+    .sample {
+      height: 100vh;  
+      background: var(--white);
+      border: 1px solid var(--grey02);
+      border-radius: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .left-area, 
+  .right-area {
+    display: flex;
+  }
+
+  .left-area {
+    height: fit-content;
+
+    .item-thumb {
+      background: var(--grey01);
+
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+  }
+
+  .right-area {
+    display: flex;
+    flex-direction: column;
+
+    .txt-group,
+    .user-group,
+    .price-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .user-group {
+      display: flex;
+      align-items: center;
+
+      .txt-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+
+    .price-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-group {
+      width: 100%;
+
+      .bottom {
+        display: flex;
+      }
+
+      button {
+        width: 100%;
+        font-weight: 700;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
 
 footer {
   width: 100%;

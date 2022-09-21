@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "Gothic A1", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
 :root {
   --primary: #ed671b;
   --primary-hover: #ff974d;
@@ -31,19 +41,19 @@
   box-sizing: border-box;
   font-size: 16px;
   font-weight: normal;
-  font-family: "Inter", "Noto Sans KR", Arial, sans-serif !important;
+  font-family: "Inter", "Gothic A1", Arial, sans-serif !important;
 }
 
 html,
 body {
   height: 100%;
   height: 100%;
-  font-family: "Inter", "Noto Sans KR", Arial, sans-serif !important;
+  font-family: "Inter", "Gothic A1", Arial, sans-serif !important;
   font-weight: 400;
   color: #727272;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #727272;
+  color: var(--grey04);
 }
 
 h1,
@@ -87,6 +97,10 @@ h7 {
   font-size: 1.25rem;
 }
 
+.subtit-lg {
+  font-size: 1.125rem;
+}
+
 .fs-1 {
   font-size: 2.5rem;
 }
@@ -122,7 +136,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #727272;
+  color: var(--grey04);
 }
 
 .text-center {
@@ -421,6 +435,7 @@ button.btn-primary {
 }
 button.btn-primary:hover {
   background: var(--primary);
+  transition: all 0.3s ease;
 }
 button.btn-primary:active {
   background: var(--primary-hover);
@@ -437,6 +452,7 @@ button.btn-secondary {
 }
 button.btn-secondary:hover {
   border: 1px solid var(--secondary);
+  transition: all 0.3s ease;
 }
 button.btn-secondary:active {
   background: var(--beige);
@@ -447,6 +463,7 @@ button.btn-minimal {
 }
 button.btn-minimal:hover {
   background: var(--white);
+  transition: all 0.3s ease;
 }
 button.btn-minimal:active {
   background: var(--beige);
@@ -475,6 +492,7 @@ button.btn-close .svg-inline--fa {
 }
 button.btn-close:hover {
   background: var(--grey03);
+  transition: all 0.3s ease;
 }
 
 .btn-wrap {
