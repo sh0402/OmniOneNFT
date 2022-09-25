@@ -9,6 +9,16 @@ body {
   margin: 0 auto;
 }
 
+.sample-box {
+  width: 100%;
+  height: 100%;
+  background: var(--grey02);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -59,7 +69,9 @@ header .gnb li a:hover {
   transition: all 0.3s ease;
 }
 header .button-group {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 header.fixed {
@@ -69,8 +81,8 @@ header.fixed {
   height: 5rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
   background: var(--white);
-  z-index: 9999;
-  transition: all 0.5s ease;
+  z-index: 3;
+  transition: all 0.3s ease;
 }
 header.fixed .header-container {
   max-width: 1320px;
@@ -162,40 +174,6 @@ section {
 
 .not {
   background: var(--linear-not);
-}
-
-#search {
-  margin: 6rem 0;
-}
-#search .search-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-#search input#search-bar {
-  border: 1px solid #ddd;
-  background-color: #f2f2f2;
-  padding: 1.5rem;
-  border-radius: var(--border-radius-md);
-  width: 66%;
-}
-
-.tag-group {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.tag-group button.tag-item {
-  background: #f2f2f2;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #727272;
-  border-radius: var(--border-radius-xs);
-  margin: 0 1rem;
 }
 
 #issu-swiper,
@@ -418,102 +396,206 @@ section {
   border-radius: var(--border-radius-md);
 }
 
-#dialog .modal-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-#dialog .modal-body {
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
-  overflow-y: auto;
-}
-#dialog .modal-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#dialog .modal-footer button {
-  width: 100%;
-}
-
 #detail {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem;
 }
-#detail #user-thumb {
-  position: initial;
-  margin-right: 1rem;
+#detail #left {
+  position: sticky;
+  top: 9rem;
+  height: fit-content;
 }
-#detail .item-thumb,
-#detail .item-info {
-  border-radius: 1.5rem;
+#detail #left .item-thumb {
   margin-bottom: 3rem;
 }
-#detail .item-info {
+#detail #left .item-group {
   height: fit-content;
   border: 1px solid var(--grey02);
   padding: 1.5rem;
 }
-#detail .item-detail .sample {
+#detail #left .item-group .txt-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#detail #left .item-group .txt-item:last-child {
+  margin-bottom: 0;
+}
+#detail #left .item-group .txt-item p {
+  color: var(--black);
+}
+#detail #right {
   height: 100vh;
-  background: var(--white);
+}
+#detail #right #user-thumb {
+  position: initial;
+  margin-right: 1rem;
+}
+#detail #right .item-group {
   border: 1px solid var(--grey02);
-  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+#detail #right .item-group:last-child {
+  margin-bottom: 0;
+}
+#detail #right .item-group .title-item {
+  margin-bottom: 2rem;
+}
+#detail #right .item-group .users-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#detail #right .item-group .price-item {
+  display: flex;
+  justify-content: space-between;
+  background: var(--grey01);
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+#detail #right .item-group .button-item {
+  display: flex;
+  flex-direction: column;
+}
+#detail #right .item-group .button-item > button {
+  margin-bottom: 1rem;
+  margin-right: 0;
+}
+#detail #right .item-group .button-item .button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+#detail #right .item-group .button-item .button-group button {
+  width: 100%;
+}
+#detail #right .item-group .detail-item .sample {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#detail .left-area,
-#detail .right-area {
-  display: flex;
-}
-#detail .left-area {
-  height: fit-content;
-}
-#detail .left-area .item-thumb {
+  height: 50vh;
   background: var(--grey01);
 }
-#detail .left-area .item-thumb img {
-  width: 100%;
-  object-fit: fill;
+
+#dialog.goldbuy .modal-dialog {
+  width: 30rem;
 }
-#detail .right-area {
-  display: flex;
-  flex-direction: column;
-}
-#detail .right-area .txt-group,
-#detail .right-area .user-group,
-#detail .right-area .price-group {
+#dialog.goldbuy .item-thumb {
   margin-bottom: 1.5rem;
 }
-#detail .right-area .user-group {
+#dialog.goldbuy .price-item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-#detail .right-area .user-group .txt-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+#dialog.goldbuy .txt-item {
+  padding: 0 3rem;
 }
-#detail .right-area .price-group {
+#dialog.goldbuy .txt-item p {
+  margin-bottom: 1rem;
+}
+#dialog.goldbuy .modal-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 1rem;
+}
+#dialog.goldbuy #radioBtn {
   display: flex;
   justify-content: space-between;
 }
-#detail .right-area .button-group {
-  width: 100%;
+
+#dialog.goldsell .modal-dialog {
+  width: 30rem;
 }
-#detail .right-area .button-group .bottom {
+#dialog.goldsell .txt-item .error-message {
+  font-size: 0.75rem;
+  color: var(--error);
+  margin-bottom: 1rem;
+}
+#dialog.goldsell .txt-item span {
+  font-size: 0.75rem;
+  color: var(--grey05);
+}
+#dialog.goldsell .modal-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 1rem;
+}
+
+#dialog.goldgift_1 .modal-dialog {
+  width: 30rem;
+}
+#dialog.goldgift_1 .modal-body .label-b {
   display: flex;
+  justify-content: space-between;
 }
-#detail .right-area .button-group button {
+#dialog.goldgift_1 .modal-body .search-wrap {
+  display: flex;
+  align-items: center;
+}
+#dialog.goldgift_1 .modal-body .search-wrap #search {
   width: 100%;
-  font-weight: 700;
+  margin-right: 1rem;
 }
-#detail .right-area .button-group button:last-child {
-  margin-right: 0;
+#dialog.goldgift_1 .modal-body .search-wrap button {
+  padding: 0 1rem;
+}
+#dialog.goldgift_1 .txt-item .error-message {
+  font-size: 0.75rem;
+  color: var(--error);
+}
+#dialog.goldgift_1 .txt-item span {
+  font-size: 0.75rem;
+  color: var(--grey05);
+}
+#dialog.goldgift_1 .modal-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#dialog.goldgift_2 #user-thumb {
+  position: initial;
+  margin-right: 1rem;
+}
+#dialog.goldgift_2 .modal-dialog {
+  width: 30rem;
+}
+#dialog.goldgift_2 .label-b {
+  display: flex;
+  justify-content: space-between;
+}
+#dialog.goldgift_2 .item-thumb {
+  background: var(--white);
+}
+#dialog.goldgift_2 .users-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+#dialog.goldgift_2 .users-item .txt-group p {
+  color: var(--black);
+}
+#dialog.goldgift_2 .txt-item .error-message {
+  font-size: 0.75rem;
+  color: var(--error);
+  line-height: 1.5;
+}
+#dialog.goldgift_2 .txt-item p {
+  color: var(--black);
+}
+#dialog.goldgift_2 .txt-item span {
+  font-size: 0.75rem;
+  color: var(--grey05);
+}
+#dialog.goldgift_2 .modal-footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
 }
 
 footer {
