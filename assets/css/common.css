@@ -25,8 +25,8 @@
   --grey05: #656565;
   --black: #2d2d2d;
   --white: #ffffff;
-  --elevation-figma: 0 0.5rem 1rem rgba(9, 44, 76, 0.16);
-  --elevation-figma-hover: 0 1.5rem 2rem rgba(9, 44, 76, 0.26);
+  --elevation-default: 0 0.5rem 1rem rgba(9, 44, 76, 0.16);
+  --elevation-default-hover: 0 1.5rem 2rem rgba(9, 44, 76, 0.26);
   --modalbg: rgba(0, 0, 0, 0.6);
   --linear-gold: linear-gradient(360deg, #846A3C 12%, rgba(110, 120, 70, 0) 80%);
   --linear-not: linear-gradient(360deg, #3D3D3D 0%, rgba(61, 61, 61, 0.8) 50%, rgba(61, 61, 61, 0.4) 100%);
@@ -676,7 +676,7 @@ button.btn-close:hover {
   border-radius: 1.25rem;
   background: var(--white);
   border: 1px solid var(--grey02);
-  box-shadow: var(--elevation-figma);
+  box-shadow: var(--elevation-default);
   padding: 2rem;
 }
 #dialog .modal-header {

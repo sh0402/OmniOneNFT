@@ -39,6 +39,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
   <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/detail.js"></script>
 
 </head>
 
@@ -87,7 +88,7 @@
         </div>
 
         <div id="right">
-          <div class="item-group rounded-md">
+          <div class="prod-option item-group rounded-md">
             <div class="title-item">
               <h4 class="h4 title">금 1g</h4>
               <p class="subtitle subtit-lg">실물 금 1g으로 교환 가능한 금 NFT 상품입니다.</p>
@@ -140,10 +141,26 @@
             </p>
           </div>
 
-          <div class="item-group rounded-md">
+          <div class="detail-area item-group rounded-md">
             <div class="detail-item">
               <div class="sample rounded-sm">
                 <h4 class="h4">sample</h4>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="float" class="fade">
+            <div class="button-item">
+              <button class="btn-primary btn-lg default btn-modal" data-bs-toggle="modal" data-bs-target=".goldgift_1">
+                금 1g NFT 선물하기
+              </button>
+
+              <div class="button-group">
+                <button class="btn-secondary btn-lg default btn-modal" data-bs-toggle="modal"
+                  data-bs-target=".goldsell">Buy Now 판매하기</button>
+                <button class="btn-secondary btn-lg default btn-modal" data-bs-toggle="modal"
+                  data-bs-target=".goldgift_1">실물 금으로 교환하기</button>
               </div>
             </div>
           </div>
@@ -384,5 +401,9 @@
 
   <div data-include-path="footer.html"></div>
 </body>
+
+<script>
+
+</script>
 
 </html>

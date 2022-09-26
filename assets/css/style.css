@@ -19,14 +19,14 @@ body {
   align-items: center;
 }
 
-header {
+#header {
   display: flex;
   align-items: center;
   background: transparent;
   height: 6rem;
   font-size: 1.25rem;
 }
-header .header-container {
+#header .header-container {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
@@ -34,47 +34,50 @@ header .header-container {
   align-items: center;
   justify-content: space-between;
 }
-header .nav {
+#header .nav {
   display: flex;
   align-items: center;
 }
-header h1 {
+#header h1 {
   display: flex;
   align-items: center;
   font-weight: bold;
   padding-right: 1rem;
   cursor: pointer;
 }
-header h1:hover {
+#header h1:hover {
   background: var(--white);
   opacity: 0.8;
   transition: all 0.3s ease;
 }
-header .gnb {
+#header .gnb {
   display: flex;
   align-items: center;
 }
-header .gnb li {
+#header .gnb li {
   display: flex;
   align-items: center;
   padding: 0 1rem;
   height: 3.25rem;
   font-weight: 700;
 }
-header .gnb li a {
+#header .gnb li a {
   color: var(--grey04);
 }
-header .gnb li a:hover {
+#header .gnb li a:hover {
   color: var(--grey05);
   transition: all 0.3s ease;
 }
-header .button-group {
+#header .button-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+#header .button-group button {
+  margin-right: 0;
+}
 
-header.fixed {
+#header.fixed {
   position: fixed;
   top: 0;
   width: 100%;
@@ -84,7 +87,7 @@ header.fixed {
   z-index: 3;
   transition: all 0.3s ease;
 }
-header.fixed .header-container {
+#header.fixed .header-container {
   max-width: 1320px;
   margin: 0 auto;
   display: flex;
@@ -97,6 +100,9 @@ section {
   padding-bottom: 3rem;
 }
 
+#hero-swiper {
+  margin-bottom: 6rem;
+}
 #hero-swiper .swiper-slide {
   width: 100%;
   height: 30rem;
@@ -194,13 +200,13 @@ section {
   border-radius: var(--border-radius-md);
   transition: all 0.2s ease;
   overflow: hidden;
-  box-shadow: var(--elevation-figma);
+  box-shadow: var(--elevation-default);
   cursor: pointer;
 }
 #issu-swiper .swiper-slide:hover,
 #prod-swiper .swiper-slide:hover {
   transform: translateY(-1rem);
-  box-shadow: var(--elevation-figma-hover);
+  box-shadow: var(--elevation-default-hover);
 }
 #issu-swiper .swiper-pagination,
 #prod-swiper .swiper-pagination {
@@ -427,7 +433,7 @@ section {
   color: var(--black);
 }
 #detail #right {
-  height: 100vh;
+  height: 100%;
 }
 #detail #right #user-thumb {
   position: initial;
@@ -453,7 +459,7 @@ section {
   display: flex;
   justify-content: space-between;
   background: var(--grey01);
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem;
   margin-bottom: 2rem;
 }
 #detail #right .item-group .button-item {
@@ -476,8 +482,46 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 100vh;
   background: var(--grey01);
+}
+
+#float {
+  position: sticky;
+  bottom: 1.5rem;
+  right: 0;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid var(--grey02);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  opacity: 0;
+  background: var(--white);
+  box-shadow: var(--elevation-default);
+}
+#float .button-item {
+  display: flex;
+  flex-direction: column;
+}
+#float .button-item > button {
+  margin-bottom: 1rem;
+  margin-right: 0;
+}
+#float .button-item .button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+#float .button-item .button-group button {
+  width: 100%;
+}
+
+#float.show {
+  opacity: 1;
+}
+
+#float.ele-none {
+  box-shadow: none;
 }
 
 #dialog.goldbuy .modal-dialog {
