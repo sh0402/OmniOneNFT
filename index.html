@@ -39,12 +39,43 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
   <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/swiper.js"></script>
 
 </head>
 
 <body>
 
-  <div data-include-path="inc/header.html"></div>
+  <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="sign-up" class="btn-secondary btn-sm default" onclick="alert('준비중입니다.')">
+          회원가입
+        </button>
+
+        <button id=" sign-in" class="btn-primary btn-sm default" onclick="alert('준비중입니다.')">
+          로그인
+        </button>
+      </div>
+    </div>
+  </div>
 
   <section>
     <div class="container">
@@ -63,7 +94,7 @@
                   </h1>
 
                   <p>
-                    실물 금으로 교환할 수 있는 금 NFT 입니다.
+                    실물 금으로 교환할 수 있는 금 NFT 입니다. <br>
                     한국조폐공사가 보증하는 실물 1:1 교환 금 NFT 입니다.
                   </p>
                 </div>
@@ -262,7 +293,7 @@
         <div class="swiper prodSwiper">
           <div class="swiper-wrapper">
 
-            <div id="prod-item" class="swiper-slide">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
               <div id="user-thumb">
                 <img src="assets/image/user-thumb/user-thumb.png" alt="">
               </div>
@@ -292,7 +323,7 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
               <div id="user-thumb">
                 <img src="assets/image/user-thumb/user-thumb.png" alt="">
               </div>
@@ -322,7 +353,7 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
               <div id="user-thumb">
                 <img src="assets/image/user-thumb/user-thumb.png" alt="">
               </div>
@@ -352,7 +383,7 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
               <div id="user-thumb">
                 <img src="assets/image/user-thumb/user-thumb.png" alt="">
               </div>
@@ -382,7 +413,7 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
               <div id="user-thumb">
                 <img src="assets/image/user-thumb/user-thumb.png" alt="">
               </div>
@@ -412,7 +443,7 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
               <div id="user-thumb">
                 <img src="assets/image/user-thumb/user-thumb.png" alt="">
               </div>
@@ -475,7 +506,61 @@
     </div>
   </section>
 
-  <div data-include-path="inc/footer.html"></div>
+  <footer>
+    <div class="footer-lnb">
+      <div class="container">
+        <div class="col">
+          <h1>OmniOne NFT</h1>
+          <ul>
+            <li><a href="">About</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Marketplace</h1>
+          <ul>
+            <li><a href="">Explore</a></li>
+            <li><a href="">Gold</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="col-group">
+            <h1>Address</h1>
+            <ul>
+              <li>13F Woosin Building, 145 Teheran-ro, Gangnam-gu, Seoul, 06132 Korea</li>
+            </ul>
+          </div>
+          <div class="col-group">
+            <h1>Tel</h1>
+            <ul>
+              <li>+82-2-561-4541</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <h1>SNS</h1>
+          <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Youtube</a></li>
+            <li><a href="">instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <p>© RaonWhiteHat. All rights reserved.</p>
+
+        <ul>
+          <li><a href="">Notice</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
