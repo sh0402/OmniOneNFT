@@ -20,6 +20,7 @@ body {
 }
 
 #header {
+  z-index: 2;
   display: flex;
   align-items: center;
   background: transparent;
@@ -69,12 +70,39 @@ body {
   transition: all 0.3s ease;
 }
 #header .button-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
 }
 #header .button-group button {
+  margin-left: 1rem;
   margin-right: 0;
+}
+#header .button-group button:first-child {
+  margin-left: 0;
+}
+#header button#search img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0.75rem;
+}
+#header button#user-thumb {
+  position: initial;
+}
+#header button#alarm {
+  position: relative;
+}
+#header button#alarm img {
+  background: var(--grey02);
+}
+#header button#alarm span.alarm-mark {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--error);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 1rem;
+  outline: 2px solid var(--white);
 }
 
 #header.fixed {
@@ -234,6 +262,7 @@ section {
   color: #fff;
   padding: 2rem;
   opacity: 0.6;
+  z-index: 1;
 }
 #issu-swiper .swiper-button-next:after,
 #issu-swiper .swiper-button-prev:after,
@@ -642,11 +671,149 @@ section {
   gap: 1rem;
 }
 
+#trade > .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6.25rem;
+}
+#trade > .title h4 {
+  margin-bottom: 0.5rem;
+}
+#trade > .title .divider {
+  width: 4.5rem;
+  background: var(--primary);
+  margin: 0;
+}
+#trade > .subtitle {
+  margin-bottom: 6.25rem;
+}
+#trade #trade-banner {
+  width: 100%;
+  height: 25rem;
+  background: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  box-shadow: var(--elevation-default);
+  margin-bottom: 6.25rem;
+}
+#trade #trade-banner .img-group {
+  width: 100%;
+  height: 100%;
+  background: var(--grey02);
+  border-radius: var(--border-radius-sm);
+}
+#trade #trade-banner .txt-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#trade #trade-banner .txt-group p {
+  margin-bottom: 1.5rem;
+}
+#trade #trade-banner .txt-group p:first-child {
+  color: var(--primary);
+}
+#trade #trade-banner .txt-group button {
+  width: fit-content;
+}
+#trade #trade-form {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 3.5rem;
+  box-shadow: var(--elevation-default);
+}
+#trade #trade-form .input-group {
+  margin-bottom: 6.5rem;
+}
+#trade #trade-form .input-group:nth-child(3) {
+  margin-bottom: 2rem;
+}
+#trade #trade-form .input-group .subtitle {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#trade #trade-form .input-group .input-item.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+#trade #trade-form .input-group .address-item.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+#trade #trade-form .input-item {
+  width: 50%;
+  align-items: center;
+}
+#trade #trade-form .input-item input {
+  position: relative;
+  border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: var(--white);
+  margin: 1rem 0;
+}
+#trade #trade-form .input-item input:focus {
+  outline: 1px solid var(--primary);
+}
+#trade #trade-form .input-item input::placeholder {
+  color: var(--grey03);
+}
+#trade #trade-form .address-item {
+  width: 50%;
+  align-items: center;
+}
+#trade #trade-form .address-item:last-child input {
+  position: relative;
+  border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: var(--white);
+  margin: 0.25rem 0;
+}
+#trade #trade-form .address-item:last-child .address-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#trade #trade-form .address-item input {
+  position: relative;
+  border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: var(--white);
+  margin: 1rem 0;
+}
+#trade #trade-form .address-item .address-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+#trade #trade-form .trade-info {
+  margin-bottom: 3rem;
+}
+#trade #trade-form .button-group button {
+  width: 100%;
+}
+
 footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  background: #ED671B;
+  background: #ed671b;
 }
 footer .footer-lnb {
   padding-top: 2rem;

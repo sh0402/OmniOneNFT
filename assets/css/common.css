@@ -28,8 +28,17 @@
   --elevation-default: 0 0.5rem 1rem rgba(9, 44, 76, 0.16);
   --elevation-default-hover: 0 1.5rem 2rem rgba(9, 44, 76, 0.26);
   --modalbg: rgba(0, 0, 0, 0.6);
-  --linear-gold: linear-gradient(360deg, #846A3C 12%, rgba(110, 120, 70, 0) 80%);
-  --linear-not: linear-gradient(360deg, #3D3D3D 0%, rgba(61, 61, 61, 0.8) 50%, rgba(61, 61, 61, 0.4) 100%);
+  --linear-gold: linear-gradient(
+    360deg,
+    #846a3c 12%,
+    rgba(110, 120, 70, 0) 80%
+  );
+  --linear-not: linear-gradient(
+    360deg,
+    #3d3d3d 0%,
+    rgba(61, 61, 61, 0.8) 50%,
+    rgba(61, 61, 61, 0.4) 100%
+  );
   --border-radius-xs: 0.5rem;
   --border-radius-sm: 1rem;
   --border-radius-md: 1.5rem;
@@ -177,6 +186,12 @@ p {
 a {
   text-decoration: none;
   color: var(--grey04);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .text-center {
@@ -328,27 +343,24 @@ a {
   opacity: 1;
 }
 
-#checkBox .checkbox-group {
-  padding: 1rem 0;
-}
-#checkBox .checkbox {
+.checkbox-item label.checkbox {
   -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-#checkBox .checkbox span {
-  padding-left: 0.5rem;
+.checkbox-item label.checkbox:hover {
+  background: rgba(0, 119, 255, 0.06);
 }
-#checkBox .checkbox span:first-child {
-  position: relative;
-  border-radius: 0.25rem;
-  transform: scale(1);
-  border: 1px solid var(--grey02);
-  transition: all 0.2s ease;
+.checkbox-item label.checkbox:hover span:first-child {
+  border-color: var(--secondary);
+  opacity: 0.5;
 }
-#checkBox .checkbox span:first-child svg {
+.checkbox-item label.checkbox span {
+  margin-right: 0.5rem;
+}
+.checkbox-item label.checkbox span i.check-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -358,31 +370,31 @@ a {
   width: 100%;
   height: 100%;
 }
-#checkBox .checkbox span.md:first-child {
+.checkbox-item label.checkbox span:first-child {
+  position: relative;
+  border-radius: 0.25rem;
+  transform: scale(1);
+  border: 1px solid var(--grey02);
+  transition: all 0.2s ease;
+}
+.checkbox-item label.checkbox span.check-square.size-md:first-child {
   width: 1.5rem;
   height: 1.5rem;
 }
-#checkBox .checkbox span.lg:first-child {
+.checkbox-item label.checkbox span.check-square.size-lg:first-child {
   width: 2rem;
   height: 2rem;
 }
-#checkBox .checkbox:hover {
-  background: rgba(0, 119, 255, 0.06);
-}
-#checkBox .checkbox:hover span:first-child {
-  border-color: var(--secondary);
-  opacity: 0.5;
-}
-#checkBox input {
+.checkbox-item input {
   position: absolute;
   visibility: hidden;
 }
-#checkBox input:checked + .checkbox span:first-child {
+.checkbox-item input:checked + .checkbox span:first-child {
   background: var(--secondary);
   border-color: var(--secondary);
   animation: scaleAni 0.3s ease;
 }
-#checkBox input:checked + .checkbox span:first-child svg {
+.checkbox-item input:checked + .checkbox span:first-child svg {
   opacity: 1;
 }
 
@@ -548,9 +560,17 @@ button.round {
   border-radius: 5rem;
 }
 
+button.btn-circle {
+  border-radius: 5rem;
+}
+
 button.btn-main {
   background: var(--primary);
   color: var(--white);
+}
+button.btn-main:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 button.btn-primary {
@@ -582,6 +602,15 @@ button.btn-secondary:active {
   background: var(--beige);
 }
 
+button.btn-info {
+  background: var(--info);
+  color: var(--white);
+}
+button.btn-info:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
 button.btn-minimal {
   background: transparent;
 }
@@ -604,19 +633,16 @@ button.btn-minimal p {
 
 button.btn-close {
   border-radius: 50%;
-  background: var(--grey02);
   height: 100%;
   padding: 0.25rem;
-}
-button.btn-close .svg-inline--fa {
-  font-size: 1rem;
-  width: 1rem;
-  height: 1rem;
-  color: var(--white);
+  background: transparent;
 }
 button.btn-close:hover {
-  background: var(--grey03);
   transition: all 0.3s ease;
+}
+button.btn-close .icon-close {
+  background: url("../image/icon/icon-close.svg") no-repeat center center;
+  color: var(--grey04);
 }
 
 .btn-wrap {
@@ -633,6 +659,11 @@ button.btn-close:hover {
 .btn-sm p {
   font-size: 0.75rem;
 }
+.btn-sm .icon-close {
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
 
 .btn-md {
   height: 3rem;
@@ -641,6 +672,11 @@ button.btn-close:hover {
 .btn-md svg,
 .btn-md p {
   font-size: 0.75rem;
+}
+.btn-md .icon-close {
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .btn-lg {
@@ -651,20 +687,54 @@ button.btn-close:hover {
 .btn-lg p {
   font-size: 1rem;
 }
+.btn-lg .icon-close {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+}
 
-#dialog,
+.btn-circle img {
+  border-radius: 5rem;
+  border: 1px solid var(--grey02);
+}
+
+.btn-circle-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.btn-circle-md {
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn-circle-lg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
 #progress {
+  z-index: 10;
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0;
   background: var(--modalbg);
 }
 
 #dialog {
   z-index: 10;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  background: var(--modalbg);
 }
 #dialog .modal-dialog {
   position: fixed;
@@ -696,6 +766,94 @@ button.btn-close:hover {
   gap: 1rem;
 }
 #dialog .modal-footer button {
+  width: 100%;
+}
+
+#side-menu {
+  z-index: 10;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  background: var(--modalbg);
+}
+#side-menu .modal-dialog {
+  position: absolute;
+  z-index: 1055;
+  top: 2%;
+  right: 10%;
+  border-radius: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--grey02);
+  box-shadow: var(--elevation-default);
+  padding: 2rem;
+  width: 24.5rem;
+}
+#side-menu .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#side-menu .modal-body .user-info {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+#side-menu .modal-body .user-info #user {
+  margin-right: 1rem;
+}
+#side-menu .modal-body .user-info p {
+  margin-bottom: 0.25rem;
+}
+#side-menu .modal-body .user-info p:last-child {
+  margin-bottom: 0;
+}
+#side-menu .modal-body .info-item {
+  margin-bottom: 1.5rem;
+}
+#side-menu .modal-body .info-item button {
+  width: 100%;
+  margin: 0;
+}
+#side-menu .modal-body .info-item.user-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#side-menu .modal-body .info-item.user-type .user-type-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#side-menu .modal-body .info-item.user-type .user-type-item button {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+#side-menu .modal-body .user-nav ul span {
+  display: block;
+  color: var(--grey03);
+  margin-bottom: 0.5rem;
+}
+#side-menu .modal-body .user-nav ul li {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#side-menu .modal-body .user-nav ul li a {
+  padding: 0.5rem 0;
+}
+#side-menu .modal-body .user-nav ul li a:hover, #side-menu .modal-body .user-nav ul li a:focus {
+  color: var(--grey05);
+}
+#side-menu .modal-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 1rem;
+}
+#side-menu .modal-footer button {
   width: 100%;
 }
 
@@ -741,7 +899,8 @@ button.btn-close:hover {
   width: 100%;
   text-align: left;
 }
-#table th, #table td {
+#table th,
+#table td {
   border: 1px solid var(--grey02);
   padding: 1rem;
 }
