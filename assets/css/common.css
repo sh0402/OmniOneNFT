@@ -106,7 +106,7 @@ body {
   font-size: 1.25rem;
 }
 
-.title {
+.title, .top {
   margin-bottom: 1rem;
 }
 
@@ -188,6 +188,50 @@ a {
   color: var(--grey04);
 }
 
+span {
+  position: relative;
+  display: block;
+}
+span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+span:first-child {
+  position: relative;
+  transform: scale(1);
+  border: 1px solid var(--grey02);
+  transition: all 0.2s ease;
+}
+
+.icon-size-xs:first-child {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-size-sm:first-child {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-size-md:first-child {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-size-lg:first-child {
+  width: 2rem;
+  height: 2rem;
+}
+
+i.icon-heart {
+  background: url("/assets/image/icon/icon-heart.svg") no-repeat center center;
+  background-size: cover;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -220,11 +264,14 @@ img {
 }
 
 .divider {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+.divider span.line {
   display: block;
   width: 100%;
   height: 1px;
   background: var(--grey02);
-  margin: 1.5rem 0;
 }
 
 #search {
@@ -357,16 +404,13 @@ img {
   border-color: var(--secondary);
   opacity: 0.5;
 }
-.checkbox-item label.checkbox span {
-  margin-right: 0.5rem;
-}
 .checkbox-item label.checkbox span i.check-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: url("/assets/image/icon/icon-check.svg") no-repeat center center;
-  opacity: 1;
+  opacity: 0;
   width: 100%;
   height: 100%;
 }
@@ -394,7 +438,7 @@ img {
   border-color: var(--secondary);
   animation: scaleAni 0.3s ease;
 }
-.checkbox-item input:checked + .checkbox span:first-child svg {
+.checkbox-item input:checked + .checkbox span:first-child i {
   opacity: 1;
 }
 
@@ -783,7 +827,7 @@ button.btn-close .icon-close {
 #side-menu .modal-dialog {
   position: absolute;
   z-index: 1055;
-  top: 2%;
+  top: 1%;
   right: 10%;
   border-radius: 1.25rem;
   background: var(--white);
@@ -910,6 +954,37 @@ button.btn-close .icon-close {
 .item-thumb img {
   width: 100%;
   object-fit: fill;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-item {
+  display: block;
+}
+.input-item input {
+  position: relative;
+  border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: var(--white);
+  margin: 1rem 0;
+}
+.input-item input:focus {
+  outline: 1px solid var(--primary);
+}
+.input-item input::placeholder {
+  color: var(--grey03);
 }
 
 @keyframes opacityAni {

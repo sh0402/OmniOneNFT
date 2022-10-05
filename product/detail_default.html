@@ -45,7 +45,361 @@
 
 <body>
 
-  <div data-include-path="header.html"></div>
+  <!-- HEADER / DEFAULT -->
+  <!-- <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="sign-up" class="btn-secondary btn-sm default" onclick="alert('준비중입니다.')">
+          회원가입
+        </button>
+
+        <button id=" sign-in" class="btn-primary btn-sm default" onclick="alert('준비중입니다.')">
+          로그인
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- HEADER / USER LOG-IN -->
+  <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="search" class="btn-main btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
+          <img src="./assets/image/icon/icon-search.svg" alt="">
+        </button>
+
+        <button id="sign-up" class="btn-info btn-md round" onclick="alert('준비중입니다.')">
+          NFT 만들기
+        </button>
+
+        <button id="alarm" class="btn-secondary btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
+          <span class="alarm-mark"></span>
+          <img>
+        </button>
+
+        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".user-menu"
+          onclick="event.preventDefault ? event.preventDefault() : (event.returnValue = false);">
+          <img src=" ./assets/image/user-thumb/user-thumb.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER / BUSINESS LOG-IN -->
+  <!-- <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="search" class="btn-main btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
+          <img src="./assets/image/icon/icon-search.svg" alt="">
+        </button>
+
+        <button id="sign-up" class="btn-primary btn-md round" onclick="alert('준비중입니다.')">
+          관리자 센터
+        </button>
+
+        <button id="alarm" class="btn-secondary btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
+          <span class="alarm-mark"></span>
+          <img>
+        </button>
+
+        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".business-menu"
+          onclick="event.preventDefault ? event.preventDefault() : (event.returnValue = false);">
+          <img src=" ./assets/image/user-thumb/business-thumb.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- MENU / USER LOG-IN -->
+  <div id="side-menu" class="modal fade user-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="h5">NFT Marketplace</h5>
+
+          <button class="btn-close btn-sm" data-bs-dismiss="modal">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-info">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src=" ./assets/image/user-thumb/user-thumb.png" alt="">
+            </div>
+
+            <div class="txt-group">
+              <p class="subtit-sm user-name">김라온</p>
+              <p class="fs-7">1938.04.01 / Male</p>
+              <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
+            </div>
+          </div>
+
+          <div class="info-item button-group">
+            <button class="btn-primary btn-md default">
+              내 정보 보기
+            </button>
+          </div>
+
+          <div class="info-item user-type">
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">히스토리</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">공지사항</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">FAQ</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">1:1 문의</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item user-nav">
+            <ul>
+              <li>
+                <a href="#" onclick="return false">About</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">마켓플레이스</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">소유한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">생성한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">판매 중인 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">좋아요 한 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">금 NFT 실물 교환</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">NFT 발급 받기</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">거래 및 정산</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-secondary default">로그아웃</button>
+          <button type="button" class="btn-md btn-primary default">이슈어로 전환</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MENU / BUSINESS LOG-IN -->
+  <div id="side-menu" class="modal fade business-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="h5">NFT Marketplace</h5>
+
+          <button class="btn-close btn-sm" data-bs-dismiss="modal">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-info">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src=" ./assets/image/user-thumb/business-thumb.png" alt="">
+            </div>
+
+            <div class="txt-group">
+              <p class="subtit-sm user-name">김라온</p>
+              <p class="fs-7">1938.04.01 / Male</p>
+              <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
+            </div>
+          </div>
+
+          <div class="info-item button-group">
+            <button class="btn-primary btn-md default">
+              기관 정보 보기
+            </button>
+          </div>
+
+          <div class="info-item user-type">
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">히스토리</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">공지사항</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">FAQ</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item user-nav">
+            <ul>
+              <li>
+                <a href="#" onclick="return false">About</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">마켓플레이스</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">소유한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">생성한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">판매 중인 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">좋아요 한 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">관리자 센터</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-secondary default">로그아웃</button>
+          <button type="button" class="btn-md btn-primary default">개인회원으로 전환</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <section>
     <div class="container">
@@ -399,11 +753,62 @@
     </div>
   </div>
 
-  <div data-include-path="footer.html"></div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-lnb">
+      <div class="container">
+        <div class="col">
+          <h1>OmniOne NFT</h1>
+          <ul>
+            <li><a href="">About</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Marketplace</h1>
+          <ul>
+            <li><a href="">Explore</a></li>
+            <li><a href="">Gold</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="col-group">
+            <h1>Address</h1>
+            <ul>
+              <li>13F Woosin Building, 145 Teheran-ro, Gangnam-gu, Seoul, 06132 Korea</li>
+            </ul>
+          </div>
+          <div class="col-group">
+            <h1>Tel</h1>
+            <ul>
+              <li>+82-2-561-4541</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <h1>SNS</h1>
+          <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Youtube</a></li>
+            <li><a href="">instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <p>© RaonWhiteHat. All rights reserved.</p>
+
+        <ul>
+          <li><a href="">Notice</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
-
-<script>
-
-</script>
 
 </html>

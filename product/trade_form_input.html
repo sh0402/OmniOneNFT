@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+  <!-- <meta property="lo:image" content="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
+  <meta name="description" content="OmniOne NFT Flatform" />
+  <meta property="og:type" content="OmniOne NFT Flatform" />
+  <meta property="og:title" content="OmniOne NFT Flatform" />
+  <meta property="og:description" content="OmniOne NFT Flatform" />
+  <!-- <meta property="og:image" content="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
+  <meta property="og:url" content="" />
+
+  <title>OmniOne NFT Flatform</title>
+
+  <!-- FAVICON -->
+  <!-- <link rel="shortcut icon" type="image⁄x-icon" href="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
+
+  <!-- IMPORT INTERNAL CSS -->
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/common.css" />
+
+  <!-- IMPORT EXTERNAL CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- IMPORT WEB FONT -->
+
+
+  <!-- IMPORT JAVASCRIPT -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/swiper.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="sign-up" class="btn-secondary btn-sm default" onclick="alert('준비중입니다.')">
+          회원가입
+        </button>
+
+        <button id=" sign-in" class="btn-primary btn-sm default" onclick="alert('준비중입니다.')">
+          로그인
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <section>
+    <div class="container" id="trade">
+
+      <div class="title text-center">
+        <h4 class="h4">금 실물 교환 신청</h4>
+        <div class="divider"></div>
+      </div>
+
+      <article id="trade-banner">
+
+        <div class="img-group"></div>
+
+        <div class="txt-group">
+          <p class="subtit-md">선택 : 금 1g 외 20개 NFT</p>
+          <p class="h5">
+            김라온님께서 소유하신 금 1g 외 20개 NFT를
+            실물 금으로 교환해드립니다.
+          </p>
+          <button class="btn-primary btn-md default">
+            교환 NFT 보기
+          </button>
+        </div>
+      </article>
+
+      <div class="subtitle text-center">
+        <p>
+          모든 정보를 정확하게 입력해주세요.
+        </p>
+      </div>
+
+      <article id="trade-form">
+
+        <div class="input-group applicant">
+          <div class="subtitle">
+            <p class="subtit-md">실물 교환 신청하시는 분의 정보</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="input-item grid">
+            <label for="default">신청인</label>
+            <input type="text" placeholder="신청하는 분의 실명">
+          </div>
+
+          <div class="input-item grid">
+            <label for="default">신청인 연락처</label>
+            <input type="text" placeholder="전화번호를 ‘-’ 없이 정확히 입력해주세요">
+          </div>
+        </div>
+
+        <div class="input-group recipient">
+          <div class="subtitle">
+            <p class="subtit-md">실물을 수령하실 분의 정보</p>
+
+            <div class="checkbox-item">
+              <input id="check-address" type="checkbox" />
+
+              <label class="checkbox" for="check-address">
+
+
+                <span class="check-square size-md">
+                  <i class="check-icon"></i>
+                </span>
+                <p class="subtit-sm">신청자 정보와 동일</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="input-item grid">
+            <label for="default">수령하실 분의 실명</label>
+            <input type="text" placeholder="신청하는 분의 실명">
+          </div>
+
+          <div class="input-item grid">
+            <label for="default">수령인 연락처</label>
+            <input type="text" placeholder="전화번호를 ‘-’ 없이 정확히 입력해주세요">
+          </div>
+        </div>
+
+        <div class="input-group address">
+          <div class="subtitle">
+            <p class="subtit-md">실물을 수령하실 분의 배송지 주소</p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="address-item grid">
+            <label for="default">우편번호</label>
+
+            <div class="address-input">
+              <input type="text">
+              <button class="btn-secondary btn-lg default">우편번호 검색</button>
+            </div>
+          </div>
+
+          <div class="address-item grid">
+            <label for="default">배송지 주소</label>
+
+            <div class="address-input">
+              <input type="text">
+              <input type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class="subtitle trade-info">
+          <p>
+            지번 : 서울특별시 송파구 신천동 17 <br>
+            도서산간 지역의 경우 추후 수령 시 추가 배송비가 과금될 수 있습니다.
+          </p>
+        </div>
+
+        <div class="button-group">
+          <button class="btn-primary btn-lg default">
+            다음
+          </button>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-lnb">
+      <div class="container">
+        <div class="col">
+          <h1>OmniOne NFT</h1>
+          <ul>
+            <li><a href="">About</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Marketplace</h1>
+          <ul>
+            <li><a href="">Explore</a></li>
+            <li><a href="">Gold</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="col-group">
+            <h1>Address</h1>
+            <ul>
+              <li>13F Woosin Building, 145 Teheran-ro, Gangnam-gu, Seoul, 06132 Korea</li>
+            </ul>
+          </div>
+          <div class="col-group">
+            <h1>Tel</h1>
+            <ul>
+              <li>+82-2-561-4541</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <h1>SNS</h1>
+          <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Youtube</a></li>
+            <li><a href="">instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <p>© RaonWhiteHat. All rights reserved.</p>
+
+        <ul>
+          <li><a href="">Notice</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

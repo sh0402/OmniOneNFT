@@ -2,11 +2,14 @@
 window.addEventListener('scroll', () => {
   const header = document.querySelector('#header');
   const headerHeight = header.offsetHeight;
+  const section = document.querySelector('section');
 
   if (window.scrollY > headerHeight) {
     header.classList.add('fixed');
+    section.classList.add('active');
   } else {
     header.classList.remove('fixed');
+    section.classList.remove('active');
   }
 });
 

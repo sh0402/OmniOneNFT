@@ -21,9 +21,9 @@
   <!-- <link rel="shortcut icon" type="image⁄x-icon" href="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
 
   <!-- IMPORT INTERNAL CSS -->
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/common.css" />
 
   <!-- IMPORT EXTERNAL CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -38,13 +38,47 @@
   <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/swiper.js"></script>
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/swiper.js"></script>
 
 </head>
 
 <body>
 
+  <!-- HEADER / DEFAULT -->
+  <!-- <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="sign-up" class="btn-secondary btn-sm default" data-bs-toggle="modal" data-bs-target=".signIn">
+          회원가입
+        </button>
+
+        <button id=" sign-in" class="btn-primary btn-sm default" data-bs-toggle="modal" data-bs-target=".qrLogin">
+          로그인
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- HEADER / USER LOG-IN -->
   <div id="header">
     <div class="header-container">
 
@@ -66,16 +100,299 @@
       </div>
 
       <div class="button-group">
-        <button id="sign-up" class="btn-secondary btn-sm default" onclick="alert('준비중입니다.')">
-          회원가입
+        <button id="alarm" class="btn-circle btn-circle-md" onclick="return false">
+          <span class="alarm-mark"></span>
+          <img src="../assets/image/icon/icon-bell.svg">
         </button>
 
-        <button id=" sign-in" class="btn-primary btn-sm default" onclick="alert('준비중입니다.')">
-          로그인
+        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".user-menu"
+          onclick="event.preventDefault ? event.preventDefault() : (event.returnValue = false);">
+          <img src="../assets/image/user-thumb/user-thumb.png" alt="">
         </button>
       </div>
     </div>
   </div>
+
+  <!-- HEADER / BUSINESS LOG-IN -->
+  <!-- <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="search" class="btn-main btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
+          <img src="../assets/image/icon/icon-search.svg" alt="">
+        </button>
+
+        <button id="sign-up" class="btn-primary btn-md round" onclick="alert('준비중입니다.')">
+          관리자 센터
+        </button>
+
+        <button id="alarm" class="btn-secondary btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
+          <span class="alarm-mark"></span>
+          <img>
+        </button>
+
+        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".business-menu"
+          onclick="event.preventDefault ? event.preventDefault() : (event.returnValue = false);">
+          <img src="../assets/image/user-thumb/business-thumb.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- MENU / USER LOG-IN -->
+  <div id="side-menu" class="modal fade user-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="h5">NFT Marketplace</h5>
+
+          <button class="btn-close btn-sm" data-bs-dismiss="modal">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-info">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+            </div>
+
+            <div class="text-group">
+              <p class="subtit-sm user-name">김라온</p>
+              <p class="fs-7">1938.04.01 / Male</p>
+              <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
+            </div>
+          </div>
+
+          <div class="info-item button-group">
+            <button class="btn-primary btn-md default" onclick="location.href='../mypage/mypage.html'">
+              내 정보 보기
+            </button>
+          </div>
+
+          <div class="info-item user-type">
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">히스토리</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">공지사항</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">FAQ</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">1:1 문의</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item user-nav">
+            <ul>
+              <li>
+                <a href="#" onclick="return false">About</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">마켓플레이스</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">소유한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">생성한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">판매 중인 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">좋아요 한 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">금 NFT 실물 교환</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">NFT 발급 받기</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">거래 및 정산</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-secondary default">로그아웃</button>
+          <button type="button" class="btn-md btn-primary default">이슈어로 전환</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MENU / BUSINESS LOG-IN -->
+  <div id="side-menu" class="modal fade business-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="h5">NFT Marketplace</h5>
+
+          <button class="btn-close btn-sm" data-bs-dismiss="modal">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-info">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src="../assets/image/user-thumb/business-thumb.png" alt="">
+            </div>
+
+            <div class="text-group">
+              <p class="subtit-sm user-name">김라온</p>
+              <p class="fs-7">1938.04.01 / Male</p>
+              <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
+            </div>
+          </div>
+
+          <div class="info-item button-group">
+            <button class="btn-primary btn-md default">
+              기관 정보 보기
+            </button>
+          </div>
+
+          <div class="info-item user-type">
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">히스토리</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">공지사항</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="">
+              </button>
+
+              <p class="fs-7">FAQ</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item user-nav">
+            <ul>
+              <li>
+                <a href="#" onclick="return false">About</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">마켓플레이스</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">소유한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">생성한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">판매 중인 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">좋아요 한 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">관리자 센터</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-secondary default">로그아웃</button>
+          <button type="button" class="btn-md btn-primary default">개인회원으로 전환</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
   <section>
     <div class="container">
@@ -88,7 +405,7 @@
             <div class="swiper-slide">
               <div class="linear-overlay gold"></div>
               <div class="content-group">
-                <div class="txt-group text-center">
+                <div class="text-group text-center">
                   <h1 class="h1">
                     OmniOne NFT Marketplace
                   </h1>
@@ -99,14 +416,14 @@
                   </p>
                 </div>
 
-                <img src="assets/image/hero/hero.png" alt="">
+                <img src="../assets/image/hero/hero.png" alt="">
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="linear-overlay not"></div>
               <div class="content-group">
-                <div class="txt-group text-center">
+                <div class="text-group text-center">
                   <h1 class="h1">
                     Test Titlte - 02
                   </h1>
@@ -116,14 +433,14 @@
                   </p>
                 </div>
 
-                <img src="assets/image/hero/hero.png" alt="">
+                <img src="../assets/image/hero/hero.png" alt="">
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="linear-overlay not"></div>
               <div class="content-group">
-                <div class="txt-group text-center">
+                <div class="text-group text-center">
                   <h1 class="h1">
                     Test Titlte - 03
                   </h1>
@@ -133,7 +450,7 @@
                   </p>
                 </div>
 
-                <img src="assets/image/hero/hero.png" alt="">
+                <img src="../assets/image/hero/hero.png" alt="">
               </div>
             </div>
 
@@ -145,37 +462,40 @@
 
       <!-- ISSUER ITEM -->
       <article id="issu-swiper">
-        <h5 class="h5">Issuer</h5>
+        <h5 class="h5">카테고리</h5>
 
         <div class="swiper issuSwiper">
           <div class="swiper-wrapper">
 
             <div id="issu-item" class="swiper-slide">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
-              <div class="linear-overlay gold"></div>
-              <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
-                  <h5 class="h5">Issuer</h5>
-                  <p class="fs-6">
-                    ISSUER_ITEM 1
+              <div class="linear-overlay gold"></div>
+
+              <div class="content-group">
+                <img src="../assets/image/card/gold.png" alt="">
+
+                <div class="text-group">
+                  <h5 class="h5">KOMSCO</h5>
+                  <p class="fs-6">한국조폐공사가 발행하는
+                    실물로 교환 가능한 금 NFT
                   </p>
                 </div>
+
               </div>
             </div>
 
             <div id="issu-item" class="swiper-slide">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="linear-overlay not"></div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <h5 class="h5">Issuer</h5>
                   <p class="fs-6">
                     ISSUER_ITEM 2
@@ -186,13 +506,13 @@
 
             <div id="issu-item" class="swiper-slide">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="linear-overlay not"></div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <h5 class="h5">Issuer</h5>
                   <p class="fs-6">
                     ISSUER_ITEM 3
@@ -203,15 +523,15 @@
 
             <div id="issu-item" class="swiper-slide">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
 
               <div class="linear-overlay not"></div>
 
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <h5 class="h5">Issuer</h5>
                   <p class="fs-6">
                     ISSUER_ITEM 4
@@ -222,13 +542,13 @@
 
             <div id="issu-item" class="swiper-slide">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="linear-overlay not"></div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <h5 class="h5">Issuer</h5>
                   <p class="fs-6">
                     ISSUER_ITEM 5
@@ -239,13 +559,13 @@
 
             <div id="issu-item" class="swiper-slide">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="linear-overlay not"></div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <h5 class="h5">Issuer</h5>
                   <p class="fs-6">
                     ISSUER_ITEM 6
@@ -266,7 +586,7 @@
       <!-- EVENT AREA -->
       <article id="grid-banner">
         <div class="banner-inner">
-          <div class="txt-group">
+          <div class="text-group">
             <h4 class="h4">Event</h4>
             <h2 class="h2">
               OmniOne NFT Marketplace
@@ -281,26 +601,29 @@
           </div>
 
           <div class="img-group">
-            <img src="assets/image/content/banner-02.png" alt="">
+            <img src="../assets/image/content/banner-02.png" alt="">
           </div>
         </div>
       </article>
 
       <!-- PRODUCT ITEM -->
       <article id="prod-swiper">
-        <h5 class="h5">Gold Item</h5>
+        <h5 class="h5">
+          필수 안전자산 금 <br>
+          위 • 변조가 불가능한 NFT로 소유하세요.
+        </h5>
 
         <div class="swiper prodSwiper">
           <div class="swiper-wrapper">
 
-            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nft.html'">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <div class="txt-header">
                     <p class="fs-7">user-name</p>
                   </div>
@@ -323,14 +646,14 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nfg.html'">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <div class="txt-header">
                     <p class="fs-7">user-name</p>
                   </div>
@@ -353,14 +676,14 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nfg.html'">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <div class="txt-header">
                     <p class="fs-7">user-name</p>
                   </div>
@@ -383,14 +706,14 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nfg.html'">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <div class="txt-header">
                     <p class="fs-7">user-name</p>
                   </div>
@@ -413,14 +736,14 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nfg.html'">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <div class="txt-header">
                     <p class="fs-7">user-name</p>
                   </div>
@@ -443,14 +766,14 @@
               </div>
             </div>
 
-            <div id="prod-item" class="swiper-slide" onclick="location.href='./product/detail.html'">
+            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nfg.html'">
               <div id="user-thumb">
-                <img src="assets/image/user-thumb/user-thumb.png" alt="">
+                <img src="../assets/image/user-thumb/user-thumb.png" alt="">
               </div>
               <div class="content-group">
-                <img src="assets/image/card/gold.png" alt="">
+                <img src="../assets/image/card/gold.png" alt="">
 
-                <div class="txt-group">
+                <div class="text-group">
                   <div class="txt-header">
                     <p class="fs-7">user-name</p>
                   </div>
@@ -472,8 +795,6 @@
                 </div>
               </div>
             </div>
-
-
           </div>
 
           <div class="swiper-pagination"></div>
@@ -486,7 +807,7 @@
       <!-- BANNER AREA -->
       <article id="wide-banner">
         <div class="banner-inner">
-          <div class="txt-group text-center">
+          <div class="text-group text-center">
             <h4 class="h4">
               지금 <span>OmniOne NFT</span> 앱을 다운로드 받아 안전하고 편리하게 로그인 하세요.
             </h4>
@@ -498,7 +819,7 @@
           </div>
 
           <div class="img-group">
-            <img src="assets/image/content/banner-01.png" alt="">
+            <img src="../assets/image/content/banner-01.png" alt="">
           </div>
         </div>
       </article>
@@ -506,6 +827,160 @@
     </div>
   </section>
 
+  <div id="dialog" class="modal fade signIn" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header text-center">
+          <div class="title text-center">
+            <h5 class="h5">OmniOne</h5>
+            <button class="btn-close btn-sm" data-bs-dismiss="modal">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="login-info step-01">
+            <div class="step-img">
+              <img src="../assets/image/content/signin-step-01.png" alt="">
+            </div>
+
+            <div class="step-text">
+              <div class="txt-item">
+                <h5 class="h5">STEP 1</h5>
+                <p class="fs-5">
+                  먼저 휴대폰 OmniOne 앱을 설치해주세요. <br>
+                  OmniOne의 블록체인 인증으로 안전하고 편리하게 서비스를 이용하실 수 있습니다.
+                </p>
+              </div>
+
+              <div class="step-qr">
+                <img src="../assets/image/content/signin-app-store.png" alt="">
+                <img src="../assets/image/content/signin-google-play.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="login-info step-02">
+            <div class="step-img">
+              <img src="../assets/image/content/signin-step-02.png" alt="">
+            </div>
+
+            <div class="step-text">
+              <div class="txt-item">
+                <h5 class="h5">STEP 2</h5>
+                <p class="fs-5">
+                  휴대폰에 설치하신 OmniOne 앱에서 ‘옴니원 가입 증명서’를 발급해주세요. <br>
+                  OmniOne NFT Marketplace 가입을 위한 블록체인 증명서입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="login-info step-03">
+            <div class="step-img">
+              <img src="../assets/image/content/signin-step-03.png" alt="">
+            </div>
+
+            <div class="step-text">
+              <div class="txt-item">
+                <h5 class="h5">STEP 3</h5>
+                <p class="fs-5">
+                  이용약관에 동의하시고 이메일 인증을 진행해주세요. <br>
+                  이메일로 보내드린 인증 코드를 입력하시면 가입이 완료됩니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="login-info step-04">
+            <div class="step-img">
+              <img src="../assets/image/content/signin-step-04.png" alt="">
+            </div>
+
+            <div class="step-text">
+              <div class="txt-item">
+                <h5 class="h5">STEP 4</h5>
+                <p class="fs-5">
+                  먼저 휴대폰 OmniOne 앱을 설치해주세요. <br>
+                  OmniOne의 블록체인 인증으로 안전하고 편리하게 서비스를 이용하실 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="signin-terms">
+
+            <div class="txt-item">
+              <h5 class="h5">이용약관</h5>
+            </div>
+
+            <div class="terms">
+              <p>한국디지털인증협회 개인정보처리방침 (이하 ‘방침’) 한국디지털인증협회 (이하 ‘당사’)는 [http://didalliance.org] 홈페이지 및 모바일 앱(홈페이지 및 모바일 앱 이하
+                ‘홈페이지’)을 소유 및 운용합니다. 당사는 귀하의 개인정보 보호에 대한 책임을 중요시합니다.</p>
+              <p>당사는 개인정보를 적절하고 안전하게 관리, 보호 및 처리하는 의무를 인지하고 있습니다.</p>
+              <p>본 방침의 목적은 귀하가 제공(직접 또는 제3자를 통해)하는 개인정보의 처리, 수집, 사용, 공개 및 취급 방법에 대해 설명하는 것 입니다.</p>
+              <p>본 개인정보처리방침을 주의 깊게 읽어주시기 바랍니다.</p>
+              <p>당사의 홈페이지를 사용하는 것은 본 방침에 동의한 것으로 간주됩니다.</p>
+              <p>본 방침에 동의하시지 않는 경우, 홈페이지를 사용하지 마시기 바랍니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-primary btn-md default btn-modal" data-bs-toggle="modal" data-bs-target=".qrLogin">
+            옴니원 앱으로 가입하기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dialog" class="modal fade qrLogin" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header text-center">
+          <div class="title text-center">
+            <h5 class="h5">QR 로그인</h5>
+            <button class="btn-close btn-sm" data-bs-dismiss="modal">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="login-info">
+            <div class="txt-item">
+              <p>OmniOne 모바일 앱으로 아래 QR코드를 스캔해주세요.</p>
+            </div>
+
+            <div class="step-img">
+              <img src="../assets/image/content/signin-step-01.png" alt="">
+            </div>
+          </div>
+
+          <div class="login-info">
+            <img src="../assets/image/content/login-qr.png" alt="">
+          </div>
+
+          <div class="qr-count text-center">
+            <p>남은시간 <span class="count-time">02:00</span></p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-primary btn-md default btn-modal" data-bs-dismiss="modal">
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-lnb">
       <div class="container">
@@ -561,6 +1036,9 @@
       </div>
     </div>
   </footer>
+
+
+
 </body>
 
 </html>
