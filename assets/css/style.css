@@ -964,8 +964,6 @@ section.active {
 
 #right .result-filter {
   width: 100%;
-  height: 100vh;
-  background: var(--grey01);
 }
 #right .item-option {
   display: flex;
@@ -1078,6 +1076,12 @@ footer .copyright ul li a {
   white-space: pre-line;
 }
 
+.board-menu ul li .checkbox-item label span {
+  order: 2;
+}
+.board-menu ul li .checkbox-item label p.check-list {
+  order: 1;
+}
 .board-menu ul li a {
   display: block;
   padding: 0.75rem 1rem;
@@ -1091,7 +1095,8 @@ footer .copyright ul li a {
 
 #nft-card {
   background: var(--white);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--elevation-default);
 }
 #nft-card #user-thumb {
   margin-right: 0.5rem;
@@ -1102,33 +1107,55 @@ footer .copyright ul li a {
   align-items: center;
   padding: 1rem;
 }
+#nft-card .card-header .user-id {
+  color: var(--black);
+  font-weight: 700;
+}
 #nft-card .card-header .checkbox-item {
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
+#nft-card .card-body {
+  height: 10rem;
+}
+#nft-card .card-body img {
+  object-fit: cover;
+}
 #nft-card .card-footer {
   padding: 1rem;
 }
 #nft-card .card-footer .divider {
   padding: 0;
+  margin: 0.5rem 0;
 }
 #nft-card .card-footer .title {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   margin-bottom: 0;
+}
+#nft-card .card-footer .title > p {
+  color: var(--black);
+  font-weight: 700;
 }
 #nft-card .card-footer .like {
   display: flex;
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 #nft-card .card-footer .like span {
   margin-right: 0.25rem;
+}
+#nft-card .card-footer .like p.like-num {
+  font-size: 0.75rem;
+}
+#nft-card .card-footer p.description {
+  font-size: 0.75rem;
 }
 
 #user-thumb.thumb-xs {

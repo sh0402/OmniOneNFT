@@ -1195,8 +1195,6 @@ section.active {
 
   .result-filter {
     width: 100%;
-    height: 100vh;
-    background: var(--grey01);
   }
 
   .item-option {
@@ -1338,6 +1336,18 @@ footer {
 .board-menu {
   ul {
     li {
+      .checkbox-item {
+        label {
+          span {
+            order: 2;
+          }
+
+          p.check-list {
+            order: 1;
+          }
+        }
+      }
+
       a {
         display: block;
         padding: 0.75rem 1rem;
@@ -1356,7 +1366,8 @@ footer {
 
 #nft-card {
   background: var(--white);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--elevation-default);
 
   #user-thumb {
     margin-right: 0.5rem;
@@ -1368,6 +1379,11 @@ footer {
     align-items: center;
     padding: 1rem;
 
+    .user-id {
+      color: var(--black);
+      font-weight: 700;
+    }
+
     .checkbox-item {
       position: absolute;
       right: 1rem;
@@ -1376,30 +1392,53 @@ footer {
     }
   }
 
+  .card-body {
+    height: 10rem;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
   .card-footer {
     padding: 1rem;
 
     .divider {
       padding: 0;
+      margin: 0.5rem 0;
     }
 
     .title {
+      position: relative;
       display: flex;
       align-items: center;
-      position: relative;
       margin-bottom: 0;
+
+      > p {
+        color: var(--black);
+        font-weight: 700;
+      }
     }
     
     .like {
       display: flex;
       position: absolute;
       top: 50%;
-      right: 1rem;
+      right: 0;
       transform: translateY(-50%);
+      cursor: pointer;
 
       span {
         margin-right: 0.25rem;
       }
+
+      p.like-num {
+        font-size: 0.75rem;
+      }
+    }
+
+    p.description {
+      font-size: 0.75rem;
     }
   }
 }
