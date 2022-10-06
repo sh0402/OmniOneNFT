@@ -950,7 +950,7 @@ section.active {
   }
 }
 
-#dialog.user-info {
+#dialog-user-info {
   .modal-dialog {
     width: 30rem;
   }
@@ -1053,6 +1053,10 @@ section.active {
 
   .modal-footer {
     display: block;
+
+    button {
+      width: 100%;
+    }
   }
 }
 

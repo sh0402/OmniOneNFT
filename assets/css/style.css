@@ -776,52 +776,52 @@ section.active {
   display: block;
 }
 
-#dialog.user-info .modal-dialog {
+#dialog-user-info .modal-dialog {
   width: 30rem;
 }
-#dialog.user-info .title {
+#dialog-user-info .title {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
 }
-#dialog.user-info .title .btn-close {
+#dialog-user-info .title .btn-close {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-#dialog.user-info .user-main-info {
+#dialog-user-info .user-main-info {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
-#dialog.user-info .user-main-info #user-thumb {
+#dialog-user-info .user-main-info #user-thumb {
   margin-right: 1rem;
 }
-#dialog.user-info .user-main-info p.item-name {
+#dialog-user-info .user-main-info p.item-name {
   font-weight: 700;
   color: var(--black);
 }
-#dialog.user-info .user-main-info p.item-nickname {
+#dialog-user-info .user-main-info p.item-nickname {
   color: var(--black);
 }
-#dialog.user-info .user-main-info p.item-email {
+#dialog-user-info .user-main-info p.item-email {
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
 }
-#dialog.user-info .user-main-info p.item-email span {
+#dialog-user-info .user-main-info p.item-email span {
   display: block;
 }
-#dialog.user-info .did-info {
+#dialog-user-info .did-info {
   display: grid;
   grid-template-columns: 1fr 4.5fr;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
-#dialog.user-info .did-info .did {
+#dialog-user-info .did-info .did {
   background: var(--info);
   display: flex;
   align-items: center;
@@ -829,11 +829,11 @@ section.active {
   height: 4.5rem;
   border-radius: var(--border-radius-xs);
 }
-#dialog.user-info .did-info .did p {
+#dialog-user-info .did-info .did p {
   color: var(--white);
   font-weight: 700;
 }
-#dialog.user-info .did-info .did-id {
+#dialog-user-info .did-info .did-id {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -843,25 +843,28 @@ section.active {
   overflow: hidden;
   padding: 1rem;
 }
-#dialog.user-info .did-info .did-id p {
+#dialog-user-info .did-info .did-id p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 15rem;
   height: 20px;
 }
-#dialog.user-info .did-info .did-id button {
+#dialog-user-info .did-info .did-id button {
   width: 3.5rem;
   height: 3.5rem;
   padding: 0;
 }
-#dialog.user-info .user-description {
+#dialog-user-info .user-description {
   background: var(--grey01);
   border-radius: var(--border-radius-xs);
   padding: 1rem;
 }
-#dialog.user-info .modal-footer {
+#dialog-user-info .modal-footer {
   display: block;
+}
+#dialog-user-info .modal-footer button {
+  width: 100%;
 }
 
 #trade > .title {

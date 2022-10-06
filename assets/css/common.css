@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("/assets/fontello/css/fontello.css");
 @font-face {
   font-family: "Gothic A1", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -28,17 +29,13 @@
   --elevation-default: 0 0.5rem 1rem rgba(9, 44, 76, 0.16);
   --elevation-default-hover: 0 1.5rem 2rem rgba(9, 44, 76, 0.26);
   --modalbg: rgba(0, 0, 0, 0.6);
-  --linear-gold: linear-gradient(
-    360deg,
-    #846a3c 12%,
-    rgba(110, 120, 70, 0) 80%
-  );
-  --linear-not: linear-gradient(
-    360deg,
-    #3d3d3d 0%,
-    rgba(61, 61, 61, 0.8) 50%,
-    rgba(61, 61, 61, 0.4) 100%
-  );
+  --linear-gold: linear-gradient(360deg,
+      #846a3c 12%,
+      rgba(110, 120, 70, 0) 80%);
+  --linear-not: linear-gradient(360deg,
+      #3d3d3d 0%,
+      rgba(61, 61, 61, 0.8) 50%,
+      rgba(61, 61, 61, 0.4) 100%);
   --border-radius-xs: 0.5rem;
   --border-radius-sm: 1rem;
   --border-radius-md: 1.5rem;
@@ -106,7 +103,8 @@ body {
   font-size: 1.25rem;
 }
 
-.title, .top {
+.title,
+.top {
   margin-bottom: 1rem;
 }
 
@@ -190,6 +188,7 @@ a {
 
 span {
   position: relative;
+  display: block;
 }
 span i {
   position: absolute;
@@ -198,33 +197,42 @@ span i {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
+  display: block;
 }
 
-span.icon-square {
+.icon-square {
   border-radius: 0.25rem;
   transform: scale(1);
   border: 1px solid var(--grey02);
   transition: all 0.2s ease;
 }
 
-span.icon-size-xs {
+.icon-size-xs {
   width: 1rem;
   height: 1rem;
 }
 
-span.icon-size-sm {
+.icon-size-sm {
   width: 1.25rem;
   height: 1.25rem;
 }
 
-span.icon-size-md {
+.icon-size-md {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-span.icon-size-lg {
+.icon-size-lg {
   width: 2rem;
   height: 2rem;
+}
+
+.icon-close {
+  color: var(--grey04);
+}
+
+i {
+  display: inline-block;
 }
 
 i.icon-heart {
@@ -282,6 +290,37 @@ img {
   width: 100%;
   height: 1px;
   background: var(--grey02);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(0.125rem);
+  -webkit-backdrop-filter: blur(0.125rem);
+  z-index: 9999;
+}
+.modal .modal-dialog {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--elevation-default);
+  padding: 1.5rem;
+}
+.modal .modal-body {
+  margin-bottom: 1rem;
+}
+
+.open {
+  display: block;
 }
 
 #search {
@@ -672,17 +711,12 @@ button.btn-minimal p {
 }
 
 button.btn-close {
-  border-radius: 50%;
-  height: 100%;
-  padding: 0.25rem;
+  display: flex;
   background: transparent;
 }
 button.btn-close:hover {
+  opacity: 0.6;
   transition: all 0.3s ease;
-}
-button.btn-close .icon-close {
-  background: url("../image/icon/icon-close.svg") no-repeat center center;
-  color: var(--grey04);
 }
 
 .btn-wrap {
