@@ -11,26 +11,27 @@ window.addEventListener('scroll', () => {
     header.classList.remove('fixed');
     section.classList.remove('active');
   }
+
+
+  // const prodOption = document.querySelector('.prod-option'); // 스크롤 기준이 될 요소
+  // const prodOptionHeight = prodOption.offsetHeight;
+  // const floatItem = document.querySelector('#float'); // 플로팅 할 요소
+  // const detailArea = document.querySelector('.detail-area');
+  // const detailAreaTop = detailArea.offsetTop;
+  // const detailAreaHeight = detailArea.offsetHeight;
+
+  // if (window.scrollY >= prodOptionHeight) {
+  //   floatItem.classList.add('show');
+  // } else {
+  //   floatItem.classList.remove('show');
+  // }
+
+  // if (window.scrollY >= ((detailAreaTop + detailAreaHeight) - prodOptionHeight)) {
+  //   floatItem.classList.add('ele-none');
+  // } else {
+  //   floatItem.classList.remove('ele-none');
+  // }
 });
-
-window.addEventListener('scroll', () => {
-
-  var prodOption = document.querySelector('.prod-option'); // 스크롤 기준이 될 요소
-  var floatItem = document.querySelector('#float'); // 플로팅 할 요소
-  var detailArea = document.querySelector('.detail-area');
-
-  if (window.scrollY >= prodOption.offsetHeight) {
-    floatItem.classList.add('show');
-  } else {
-    floatItem.classList.remove('show');
-  }
-
-  if (window.scrollY >= ((detailArea.offsetTop + detailArea.offsetHeight) - prodOption.offsetHeight)) {
-    floatItem.classList.add('ele-none');
-  } else {
-    floatItem.classList.remove('ele-none');
-  }
-})
 
 
 // SELECT BOX 함수
@@ -79,22 +80,22 @@ document.addEventListener('click', function (e) {
 });
 
 
-// COUNTER 함수
-const increase = document.querySelector('.plus');
-const decrease = document.querySelector('.minus');
-const counterText = document.querySelector('.count-num');
+// // COUNTER 함수
+// var increase = document.querySelector('.plus');
+// var decrease = document.querySelector('.minus');
+// var counterText = document.querySelector('.count-num');
 
 
-increase.onclick = () => {
-  const current = parseInt(counterText.innerText, 10)
-  counterText.innerText = current + 1;
+// increase.onclick = () => {
+//   var current = parseInt(counterText.innerText, 10)
+//   counterText.innerText = current + 1;
 
-  console.log(counterText.innerText);
-}
+//   console.log(counterText.innerText);
+// }
 
-decrease.onclick = () => {
-  if (counterText.innerText > 0) {
-    const current = parseInt(counterText.innerText, 10)
-    counterText.innerText = current - 1;
-  }
-}
+// decrease.onclick = () => {
+//   if (counterText.innerText > 0) {
+//     var current = parseInt(counterText.innerText, 10)
+//     counterText.innerText = current - 1;
+//   }
+// }

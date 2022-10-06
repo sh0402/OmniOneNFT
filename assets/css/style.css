@@ -776,6 +776,94 @@ section.active {
   display: block;
 }
 
+#dialog.user-info .modal-dialog {
+  width: 30rem;
+}
+#dialog.user-info .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#dialog.user-info .title .btn-close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#dialog.user-info .user-main-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#dialog.user-info .user-main-info #user-thumb {
+  margin-right: 1rem;
+}
+#dialog.user-info .user-main-info p.item-name {
+  font-weight: 700;
+  color: var(--black);
+}
+#dialog.user-info .user-main-info p.item-nickname {
+  color: var(--black);
+}
+#dialog.user-info .user-main-info p.item-email {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+#dialog.user-info .user-main-info p.item-email span {
+  display: block;
+}
+#dialog.user-info .did-info {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+#dialog.user-info .did-info .did {
+  background: var(--info);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  border-radius: var(--border-radius-xs);
+}
+#dialog.user-info .did-info .did p {
+  color: var(--white);
+  font-weight: 700;
+}
+#dialog.user-info .did-info .did-id {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--grey01);
+  height: 4.5rem;
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  padding: 1rem;
+}
+#dialog.user-info .did-info .did-id p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 15rem;
+  height: 20px;
+}
+#dialog.user-info .did-info .did-id button {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+}
+#dialog.user-info .user-description {
+  background: var(--grey01);
+  border-radius: var(--border-radius-xs);
+  padding: 1rem;
+}
+#dialog.user-info .modal-footer {
+  display: block;
+}
+
 #trade > .title {
   display: flex;
   flex-direction: column;
@@ -914,50 +1002,6 @@ section.active {
   position: sticky;
   top: 9rem;
 }
-#left .explore-menu .title {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0;
-}
-#left .explore-menu .title p.h7, #left .explore-menu .title i {
-  padding: 0.5rem 1rem;
-}
-#left .explore-menu .menu-group ul li {
-  padding: 0.5rem 1rem;
-}
-#left .explore-menu .menu-group ul li a {
-  font-size: 1rem;
-  color: var(--grey03);
-}
-#left .explore-menu .menu-group ul li button {
-  width: 100%;
-}
-#left .explore-menu .menu-group .input-item {
-  margin-right: 0.5rem;
-}
-#left .explore-menu .menu-group .input-item:last-child {
-  margin-right: 0;
-}
-#left .explore-menu .menu-group .input-item label {
-  position: relative;
-}
-#left .explore-menu .menu-group .input-item input {
-  padding-left: 1rem;
-  padding-right: 2rem;
-}
-#left .explore-menu .menu-group .input-item span.subtit-sm {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  font-weight: 700;
-}
-#left .explore-menu .menu-group.check-list ul li {
-  justify-content: space-between;
-}
-#left .explore-menu .menu-group.input-list ul li {
-  margin: 0.25rem 0;
-}
 #left p {
   margin-right: 0.5rem;
 }
@@ -1076,11 +1120,8 @@ footer .copyright ul li a {
   white-space: pre-line;
 }
 
-.board-menu ul li .checkbox-item label span {
-  order: 2;
-}
-.board-menu ul li .checkbox-item label p.check-list {
-  order: 1;
+.board-menu ul li {
+  padding: 0.25rem 0;
 }
 .board-menu ul li a {
   display: block;
@@ -1091,6 +1132,46 @@ footer .copyright ul li a {
 .board-menu ul li a:focus, .board-menu ul li a:hover, .board-menu ul li a:active {
   color: var(--black);
   background: var(--grey01);
+}
+.board-menu ul li p {
+  padding: 0.75rem 1rem;
+  color: var(--grey03);
+}
+
+.explore-menu ul li {
+  padding: 0.75rem 1rem;
+}
+.explore-menu .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.explore-menu .main-list {
+  cursor: pointer;
+}
+.explore-menu .main-list span {
+  transition: all ease 0.1s;
+}
+.explore-menu .main-list.active span {
+  transform: rotate(180deg);
+}
+.explore-menu .sub-list {
+  display: none;
+  animation: opacityAni 0.3s;
+  margin-top: 1rem;
+}
+.explore-menu .sub-list li {
+  padding: 0.25rem 0;
+}
+.explore-menu .sub-list li p {
+  color: var(--grey03);
+}
+.explore-menu .sub-list li button {
+  width: 100%;
+}
+.explore-menu .sub-list.active {
+  display: block;
 }
 
 #nft-card {
@@ -1161,6 +1242,21 @@ footer .copyright ul li a {
 #user-thumb.thumb-xs {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+#user-thumb.thumb-sm {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+#user-thumb.thumb-md {
+  width: 4rem;
+  height: 4rem;
+}
+
+#user-thumb.thumb-lg {
+  width: 5rem;
+  height: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

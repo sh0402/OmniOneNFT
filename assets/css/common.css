@@ -232,6 +232,16 @@ i.icon-heart {
   background-size: cover;
 }
 
+i.icon-arrow {
+  background: url("/assets/image/icon/icon-down.svg") no-repeat center center;
+  background-size: cover;
+}
+
+i.icon-copy {
+  background: url("/assets/image/icon/icon-copy.svg") no-repeat center center;
+  background-size: cover;
+}
+
 img {
   width: 100%;
   height: 100%;

@@ -38,16 +38,81 @@
   <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- <script defer src="../assets/js/main.js"></script> -->
   <script defer src="../assets/js/main.js"></script>
   <script defer src="../assets/js/swiper.js"></script>
 
 </head>
 
 <body>
+  <!-- HEADER / DEFAULT -->
+  <!-- <div id="header">
+    <div class="header-container">
+
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="">
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="sign-up" class="btn-secondary btn-sm default" data-bs-toggle="modal" data-bs-target=".signIn">
+          회원가입
+        </button>
+
+        <button id=" sign-in" class="btn-primary btn-sm default" data-bs-toggle="modal" data-bs-target=".qrLogin">
+          로그인
+        </button>
+      </div>
+    </div>
+  </div> -->
 
   <!-- HEADER / USER LOG-IN -->
   <div id="header">
+    <div class="header-container">
+      <div class="nav">
+        <h1 class="logo" onclick="location.href='/'">
+          <img src="../assets/image/logo-symbol.svg" alt="" />
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#" onclick="return false">About</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">마켓플레이스</a>
+          </li>
+          <li>
+            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-group">
+        <button id="alarm" class="btn-circle btn-circle-md" onclick="return false">
+          <span class="alarm-mark"></span>
+          <img src="../assets/image/icon/icon-bell.svg" />
+        </button>
+
+        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".user-menu"
+          onclick="event.preventDefault ? event.preventDefault() : (event.returnValue = false);">
+          <img src="../assets/image/user-thumb/user-thumb.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER / BUSINESS LOG-IN -->
+  <!-- <div id="header">
     <div class="header-container">
 
       <div class="nav">
@@ -72,8 +137,8 @@
           <img src="../assets/image/icon/icon-search.svg" alt="">
         </button>
 
-        <button id="sign-up" class="btn-info btn-md round" onclick="alert('준비중입니다.')">
-          NFT 만들기
+        <button id="sign-up" class="btn-primary btn-md round" onclick="alert('준비중입니다.')">
+          관리자 센터
         </button>
 
         <button id="alarm" class="btn-secondary btn-circle btn-circle-md" onclick="alert('준비중입니다.')">
@@ -81,22 +146,257 @@
           <img>
         </button>
 
-        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".user-menu"
+        <button id="user" class="btn-circle btn-circle-md" data-bs-toggle="modal" data-bs-target=".business-menu"
           onclick="event.preventDefault ? event.preventDefault() : (event.returnValue = false);">
-          <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+          <img src="../assets/image/user-thumb/business-thumb.png" alt="">
         </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- MENU / USER LOG-IN -->
+  <div id="side-menu" class="modal fade user-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="h5">NFT Marketplace</h5>
+
+          <button class="btn-close btn-sm" data-bs-dismiss="modal">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-info">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src="../assets/image/user-thumb/user-thumb.png" alt="" />
+            </div>
+
+            <div class="text-group">
+              <p class="subtit-sm user-name">김라온</p>
+              <p class="fs-7">1938.04.01 / Male</p>
+              <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
+            </div>
+          </div>
+
+          <div class="info-item button-group">
+            <button class="btn-primary btn-md default" onclick="location.href='../mypage/mypage.html'">
+              내 정보 보기
+            </button>
+          </div>
+
+          <div class="info-item user-type">
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">히스토리</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">공지사항</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">FAQ</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">1:1 문의</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item user-nav">
+            <ul>
+              <li>
+                <a href="#" onclick="return false">About</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">마켓플레이스</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">소유한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">생성한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">판매 중인 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">좋아요 한 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">금 NFT 실물 교환</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">NFT 발급 받기</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">거래 및 정산</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-secondary default">
+            로그아웃
+          </button>
+          <button type="button" class="btn-md btn-primary default">
+            이슈어로 전환
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- MENU / BUSINESS LOG-IN -->
+  <div id="side-menu" class="modal fade business-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="h5">NFT Marketplace</h5>
+
+          <button class="btn-close btn-sm" data-bs-dismiss="modal">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-info">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src="../assets/image/user-thumb/business-thumb.png" alt="" />
+            </div>
+
+            <div class="text-group">
+              <p class="subtit-sm user-name">김라온</p>
+              <p class="fs-7">1938.04.01 / Male</p>
+              <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
+            </div>
+          </div>
+
+          <div class="info-item button-group">
+            <button class="btn-primary btn-md default">기관 정보 보기</button>
+          </div>
+
+          <div class="info-item user-type">
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="../assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">히스토리</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">공지사항</p>
+            </div>
+
+            <div class="user-type-item">
+              <button class="btn-secondary btn-md default">
+                <img src="./assets/image/icon/icon-search.svg" alt="" />
+              </button>
+
+              <p class="fs-7">FAQ</p>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item user-nav">
+            <ul>
+              <li>
+                <a href="#" onclick="return false">About</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">마켓플레이스</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">소유한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">생성한 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">판매 중인 NFT</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">좋아요 한 NFT</a>
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <ul>
+              <span class="fs-7">List Ttile</span>
+              <li>
+                <a href="#" onclick="return false">관리자 센터</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-md btn-secondary default">
+            로그아웃
+          </button>
+          <button type="button" class="btn-md btn-primary default">
+            개인회원으로 전환
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section>
     <div class="container">
-
       <article id="my-info">
-
         <div id="user-thumb">
-          <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+          <img src="../assets/image/user-thumb/user-thumb.png" alt="" />
         </div>
 
         <div class="info-text">
@@ -107,19 +407,24 @@
             </div>
 
             <div class="description">
-              <p>소개하겠습니다. 제 실명은 김라온이고 닉네임은 정하지 않았습니다.
-                제 DID 복사해서 NFT 소유권 이전 많이 해주세요.</p>
+              <p>
+                소개하겠습니다. 제 실명은 김라온이고 닉네임은 정하지
+                않았습니다. 제 DID 복사해서 NFT 소유권 이전 많이 해주세요.
+              </p>
             </div>
           </div>
 
+
           <div class="button-group">
-            <button class="btn-primary btn-md default">자세히 보기</button>
+            <button class="btn-primary btn-md default">
+              자세히 보기
+            </button>
           </div>
+
         </div>
       </article>
 
       <article id="explore">
-
         <div id="left">
           <div class="board-menu">
             <ul>
@@ -135,98 +440,108 @@
               <li>
                 <a href="#" onclick="return false">좋아요 한 NFT</a>
               </li>
+            </ul>
+
+            <div class="divider">
+              <span class="line"></span>
+            </div>
+
+            <ul>
               <li>
                 <a href="#" onclick="return false">거래 및 정산 내역</a>
               </li>
             </ul>
-          </div>
 
-          <div class="divider">
-            <span class="line"></span>
+            <div class="divider">
+              <span class="line"></span>
+            </div>
           </div>
 
           <div class="explore-menu">
-            <div class="menu-group check-list">
-              <div class="title">
-                <p class="h7">Status</p>
-                <i>
-                  <img src="../assets/image/icon/icon-down.svg" alt="">
-                </i>
-              </div>
+            <ul>
+              <li>
+                <div class="main-list title">
+                  <h7 class="h7">Status</h7>
+                  <span class="icon-size-md">
+                    <i class="icon-arrow"></i>
+                  </span>
+                </div>
 
-              <ul>
-                <li>
-                  <div class="checkbox-item">
-                    <input id="nft-all" type="checkbox" />
+                <ul class="sub-list">
+                  <li>
+                    <div class="checkbox-item">
+                      <input id="nft-all" type="checkbox" />
 
-                    <label class="checkbox" for="nft-all">
-                      <p>NFT 유형 전체</p>
+                      <label class="checkbox" for="nft-all">
+                        <p>NFT 유형 전체</p>
 
-                      <span class="icon-square icon-size-md">
-                        <i class="icon-check"></i>
-                      </span>
-                    </label>
-                  </div>
-                </li>
+                        <span class="icon-square icon-size-md">
+                          <i class="icon-check"></i>
+                        </span>
+                      </label>
+                    </div>
+                  </li>
 
-                <li>
-                  <div class="checkbox-item">
-                    <input id="trade" type="checkbox" />
+                  <li>
+                    <div class="checkbox-item">
+                      <input id="trade" type="checkbox" />
 
-                    <label class="checkbox" for="trade">
-                      <p>실물 교환 가능</p>
+                      <label class="checkbox" for="trade">
+                        <p>실물 교환 가능</p>
 
-                      <span class="icon-square icon-size-md">
-                        <i class="icon-check"></i>
-                      </span>
-                    </label>
-                  </div>
-                </li>
+                        <span class="icon-square icon-size-md">
+                          <i class="icon-check"></i>
+                        </span>
+                      </label>
+                    </div>
+                  </li>
 
-                <li>
-                  <div class="checkbox-item">
-                    <input id="digital-cont" type="checkbox" />
+                  <li>
+                    <div class="checkbox-item">
+                      <input id="digital-cont" type="checkbox" />
 
-                    <label class="checkbox" for="digital-cont">
-                      <p>디지털 콘텐츠</p>
+                      <label class="checkbox" for="digital-cont">
+                        <p>디지털 콘텐츠</p>
 
-                      <span class="icon-square icon-size-md">
-                        <i class="icon-check"></i>
-                      </span>
-                    </label>
-                  </div>
-                </li>
-
-              </ul>
+                        <span class="icon-square icon-size-md">
+                          <i class="icon-check"></i>
+                        </span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </li>
 
               <div class="divider">
                 <span class="line"></span>
               </div>
 
-              <div class="menu-group">
-                <ul>
-                  <div class="title">
-                    <p class="h7">금 NFT 실물 교환</p>
-                  </div>
+              <li>
+                <div class="main-list title">
+                  <h7 class="h7">금 NFT 실물 교환</h7>
+                  <span class="icon-size-md">
+                    <i class="icon-arrow"></i>
+                  </span>
+                </div>
 
-                  <li class="button-group">
+                <ul class="sub-list">
+                  <li>
                     <button class="btn-primary btn-md default">실물로 교환하기</button>
                   </li>
                 </ul>
-              </div>
 
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div id="right">
-
           <div class="item-option">
             <div id="select">
               <div class="selected">
                 <span class="selected-value">크리에이터</span>
                 <i>
-                  <img src="/assets/image/icon/icon-down.svg" alt="">
+                  <img src="/assets/image/icon/icon-down.svg" alt="" />
                 </i>
               </div>
 
@@ -242,7 +557,7 @@
               <div class="selected">
                 <span class="selected-value">최신순</span>
                 <i>
-                  <img src="/assets/image/icon/icon-down.svg" alt="">
+                  <img src="/assets/image/icon/icon-down.svg" alt="" />
                 </i>
               </div>
 
@@ -256,17 +571,15 @@
           </div>
 
           <div class="result-filter">
-            <div class="row">
 
+            <div class="row">
               <div id="nft-card">
                 <div class="card-header">
                   <div id="user-thumb" class="thumb-xs">
-                    <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+                    <img src="../assets/image/user-thumb/user-thumb.png" alt="" />
                   </div>
 
-                  <p class="user-id fs-7">
-                    달콤한미르_3901803
-                  </p>
+                  <p class="user-id fs-7">달콤한미르_3901803</p>
 
                   <div class="checkbox-item">
                     <input id="check-01" type="checkbox" />
@@ -276,11 +589,10 @@
                       </span>
                     </label>
                   </div>
-
                 </div>
 
                 <div class="card-body">
-                  <img src="../assets/image/card/gold.png" alt="">
+                  <img src="../assets/image/card/gold.png" alt="" />
                 </div>
 
                 <div class="card-footer">
@@ -301,11 +613,13 @@
                   </div>
 
                   <div class="">
-                    <p class="description">NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌. 초과영역은 이...</p>
+                    <p class="description">
+                      NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
+                      초과영역은 이...
+                    </p>
                   </div>
                 </div>
               </div>
-
               <div id="nft-card">
                 <div class="card-header">
                   <div id="user-thumb" class="thumb-xs">
@@ -445,15 +759,157 @@
                   <p class="description">NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌. 초과영역은 이...</p>
                 </div>
               </div>
-
             </div>
+
           </div>
+        </div>
       </article>
-
-
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-lnb">
+      <div class="container">
+        <div class="col">
+          <h1>OmniOne NFT</h1>
+          <ul>
+            <li><a href="">About</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Marketplace</h1>
+          <ul>
+            <li><a href="">Explore</a></li>
+            <li><a href="">Gold</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="col-group">
+            <h1>Address</h1>
+            <ul>
+              <li>13F Woosin Building, 145 Teheran-ro, Gangnam-gu, Seoul, 06132 Korea</li>
+            </ul>
+          </div>
+          <div class="col-group">
+            <h1>Tel</h1>
+            <ul>
+              <li>+82-2-561-4541</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <h1>SNS</h1>
+          <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Youtube</a></li>
+            <li><a href="">instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <p>© RaonWhiteHat. All rights reserved.</p>
+
+        <ul>
+          <li><a href="">Notice</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Terms</a></li>
+          <li><a href="">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div id="dialog" class="user-info" tabindex="-1" aria-hidden="true" style="display: block;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header text-center">
+          <div class="title">
+            <h5 class="h5">사용자 정보</h5>
+            <button class="btn-close btn-sm" data-bs-dismiss="modal">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="user-main-info">
+            <div id="user-thumb" class="thumb-lg">
+              <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+            </div>
+
+            <div class="item-group">
+              <p class="item-name fs-6">김라온</p>
+              <p class="item-nickname fs-7">달콤한미르_12345678</p>
+
+              <p class="item-email fs-7">
+                <span class="icon-size-sm">
+                  <i class="icon-copy"></i>
+                </span>
+                raonsequre@raonkorp.com
+              </p>
+            </div>
+          </div>
+
+          <div class="did-info">
+            <div class="did">
+              <p>DID</p>
+            </div>
+
+            <div class="did-id">
+              <p>
+                did:raon:0000000000000000000000000039djvvse
+              </p>
+
+              <button class="copy btn-secondary btn-md default">
+                <span class="icon-size-sm">
+                  <i class="icon-copy"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="user-description">
+            <p>소개하겠습니다. 제 실명은 김라온이고 닉네임은 정하지 않았습니다. 제 DID 복사해서 NFT
+              소유권 이전 많이 해주세요.
+            </p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-primary btn-md default btn-modal" data-bs-dismiss="modal">
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var openTriger = document.getElementsByClassName('main-list');
+    var i;
+
+    for (i = 0; i < openTriger.length; i++) {
+      openTriger[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+
+        var content = this.nextElementSibling;
+        if (content.classList.contains('active')) {
+          content.classList.remove('active');
+
+        } else {
+          content.classList.add('active');
+        }
+
+      })
+    }
+  </script>
 </body>
 
 </html>

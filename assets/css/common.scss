@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 @font-face {
-  font-family: "Gothic A1", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  font-family: 'Gothic A1', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  font-family: 'Inter', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 
@@ -55,14 +55,14 @@
   box-sizing: border-box;
   font-size: 16px;
   font-weight: normal;
-  font-family: "Inter", "Gothic A1", Arial, sans-serif !important;
+  font-family: 'Inter', 'Gothic A1', Arial, sans-serif !important;
 }
 
 html,
 body {
   height: 100%;
   height: 100%;
-  font-family: "Inter", "Gothic A1", Arial, sans-serif !important;
+  font-family: 'Inter', 'Gothic A1', Arial, sans-serif !important;
   font-weight: 400;
   color: #727272;
   -ms-text-size-adjust: 100%;
@@ -222,7 +222,17 @@ span.icon-size-lg {
 }
 
 i.icon-heart {
-  background: url("/assets/image/icon/icon-heart.svg") no-repeat center center;
+  background: url('/assets/image/icon/icon-heart.svg') no-repeat center center;
+  background-size: cover;
+}
+
+i.icon-arrow {
+  background: url('/assets/image/icon/icon-down.svg') no-repeat center center;
+  background-size: cover;
+}
+
+i.icon-copy {
+  background: url('/assets/image/icon/icon-copy.svg') no-repeat center center;
   background-size: cover;
 }
 
@@ -434,7 +444,7 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url("/assets/image/icon/icon-check.svg") no-repeat center
+        background: url('/assets/image/icon/icon-check.svg') no-repeat center
           center;
         opacity: 0;
         width: 100%;
@@ -518,7 +528,7 @@ img {
 //           top: 50%;
 //           left: 50%;
 //           transform: translate(-50%, -50%);
-//           background: url("/assets/image/icon/icon-check.svg") no-repeat center
+//           background: url('/assets/image/icon/icon-check.svg') no-repeat center
 //             center;
 //           opacity: 1;
 //           width: 100%;
@@ -616,12 +626,12 @@ img {
     visibility: hidden;
   }
 
-  input[type="radio"]:checked + .radio-label span:first-child {
+  input[type='radio']:checked + .radio-label span:first-child {
     border-color: var(--secondary);
     animation: scaleAni 0.3s ease;
   }
 
-  input[type="radio"]:checked + .radio-label span:first-child svg {
+  input[type='radio']:checked + .radio-label span:first-child svg {
     border-radius: 50%;
     background: var(--secondary);
     opacity: 1;
@@ -720,7 +730,7 @@ img {
   }
 
   p.count-num {
-    font-family: "Inter", "Gothic A1", Arial, sans-serif;
+    font-family: 'Inter', 'Gothic A1', Arial, sans-serif;
     font-weight: bold;
     padding: 0 1.5rem;
     width: 4rem;
@@ -857,7 +867,7 @@ button.btn-close {
   }
 
   .icon-close {
-    background: url("../image/icon/icon-close.svg") no-repeat center center;
+    background: url('../image/icon/icon-close.svg') no-repeat center center;
     color: var(--grey04);
   }
 }
