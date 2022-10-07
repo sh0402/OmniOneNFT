@@ -11,26 +11,6 @@ window.addEventListener('scroll', () => {
     header.classList.remove('fixed');
     section.classList.remove('active');
   }
-
-
-  // const prodOption = document.querySelector('.prod-option'); // 스크롤 기준이 될 요소
-  // const prodOptionHeight = prodOption.offsetHeight;
-  // const floatItem = document.querySelector('#float'); // 플로팅 할 요소
-  // const detailArea = document.querySelector('.detail-area');
-  // const detailAreaTop = detailArea.offsetTop;
-  // const detailAreaHeight = detailArea.offsetHeight;
-
-  // if (window.scrollY >= prodOptionHeight) {
-  //   floatItem.classList.add('show');
-  // } else {
-  //   floatItem.classList.remove('show');
-  // }
-
-  // if (window.scrollY >= ((detailAreaTop + detailAreaHeight) - prodOptionHeight)) {
-  //   floatItem.classList.add('ele-none');
-  // } else {
-  //   floatItem.classList.remove('ele-none');
-  // }
 });
 
 
@@ -80,37 +60,28 @@ document.addEventListener('click', function (e) {
 });
 
 
-// // COUNTER 함수
-// var increase = document.querySelector('.plus');
-// var decrease = document.querySelector('.minus');
-// var counterText = document.querySelector('.count-num');
-
-
-// increase.onclick = () => {
-//   var current = parseInt(counterText.innerText, 10)
-//   counterText.innerText = current + 1;
-
-//   console.log(counterText.innerText);
-// }
-
-// decrease.onclick = () => {
-//   if (counterText.innerText > 0) {
-//     var current = parseInt(counterText.innerText, 10)
-//     counterText.innerText = current - 1;
-//   }
-// }
-
 // MODAL 함수
-
 document.addEventListener('click', function (e) {
   e = e || window.event;
+  // var target = e.target || e.srcElement || e.target.parentElement;
   var target = e.target || e.srcElement;
+  var body = document.body;
+  var modal = document.querySelector('[class="modal open"]');
+
+  console.log(target);
 
   if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'modal') {
     if (target.hasAttribute('data-target')) {
       var m_ID = target.getAttribute('data-target');
       document.getElementById(m_ID).classList.add('open');
-      e.preventDefault();
+      body.classList.add('open');
+      e.stopPropagation();
+
+      if (!modal) return;
+
+      if (modal) {
+        modal.classList.remove('open')
+      }
     }
   }
 
@@ -118,6 +89,27 @@ document.addEventListener('click', function (e) {
   if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'modal') || target.classList.contains('modal')) {
     var modal = document.querySelector('[class="modal open"]');
     modal.classList.remove('open');
-    e.preventDefault();
+    body.classList.remove('open');
+    e.stopPropagation();
   }
+
 }, false);
+
+document.addEventListener('keydown', (e) => {
+  const modal = document.querySelector('[class="modal open"]');
+  if (!modal) return;
+
+  const keyDown = e.keyCode;
+
+  if (keyDown === 27) {
+    modal.classList.remove('open');
+    document.body.classList.remove('open');
+  }
+}); //ESC로 모달 닫기
+
+// document.addEventListener('click', function (e) {\
+// if(e.target.classList.contains('open')) {
+//   e.target.classList.remove('open');
+//   this.body.classList.remove('open');
+// }
+// }); //외부 클릭 모달 닫기

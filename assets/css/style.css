@@ -72,31 +72,10 @@ body {
 #header .button-group {
   display: flex;
 }
-#header .button-group button {
-  margin-left: 1rem;
-  margin-right: 0;
-}
-#header .button-group button:first-child {
-  margin-left: 0;
-}
-#header button#search img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  padding: 0.75rem;
-  border: none;
-}
-#header button#user-thumb {
-  position: initial;
-}
-#header button#alarm {
+#header .button-item {
   position: relative;
 }
-#header button#alarm img {
-  background: var(--grey01);
-  padding: 0.5rem;
-}
-#header button#alarm span.alarm-mark {
+#header .button-item span.alarm-mark {
   width: 0.75rem;
   height: 0.75rem;
   background: var(--error);
@@ -105,6 +84,13 @@ body {
   right: 0;
   border-radius: 1rem;
   outline: 2px solid var(--white);
+}
+#header button.alarm {
+  background: var(--grey01);
+}
+#header button.alarm:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 #header.fixed {
@@ -290,7 +276,14 @@ section.active {
   height: 22rem;
 }
 #issu-swiper #user-thumb {
+  position: absolute;
+  bottom: 26%;
   right: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+#issu-swiper #user-thumb img {
+  border-radius: var(--border-radius-sm);
 }
 #issu-swiper .text-group {
   bottom: 0;
@@ -312,7 +305,14 @@ section.active {
   height: 40rem;
 }
 #prod-swiper #user-thumb {
+  position: absolute;
+  bottom: 22%;
   left: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+}
+#prod-swiper #user-thumb img {
+  border-radius: var(--border-radius-sm);
 }
 #prod-swiper .text-group {
   bottom: 0;
@@ -348,8 +348,6 @@ section.active {
 }
 
 #user-thumb {
-  bottom: 26%;
-  border-radius: 1.5rem;
   z-index: 2;
   outline: none;
   border: none;
@@ -357,7 +355,7 @@ section.active {
 #user-thumb img {
   outline: none;
   border: none;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-sm);
 }
 
 #grid-banner {
@@ -466,8 +464,10 @@ section.active {
   height: 100%;
 }
 #detail #right #user-thumb {
-  position: initial;
   margin-right: 1rem;
+}
+#detail #right #user-thumb img {
+  border-radius: var(--border-radius-sm);
 }
 #detail #right .item-group {
   border: 1px solid var(--grey02);
@@ -479,6 +479,9 @@ section.active {
 }
 #detail #right .item-group .title-item {
   margin-bottom: 2rem;
+}
+#detail #right .item-group .title-item p {
+  margin-bottom: 0.5rem;
 }
 #detail #right .item-group .users-item {
   display: flex;
@@ -492,20 +495,12 @@ section.active {
   padding: 1.5rem;
   margin-bottom: 2rem;
 }
-#detail #right .item-group .button-item {
-  display: flex;
-  flex-direction: column;
-}
-#detail #right .item-group .button-item > button {
-  margin-bottom: 1rem;
-  margin-right: 0;
-}
-#detail #right .item-group .button-item .button-group {
+#detail #right .item-group .button-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
-#detail #right .item-group .button-item .button-group button {
+#detail #right .item-group .button-group button {
   width: 100%;
 }
 #detail #right .item-group .detail-item .sample {
@@ -529,20 +524,12 @@ section.active {
   background: var(--white);
   box-shadow: var(--elevation-default);
 }
-#float .button-item {
-  display: flex;
-  flex-direction: column;
-}
-#float .button-item > button {
-  margin-bottom: 1rem;
-  margin-right: 0;
-}
-#float .button-item .button-group {
+#float .button-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
-#float .button-item .button-group button {
+#float .button-group button {
   width: 100%;
 }
 
@@ -554,140 +541,264 @@ section.active {
   box-shadow: none;
 }
 
-#dialog.goldbuy .modal-dialog {
-  width: 30rem;
+#side-menu-user .modal-dialog, #side-menu-issuer .modal-dialog {
+  top: 3rem;
+  right: 3rem;
+  width: 24.5rem;
 }
-#dialog.goldbuy .item-thumb {
+#side-menu-user .modal-header, #side-menu-issuer .modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#side-menu-user .modal-body .divider, #side-menu-issuer .modal-body .divider {
+  padding: 0;
+}
+#side-menu-user .modal-body .user-info, #side-menu-issuer .modal-body .user-info {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+#side-menu-user .modal-body .user-info #user-thumb, #side-menu-issuer .modal-body .user-info #user-thumb {
+  margin-right: 1rem;
+}
+#side-menu-user .modal-body .user-info #issuer-thumb, #side-menu-issuer .modal-body .user-info #issuer-thumb {
+  margin-right: 1rem;
+}
+#side-menu-user .modal-body .user-info p, #side-menu-issuer .modal-body .user-info p {
+  margin-bottom: 0.25rem;
+}
+#side-menu-user .modal-body .user-info p:nth-of-type(2), #side-menu-issuer .modal-body .user-info p:nth-of-type(2) {
+  color: var(--grey03);
+}
+#side-menu-user .modal-body .user-info p:last-child, #side-menu-issuer .modal-body .user-info p:last-child {
+  margin-bottom: 0;
+}
+#side-menu-user .modal-body .info-item, #side-menu-issuer .modal-body .info-item {
   margin-bottom: 1.5rem;
 }
-#dialog.goldbuy .price-item {
+#side-menu-user .modal-body .info-item button, #side-menu-issuer .modal-body .info-item button {
+  width: 100%;
+  margin: 0;
+}
+#side-menu-user .modal-body .user-type, #side-menu-issuer .modal-body .user-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#dialog.goldbuy .txt-item {
-  padding: 0 3rem;
+#side-menu-user .modal-body .issuer-type, #side-menu-issuer .modal-body .issuer-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-#dialog.goldbuy .txt-item p {
+#side-menu-user .modal-body .user-type .user-type-item, #side-menu-user .modal-body .issuer-type .user-type-item, #side-menu-issuer .modal-body .user-type .user-type-item, #side-menu-issuer .modal-body .issuer-type .user-type-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#side-menu-user .modal-body .user-type .user-type-item button, #side-menu-user .modal-body .issuer-type .user-type-item button, #side-menu-issuer .modal-body .user-type .user-type-item button, #side-menu-issuer .modal-body .issuer-type .user-type-item button {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.5rem;
+}
+#side-menu-user .modal-body .user-type p, #side-menu-user .modal-body .issuer-type p, #side-menu-issuer .modal-body .user-type p, #side-menu-issuer .modal-body .issuer-type p {
+  color: var(--grey03);
+}
+#side-menu-user .modal-body .user-nav ul span, #side-menu-issuer .modal-body .user-nav ul span {
+  display: block;
+  color: var(--grey03);
+  margin-bottom: 0.5rem;
+}
+#side-menu-user .modal-body .user-nav ul li, #side-menu-issuer .modal-body .user-nav ul li {
   margin-bottom: 1rem;
 }
-#dialog.goldbuy .modal-footer {
+#side-menu-user .modal-body .user-nav ul li a, #side-menu-issuer .modal-body .user-nav ul li a {
+  font-weight: 500;
+  padding: 0.75rem 0;
+}
+#side-menu-user .modal-body .user-nav ul li a:hover, #side-menu-user .modal-body .user-nav ul li a:focus, #side-menu-issuer .modal-body .user-nav ul li a:hover, #side-menu-issuer .modal-body .user-nav ul li a:focus {
+  color: var(--grey05);
+}
+#side-menu-user .modal-footer, #side-menu-issuer .modal-footer {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   gap: 1rem;
 }
-#dialog.goldbuy #radioBtn {
+#side-menu-user .modal-footer button, #side-menu-issuer .modal-footer button {
+  width: 100%;
+}
+
+#dialog-gold-buy .divider {
+  padding: 0;
+}
+#dialog-gold-buy .modal-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+}
+#dialog-gold-buy .title {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+#dialog-gold-buy .item-thumb {
+  margin-bottom: 1.5rem;
+}
+#dialog-gold-buy .price-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+#dialog-gold-buy .price-item .stock-group {
+  text-align: center;
+}
+#dialog-gold-buy .txt-item {
+  padding: 0 3rem;
+}
+#dialog-gold-buy .txt-item p {
+  margin-bottom: 1rem;
+}
+#dialog-gold-buy .modal-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 1rem;
+}
+#dialog-gold-buy #radioBtn {
   display: flex;
   justify-content: space-between;
 }
 
-#dialog.goldsell .modal-dialog {
+#dialog-gold-sell .modal-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 30rem;
 }
-#dialog.goldsell .txt-item .error-message {
+#dialog-gold-sell .txt-item .error-message {
   font-size: 0.75rem;
   color: var(--error);
   margin-bottom: 1rem;
 }
-#dialog.goldsell .txt-item span {
+#dialog-gold-sell .txt-item span {
   font-size: 0.75rem;
   color: var(--grey05);
 }
-#dialog.goldsell .modal-footer {
+#dialog-gold-sell .modal-footer {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   gap: 1rem;
 }
 
-#dialog.goldgift_1 .modal-dialog {
+#dialog-gold-gift-01 .modal-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 30rem;
 }
-#dialog.goldgift_1 .modal-body .label-b {
+#dialog-gold-gift-01 .modal-body .label-b {
   display: flex;
   justify-content: space-between;
 }
-#dialog.goldgift_1 .modal-body .search-wrap {
-  display: flex;
-  align-items: center;
+#dialog-gold-gift-01 .modal-body .label-b span:nth-of-type(2) {
+  font-weight: normal;
 }
-#dialog.goldgift_1 .modal-body .search-wrap #search {
+#dialog-gold-gift-01 .modal-body .search-wrap {
+  display: flex;
+}
+#dialog-gold-gift-01 .modal-body .search-wrap #search {
   width: 100%;
   margin-right: 1rem;
 }
-#dialog.goldgift_1 .modal-body .search-wrap button {
-  padding: 0 1rem;
-}
-#dialog.goldgift_1 .txt-item .error-message {
+#dialog-gold-gift-01 .txt-item .error-message {
   font-size: 0.75rem;
   color: var(--error);
 }
-#dialog.goldgift_1 .txt-item span {
+#dialog-gold-gift-01 .txt-item span {
   font-size: 0.75rem;
   color: var(--grey05);
 }
-#dialog.goldgift_1 .modal-footer {
+#dialog-gold-gift-01 .modal-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-#dialog.goldgift_2 #user-thumb {
+#dialog-gold-gift-02 #user-thumb {
   position: initial;
   margin-right: 1rem;
 }
-#dialog.goldgift_2 .modal-dialog {
+#dialog-gold-gift-02 .divider {
+  padding: 0;
+}
+#dialog-gold-gift-02 .modal-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 30rem;
 }
-#dialog.goldgift_2 .label-b {
+#dialog-gold-gift-02 .title {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+#dialog-gold-gift-02 .label-b {
   display: flex;
   justify-content: space-between;
 }
-#dialog.goldgift_2 .item-thumb {
+#dialog-gold-gift-02 .item-thumb {
   background: var(--white);
 }
-#dialog.goldgift_2 .users-item {
+#dialog-gold-gift-02 .users-item {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
 }
-#dialog.goldgift_2 .users-item .text-group p {
+#dialog-gold-gift-02 .users-item .text-group p {
   color: var(--black);
 }
-#dialog.goldgift_2 .txt-item .error-message {
+#dialog-gold-gift-02 .txt-item .error-message {
   font-size: 0.75rem;
   color: var(--error);
   line-height: 1.5;
 }
-#dialog.goldgift_2 .txt-item p {
+#dialog-gold-gift-02 .txt-item p {
   color: var(--black);
 }
-#dialog.goldgift_2 .txt-item span {
+#dialog-gold-gift-02 .txt-item span {
   font-size: 0.75rem;
   color: var(--grey05);
 }
-#dialog.goldgift_2 .modal-footer {
+#dialog-gold-gift-02 .modal-footer {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
 }
 
-#dialog.signIn .modal-dialog {
+#dialog-signUp .modal-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
   height: calc(100vh - 3.5rem);
   overflow-y: scroll;
 }
-#dialog.signIn .title {
+#dialog-signUp .title {
   position: relative;
   display: flex;
   width: 100%;
 }
-#dialog.signIn .title .btn-close {
+#dialog-signUp .title .btn-close {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-#dialog.signIn .login-info {
+#dialog-signUp .login-info {
   display: grid;
   grid-template-columns: 1fr 4fr;
   gap: 1.5rem;
@@ -697,56 +808,62 @@ section.active {
   border: 1px solid var(--grey02);
   margin-bottom: 1.5rem;
 }
-#dialog.signIn .login-info:nth-of-type(1) {
+#dialog-signUp .login-info:nth-of-type(1) {
   align-items: flex-start;
 }
-#dialog.signIn .login-info:nth-of-type(1) .txt-item {
+#dialog-signUp .login-info:nth-of-type(1) .txt-item {
   margin-bottom: 1.5rem;
 }
-#dialog.signIn .login-info:nth-of-type(4) {
+#dialog-signUp .login-info:nth-of-type(4) {
   margin-bottom: 3rem;
 }
-#dialog.signIn .login-info .step-text {
+#dialog-signUp .login-info .step-text {
   padding: 1.5rem;
 }
-#dialog.signIn .login-info .step-text .txt-item h5 {
+#dialog-signUp .login-info .step-text .txt-item h5 {
   margin-bottom: 0.5rem;
 }
-#dialog.signIn .login-info .step-text .step-qr {
+#dialog-signUp .login-info .step-text .step-qr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
 }
-#dialog.signIn .signin-terms {
+#dialog-signUp .signin-terms {
   padding: 2rem;
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--grey02);
 }
-#dialog.signIn .signin-terms .txt-item {
+#dialog-signUp .signin-terms .txt-item {
   margin-bottom: 1.5rem;
 }
-#dialog.signIn .signin-terms .txt-item h5 {
+#dialog-signUp .signin-terms .txt-item h5 {
   margin-bottom: 0.5rem;
 }
-#dialog.signIn .modal-footer {
+#dialog-signUp .modal-footer {
   display: block;
 }
-
-#dialog.qrLogin .modal-dialog {
-  width: 30rem;
+#dialog-signUp .modal-footer button {
+  width: 100%;
 }
-#dialog.qrLogin .title {
+
+#dialog-qrLogin .modal-dialog {
+  width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#dialog-qrLogin .title {
   position: relative;
   display: flex;
   width: 100%;
 }
-#dialog.qrLogin .title .btn-close {
+#dialog-qrLogin .title .btn-close {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
-#dialog.qrLogin .login-info {
+#dialog-qrLogin .login-info {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1.5rem;
@@ -756,24 +873,27 @@ section.active {
   border: 1px solid var(--grey02);
   margin-bottom: 1.5rem;
 }
-#dialog.qrLogin .login-info:nth-of-type(2) {
+#dialog-qrLogin .login-info:nth-of-type(2) {
   grid-template-columns: 1fr;
   gap: 0;
 }
-#dialog.qrLogin .login-info:nth-of-type(2) img {
+#dialog-qrLogin .login-info:nth-of-type(2) img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
-#dialog.qrLogin .qr-count {
+#dialog-qrLogin .qr-count {
   color: var(--grey04);
 }
-#dialog.qrLogin .qr-count span.count-time {
+#dialog-qrLogin .qr-count span.count-time {
   color: var(--error);
   font-weight: 700;
 }
-#dialog.qrLogin .modal-footer {
+#dialog-qrLogin .modal-footer {
   display: block;
+}
+#dialog-qrLogin .modal-footer button {
+  width: 100%;
 }
 
 #dialog-user-info .modal-dialog {
@@ -796,7 +916,7 @@ section.active {
   align-items: center;
   margin-bottom: 1rem;
 }
-#dialog-user-info .user-main-info #user-thumb {
+#dialog-user-info .user-main-info #user-thumb, #dialog-user-info .user-main-info #issuer-thumb {
   margin-right: 1rem;
 }
 #dialog-user-info .user-main-info p.item-name {
@@ -989,7 +1109,8 @@ section.active {
   width: 100%;
 }
 
-#explore-search, #explore {
+#explore-search,
+#explore {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -1123,6 +1244,15 @@ footer .copyright ul li a {
   white-space: pre-line;
 }
 
+.detail-info .users-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.detail-info #user-thumb, .detail-info #issuer-thumb {
+  margin-right: 1rem;
+}
+
 .board-menu ul li {
   padding: 0.25rem 0;
 }
@@ -1242,24 +1372,67 @@ footer .copyright ul li a {
   font-size: 0.75rem;
 }
 
-#user-thumb.thumb-xs {
+.thumb-xs {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-#user-thumb.thumb-sm {
+.thumb-sm {
   width: 3.25rem;
   height: 3.25rem;
 }
 
-#user-thumb.thumb-md {
+.thumb-md {
   width: 4rem;
   height: 4rem;
 }
 
-#user-thumb.thumb-lg {
+.thumb-lg {
   width: 5rem;
   height: 5rem;
+}
+
+.icon-circle {
+  border-radius: 5rem;
+  outline: 1px solid var(--grey02);
+}
+
+.icon-square {
+  transform: scale(1);
+  border: 1px solid var(--grey02);
+  transition: all 0.2s ease;
+}
+
+.icon-size-xs {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-size-sm {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-size-md {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-size-lg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.rounded-xs {
+  border-radius: var(--border-radius-xs);
+}
+
+.rounded-sm {
+  border-radius: var(--border-radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--border-radius-md);
 }
 
 /*# sourceMappingURL=style.css.map */
