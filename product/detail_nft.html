@@ -552,7 +552,6 @@
     <div class="container">
 
       <article id="detail">
-
         <div id="left">
           <div class="item-thumb rounded-md">
             <img src="../assets/image/card/item-thumb-gold.png" alt="">
@@ -564,67 +563,51 @@
               <ul>
                 <li>
                   <div class="main-list title">
-                    <!-- <div class="users-item">
-                      <div id="user-thumb" class="icon-circle thumb-md"></div>
 
-                      <div class="txt-group">
-                        <span>소유자</span>
-                        <p class="h7 user-name">한국조폐공사</p>
+                    <div class="users-item">
+                      <div class="users-item-inner">
+                        <div id="user-thumb" class="icon-circle thumb-md"></div>
+
+                        <div class="txt-group">
+                          <span class="owner">소유자</span>
+                          <p class="h7 user-name">한국조폐공사</p>
+                        </div>
                       </div>
 
-                      <span class="icon-size-md">
-                        <i class="icon-arrow"></i>
-                      </span>
-                    </div> -->
+                      <i class="icon-arrow icon-size-md"></i>
+                    </div>
 
-                    <h7 class="h7">Status</h7>
-                    <span class="icon-size-md">
-                      <i class="icon-arrow"></i>
-                    </span>
                   </div>
 
                   <ul class="sub-list">
-                    <li>
-                      <div class="checkbox-item">
-                        <input id="nft-all" type="checkbox" />
-
-                        <label class="checkbox" for="nft-all">
-                          <p>NFT 유형 전체</p>
-
-                          <span class="icon-square icon-size-md">
-                            <i class="icon-check"></i>
-                          </span>
-                        </label>
-                      </div>
+                    <div class="divider">
+                      <span class="line"></span>
+                    </div>
+                    <li class="text-item">
+                      <p class="royalty">로열티</p>
+                      <p class="royalty-cont">0%</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">발행일시</p>
+                      <p class="royalty-cont">2022-07-21 / 21:01:59%</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">발행 수</p>
+                      <p class="royalty-cont">1/1</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">Blockchain</p>
+                      <p class="royalty-cont">Omnione%</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">Contact</p>
+                      <p class="royalty-cont">Contact-Content</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">Tocken ID</p>
+                      <p class="royalty-cont">30951</p>
                     </li>
 
-                    <li>
-                      <div class="checkbox-item">
-                        <input id="trade" type="checkbox" />
-
-                        <label class="checkbox" for="trade">
-                          <p>실물 교환 가능</p>
-
-                          <span class="icon-square icon-size-md">
-                            <i class="icon-check"></i>
-                          </span>
-                        </label>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="checkbox-item">
-                        <input id="digital-cont" type="checkbox" />
-
-                        <label class="checkbox" for="digital-cont">
-                          <p>디지털 콘텐츠</p>
-
-                          <span class="icon-square icon-size-md">
-                            <i class="icon-check"></i>
-                          </span>
-                        </label>
-                      </div>
-                    </li>
                   </ul>
                 </li>
 
@@ -633,41 +616,34 @@
             </div>
 
           </div>
-
-          <!-- <div class="item-group rounded-md">
-            <div class="txt-item">
-              <span>로열티</span>
-              <p class="subtit-sm">0%</p>
-            </div>
-            <div class="txt-item">
-              <span>text-item-title</span>
-              <p class="subtit-sm">text-item</p>
-            </div>
-            <div class="txt-item">
-              <span>text-item-title</span>
-              <p class="subtit-sm">text-item</p>
-            </div>
-            <div class="txt-item">
-              <span>text-item-title</span>
-              <p class="subtit-sm">text-item</p>
-            </div>
-            <div class="txt-item">
-              <span>text-item-title</span>
-              <p class="subtit-sm">text-item</p>
-            </div>
-          </div> -->
         </div>
 
         <div id="right">
           <div class="prod-option item-group rounded-md">
             <div class="title-item">
               <h4 class="h4 title">금 1g</h4>
+              <p class="category">카테고리</p>
               <p class="subtitle subtit-lg">실물 금 1g으로 교환 가능한 금 NFT 상품입니다.</p>
               <p class="info-description">
                 변동성이 큰 코인 투자 열풍과 함께 안전자산인 금에 투자하는 사람들이 늘어나고 있습니다.
                 에보골드는 한국조폐공사가 직접 블록체인 NFT로
                 발행하는 금 NFT 거래 플랫폼입니다.
               </p>
+
+              <div class="detail-setting">
+                <div id="switch">
+                  <input type="checkbox" id="switch-02" />
+                  <label class="switch" for="switch-02">
+                    <div class="slider">
+                      <div class="round">
+                        <p class="switch-txt">공개</p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+              </div>
             </div>
 
             <div class="users-item">
@@ -681,11 +657,11 @@
 
             <div class="price-item rounded-sm">
               <div class="stock-group">
-                <span>남은 수량</span>
+                <span class="condition">남은 수량</span>
                 <h4 class="h4">Number</h4>
               </div>
               <div class="price-group">
-                <span>가격</span>
+                <span class="condition">가격</span>
                 <h4 class="h4">Number</h4>
               </div>
             </div>
@@ -697,7 +673,8 @@
               <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-gold-sell">
                 Buy Now 판매하기
               </button>
-              <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-gold-gift-01">실물
+              <button class="btn-primary btn-md default" data-toggle="modal"
+                onclick="location.href='trade_form_input.html'">실물
                 금으로 교환하기
               </button>
             </div>
@@ -725,18 +702,183 @@
               <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-gold-sell">
                 Buy Now 판매하기
               </button>
-              <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-gold-trade">
+              <button class="btn-primary btn-md default" data-toggle="modal"
+                onclick="location.href='trade_form_input.html'">
                 실물 금으로 교환하기
               </button>
             </div>
           </div>
         </div>
-    </div>
+      </article>
 
-    </article>
+      <article id="recommend">
+        <div class="article-title text-center">
+          <h4 class="h4">You may also like</h4>
+
+          <div class="divider">
+            <span class="line"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>
+
 
   <!-- 금 NFT 구매하기 -->
   <div id="dialog-gold-buy" class="modal">
@@ -821,42 +963,45 @@
   <div id="dialog-gold-sell" class="modal">
     <div class="modal-dialog">
 
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="title">
-            <h5 class="h5">Buy Now 금 판매하기</h5>
-            <p>금 1g NFT를 판매등록합니다.</p>
+      <div class="modal-header">
+        <div class="title">
+          <h5 class="h5">Buy Now 금 판매하기</h5>
+
+          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
+        </div>
+
+        <div class="subtitle">
+          <p>금 1g NFT를 판매등록합니다.</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-item">
+          <p class="label-b">
+            판매가격
+          </p>
+
+          <div id="input">
+            <label for="default"></label>
+            <input type="text" placeholder="판매할 가격을 입력해주세요.">
+            <p class="subtit-sm">원</p>
           </div>
         </div>
 
-        <div class="modal-body">
-
-          <div class="input-item">
-            <p class="label-b">
-              판매가격
-            </p>
-
-            <div id="input">
-              <label for="default"></label>
-              <input type="text" placeholder="판매할 가격을 입력해주세요.">
-              <p class="subtit-sm">원</p>
-            </div>
+        <div class="txt-item">
+          <div class="error-message">
+            존재하지 않는 DID입니다. 다시 한 번 확인해주세요.
           </div>
 
-          <div class="txt-item">
-            <div class="error-message">
-              존재하지 않는 DID입니다. 다시 한 번 확인해주세요.
-            </div>
-
-            <span>&#183; 판매되지 않은 NFT는 판매 철회할 수 있습니다.</span>
-          </div>
-
+          <span>&#183; 판매되지 않은 NFT는 판매 철회할 수 있습니다.</span>
         </div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
-          <button type="button" class="btn-md btn-primary default">판매하기</button>
-        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
+        <button type="button" class="btn-md btn-primary default">판매하기</button>
       </div>
 
     </div>
@@ -869,6 +1014,11 @@
       <div class="modal-header">
         <div class="title">
           <h5 class="h5">금 선물하기</h5>
+
+          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
+        </div>
+
+        <div class="subtitle">
           <p>금 1g NFT를 선물합니다.</p>
         </div>
       </div>
@@ -880,14 +1030,10 @@
             <span>선물 받을 분의 DID를 입력해주세요.</span> <span>0/30</span>
           </p>
 
-          <div class="search-wrap">
-            <div id="search">
-              <label for="default"></label>
-              <input type="text" placeholder="판매할 가격을 입력해주세요.">
-              <p class="subtit-sm">원</p>
-            </div>
-
-            <button class="btn-search icon-search fs-4"></button>
+          <div id="input">
+            <label for="default"></label>
+            <input type="text" placeholder="판매할 가격을 입력해주세요.">
+            <p class="subtit-sm">원</p>
           </div>
         </div>
 
@@ -901,8 +1047,8 @@
 
       <div class="modal-footer">
         <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
-        <button type="button" class="btn-md btn-primary default btn-modal" data-toggle="modal"
-          data-target=".goldgift_2">다음</button>
+        <button type="button" class="btn-md btn-primary default" data-toggle="modal"
+          data-target="dialog-gold-gift-02">다음</button>
       </div>
 
     </div>
@@ -937,7 +1083,7 @@
         </div>
 
         <div class="users-item">
-          <div id="user-thumb" class="thumb-md"></div>
+          <div id="user-thumb" class="thumb-md rounded-sm"></div>
 
           <div class="txt-group">
             <p class="subtit-sm user-name">김라온</p>

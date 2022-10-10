@@ -108,6 +108,32 @@ body {
   margin-bottom: 1rem;
 }
 
+.article-title {
+  margin-bottom: 1.5rem;
+}
+.article-title .divider {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+.article-title .divider .line {
+  width: 5rem;
+  background: var(--primary);
+}
+
+.success {
+  color: var(--success) !important;
+}
+
+.focus {
+  color: var(--primary) !important;
+}
+
+.warning {
+  color: var(--error) !important;
+}
+
 .subtitle {
   margin-bottom: 1rem;
 }
@@ -124,6 +150,11 @@ body {
 .user-nickname {
   color: var(--grey05) !important;
   font-weight: 600 !important;
+}
+
+.owner {
+  color: var(--grey03);
+  margin-bottom: 0.25rem;
 }
 
 .subtit-lg {
@@ -151,13 +182,13 @@ body {
 }
 
 .label-b {
-  color: var(--grey05);
+  color: var(--grey04);
   font-weight: 600;
   font-size: 0.75rem;
 }
 
 .label-r {
-  color: var(--grey05);
+  color: var(--grey04);
   font-weight: normal;
   font-size: 0.75rem;
 }
@@ -214,7 +245,15 @@ span i {
   display: block;
 }
 
-.icon-close, .icon-bell, .icon-plus, .icon-minus {
+input {
+  border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: transparent;
+}
+
+.icon-close, .icon-bell, .icon-plus, .icon-minus, .icon-share, .icon-copy, .icon-email {
   color: var(--grey04);
 }
 
@@ -226,18 +265,8 @@ i {
   display: inline-block;
 }
 
-i.icon-heart {
-  background: url("/assets/image/icon/icon-heart.svg") no-repeat center center;
-  background-size: cover;
-}
-
 i.icon-arrow {
   background: url("/assets/image/icon/icon-down.svg") no-repeat center center;
-  background-size: cover;
-}
-
-i.icon-copy {
-  background: url("/assets/image/icon/icon-copy.svg") no-repeat center center;
   background-size: cover;
 }
 
@@ -292,8 +321,8 @@ img {
   box-shadow: var(--elevation-default);
   padding: 1.5rem;
 }
-.modal .modal-body {
-  margin-bottom: 1rem;
+.modal .modal-header, .modal .modal-body {
+  margin-bottom: 1.5rem;
 }
 
 .open {
@@ -306,32 +335,28 @@ img {
 #search {
   position: relative;
   display: flex;
-  flex-direction: column;
 }
-#search > input {
-  position: relative;
+#search label {
+  width: 100%;
+}
+#search input {
   border: 1px solid var(--grey02);
   padding: 1rem 1.5rem;
   border-radius: 0.75rem;
   width: 100%;
   background: var(--grey01);
-  margin: 0.5rem 0;
 }
-#search > input:hover, #search > input:focus {
+#search input:hover, #search input:focus {
   z-index: 999;
   outline: 1px solid var(--primary);
 }
-#search > input::placeholder {
+#search input::placeholder {
   color: var(--grey03);
 }
-#search p {
-  position: absolute;
-  top: 50%;
-  right: 1.5rem;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--grey05);
+#search button {
+  padding: 0 0.825rem;
+  height: auto;
+  margin-left: 1rem;
 }
 
 #input {
@@ -427,22 +452,19 @@ img {
   align-items: center;
   justify-content: space-between;
 }
-.checkbox-item label.checkbox:hover {
-  background: rgba(0, 119, 255, 0.06);
+.checkbox-item label.checkbox span {
+  border-color: var(--grey03);
+  border-radius: var(--border-radius-xs);
+}
+.checkbox-item label.checkbox span i.icon-check {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0;
 }
 .checkbox-item label.checkbox:hover span {
   border-color: var(--secondary);
   opacity: 0.5;
-}
-.checkbox-item label.checkbox span i.icon-check {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: url("/assets/image/icon/icon-check.svg") no-repeat center center;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
 }
 .checkbox-item input {
   position: absolute;
@@ -453,10 +475,14 @@ img {
   border-color: var(--secondary);
   animation: scaleAni 0.3s ease;
 }
-.checkbox-item input:checked + .checkbox span i {
+.checkbox-item input:checked + .checkbox span i.icon-check {
+  color: var(--white);
   opacity: 1;
 }
 
+#radioBtn {
+  padding: 0.5rem;
+}
 #radioBtn .radio-label {
   -webkit-user-select: none;
   user-select: none;
@@ -510,8 +536,8 @@ img {
 #switch .switch {
   position: relative;
   display: inline-block;
-  width: 3.5rem;
-  height: 2rem;
+  width: 4rem;
+  height: 2.5rem;
   cursor: pointer;
 }
 #switch .slider {
@@ -529,14 +555,23 @@ img {
 }
 #switch .slider .round {
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   left: 0.25rem;
   bottom: 0.25rem;
   background-color: var(--white);
   transition: 0.4s;
   border-radius: 2rem;
   font-size: 1rem;
+}
+#switch .slider .round p.switch-txt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  font-weight: 600;
 }
 #switch .slider.in-txt {
   width: 5rem;
@@ -611,6 +646,13 @@ button {
   cursor: pointer;
 }
 
+button:disabled,
+button[disabled] {
+  background-color: var(--grey02) !important;
+  color: var(--grey03) !important;
+  Button: disabled;
+}
+
 button.default {
   border-radius: 0.75rem;
 }
@@ -626,11 +668,6 @@ button.btn-circle {
 button.btn-circle:hover {
   opacity: 0.8;
   transition: all 0.3s ease;
-}
-
-.circle {
-  border-radius: 5rem;
-  outline: 1px solid var(--grey02);
 }
 
 button.btn-main {
@@ -680,6 +717,15 @@ button.btn-info:hover {
   transition: all 0.3s ease;
 }
 
+button.btn-warning {
+  background: var(--error);
+  color: var(--white);
+}
+button.btn-warning:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
 button.btn-minimal {
   background: transparent;
 }
@@ -725,6 +771,15 @@ button.btn-close:hover {
   transition: all 0.3s ease;
 }
 
+button.btn-more {
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+button.btn-more:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
 .btn-wrap {
   display: flex;
   flex-direction: row;
@@ -737,13 +792,13 @@ button.btn-close:hover {
 }
 
 .btn-md {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
 }
 
 .btn-lg {
   height: 3.5rem;
-  padding: 0 1.75rem;
+  padding: 1.25rem 3rem;
 }
 
 .btn-circle img {
@@ -825,6 +880,27 @@ button.btn-close:hover {
   border: 1px solid var(--grey02);
   padding: 1rem;
 }
+#tab .tabnav {
+  display: flex;
+  margin-bottom: 3rem;
+}
+#tab .tabnav .tablink {
+  width: 100%;
+  padding: 0.5rem 0;
+  color: var(--grey04);
+  border-bottom: 0.25rem solid var(--grey02);
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+#tab .tabnav .tablink.active {
+  color: var(--black);
+  border-bottom: 0.25rem solid var(--secondary);
+}
+#tab .tabcontent {
+  width: 100%;
+  animation: opacityAni 0.3s;
+}
+
 .item-thumb {
   background: var(--grey01);
 }

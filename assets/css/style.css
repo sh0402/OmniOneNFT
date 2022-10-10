@@ -170,7 +170,6 @@ section.active {
 }
 
 .content-group {
-  position: relative;
   position: absolute;
   top: 0;
   left: 0;
@@ -302,11 +301,11 @@ section.active {
 }
 
 #prod-swiper .swiper-slide {
-  height: 40rem;
+  height: 35rem;
 }
 #prod-swiper #user-thumb {
   position: absolute;
-  bottom: 22%;
+  bottom: 25%;
   left: 1.5rem;
   width: 5rem;
   height: 5rem;
@@ -399,27 +398,30 @@ section.active {
   align-items: center;
 }
 #wide-banner .text-group {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 6rem;
 }
-#wide-banner .text-group h4 {
+#wide-banner .text-group h5 {
   color: var(--white);
 }
-#wide-banner .text-group h4 span {
+#wide-banner .text-group h5 span {
   color: var(--primary);
+  display: inline-block;
 }
 #wide-banner .text-group .button-group {
   display: flex;
+  gap: 1rem;
 }
 #wide-banner .img-group {
   width: 100%;
-  height: 25rem;
+  height: 15rem;
   background: #f2f2f2;
   border-radius: var(--border-radius-md);
 }
@@ -435,6 +437,7 @@ section.active {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem;
+  margin-bottom: 6.25rem;
 }
 #detail #left {
   position: sticky;
@@ -443,6 +446,9 @@ section.active {
 }
 #detail #left .item-thumb {
   margin-bottom: 3rem;
+}
+#detail #left .item-thumb.disabled {
+  filter: grayscale(100%);
 }
 #detail #left .item-group {
   height: fit-content;
@@ -478,10 +484,28 @@ section.active {
   margin-bottom: 0;
 }
 #detail #right .item-group .title-item {
+  position: relative;
   margin-bottom: 2rem;
 }
 #detail #right .item-group .title-item p {
   margin-bottom: 0.5rem;
+}
+#detail #right .item-group .title-item .detail-setting {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 1rem;
+}
+#detail #right .item-group .title-item .detail-setting #switch {
+  height: 3rem;
+}
+#detail #right .item-group .title-item .detail-setting button {
+  background: transparent;
+}
+#detail #right .item-group .title-item .detail-setting button:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 #detail #right .item-group .users-item {
   display: flex;
@@ -495,6 +519,9 @@ section.active {
   padding: 1.5rem;
   margin-bottom: 2rem;
 }
+#detail #right .item-group .price-item.disabled {
+  justify-content: flex-end;
+}
 #detail #right .item-group .button-group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -502,6 +529,9 @@ section.active {
 }
 #detail #right .item-group .button-group button {
   width: 100%;
+}
+#detail #right .item-group .button-group.disabled {
+  display: flex;
 }
 #detail #right .item-group .detail-item .sample {
   display: flex;
@@ -531,6 +561,9 @@ section.active {
 }
 #float .button-group button {
   width: 100%;
+}
+#float .button-group.disabled {
+  display: flex;
 }
 
 #float.show {
@@ -630,6 +663,7 @@ section.active {
 
 #dialog-gold-buy .divider {
   padding: 0;
+  margin: 1.5rem 0;
 }
 #dialog-gold-buy .modal-dialog {
   top: 50%;
@@ -637,29 +671,30 @@ section.active {
   transform: translate(-50%, -50%);
   width: 30rem;
 }
-#dialog-gold-buy .title {
+#dialog-gold-buy .modal-header .title {
   position: relative;
   display: flex;
   align-items: flex-start;
   width: 100%;
 }
-#dialog-gold-buy .item-thumb {
+#dialog-gold-buy .modal-body .item-thumb {
   margin-bottom: 1.5rem;
 }
-#dialog-gold-buy .price-item {
+#dialog-gold-buy .modal-body .price-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
-#dialog-gold-buy .price-item .stock-group {
+#dialog-gold-buy .modal-body .price-item .stock-group {
   text-align: center;
 }
-#dialog-gold-buy .txt-item {
+#dialog-gold-buy .modal-body .txt-item {
   padding: 0 3rem;
 }
-#dialog-gold-buy .txt-item p {
-  margin-bottom: 1rem;
+#dialog-gold-buy .modal-body .txt-item p {
+  margin-bottom: 1.5rem;
 }
 #dialog-gold-buy .modal-footer {
   display: grid;
@@ -677,12 +712,18 @@ section.active {
   transform: translate(-50%, -50%);
   width: 30rem;
 }
-#dialog-gold-sell .txt-item .error-message {
+#dialog-gold-sell .modal-header .title {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+#dialog-gold-sell .modal-body .txt-item .error-message {
   font-size: 0.75rem;
   color: var(--error);
   margin-bottom: 1rem;
 }
-#dialog-gold-sell .txt-item span {
+#dialog-gold-sell .modal-body .txt-item span {
   font-size: 0.75rem;
   color: var(--grey05);
 }
@@ -698,6 +739,12 @@ section.active {
   transform: translate(-50%, -50%);
   width: 30rem;
 }
+#dialog-gold-gift-01 .modal-header .title {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
 #dialog-gold-gift-01 .modal-body .label-b {
   display: flex;
   justify-content: space-between;
@@ -712,11 +759,23 @@ section.active {
   width: 100%;
   margin-right: 1rem;
 }
-#dialog-gold-gift-01 .txt-item .error-message {
+#dialog-gold-gift-01 .modal-body .search-wrap #search input {
+  position: relative;
+}
+#dialog-gold-gift-01 .modal-body .search-wrap #search p {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--grey05);
+}
+#dialog-gold-gift-01 .modal-body .txt-item .error-message {
   font-size: 0.75rem;
   color: var(--error);
 }
-#dialog-gold-gift-01 .txt-item span {
+#dialog-gold-gift-01 .modal-body .txt-item span {
   font-size: 0.75rem;
   color: var(--grey05);
 }
@@ -727,11 +786,11 @@ section.active {
 }
 
 #dialog-gold-gift-02 #user-thumb {
-  position: initial;
   margin-right: 1rem;
 }
 #dialog-gold-gift-02 .divider {
   padding: 0;
+  margin: 1.5rem 0;
 }
 #dialog-gold-gift-02 .modal-dialog {
   top: 50%;
@@ -739,37 +798,33 @@ section.active {
   transform: translate(-50%, -50%);
   width: 30rem;
 }
-#dialog-gold-gift-02 .title {
+#dialog-gold-gift-02 .modal-header .title {
   position: relative;
   display: flex;
   align-items: flex-start;
   width: 100%;
 }
-#dialog-gold-gift-02 .label-b {
-  display: flex;
-  justify-content: space-between;
-}
-#dialog-gold-gift-02 .item-thumb {
+#dialog-gold-gift-02 .modal-body .item-thumb {
   background: var(--white);
 }
-#dialog-gold-gift-02 .users-item {
+#dialog-gold-gift-02 .modal-body .users-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-#dialog-gold-gift-02 .users-item .text-group p {
+#dialog-gold-gift-02 .modal-body .users-item .text-group p {
   color: var(--black);
 }
-#dialog-gold-gift-02 .txt-item .error-message {
+#dialog-gold-gift-02 .modal-body .txt-item .error-message {
   font-size: 0.75rem;
   color: var(--error);
   line-height: 1.5;
 }
-#dialog-gold-gift-02 .txt-item p {
+#dialog-gold-gift-02 .modal-body .txt-item p {
   color: var(--black);
 }
-#dialog-gold-gift-02 .txt-item span {
+#dialog-gold-gift-02 .modal-body .txt-item span {
   font-size: 0.75rem;
   color: var(--grey05);
 }
@@ -786,6 +841,10 @@ section.active {
   width: 60rem;
   height: calc(100vh - 3.5rem);
   overflow-y: scroll;
+  -ms-overflow-style: none;
+}
+#dialog-signUp .modal-dialog::-webkit-scrollbar {
+  display: none;
 }
 #dialog-signUp .title {
   position: relative;
@@ -897,6 +956,9 @@ section.active {
 }
 
 #dialog-user-info .modal-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 30rem;
 }
 #dialog-user-info .title {
@@ -987,25 +1049,120 @@ section.active {
   width: 100%;
 }
 
-#trade > .title {
+#dialog-addlink .modal-dialog {
+  width: 48rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#dialog-addlink #road-add #search,
+#dialog-addlink #num-add #search {
+  width: 100%;
+}
+#dialog-addlink #road-add #search p,
+#dialog-addlink #num-add #search p {
+  margin-bottom: 1rem;
+}
+#dialog-addlink #road-add #search p span,
+#dialog-addlink #num-add #search p span {
+  display: inline-block;
+}
+#dialog-addlink #road-add .add-info,
+#dialog-addlink #num-add .add-info {
+  margin-bottom: 3rem;
+}
+#dialog-addlink #road-add .text-info,
+#dialog-addlink #num-add .text-info {
+  margin-bottom: 2rem;
+}
+#dialog-addlink #road-add .text-info p,
+#dialog-addlink #num-add .text-info p {
+  color: var(--black);
+}
+#dialog-addlink #road-add .text-info p span,
+#dialog-addlink #num-add .text-info p span {
+  display: inline-block;
+  font-weight: 600;
+}
+#dialog-addlink #road-add .text-info p:nth-of-type(2),
+#dialog-addlink #num-add .text-info p:nth-of-type(2) {
+  color: var(--grey04);
+}
+#dialog-addlink #road-add .add-result .label-b,
+#dialog-addlink #num-add .add-result .label-b {
+  color: var(--black);
+}
+#dialog-addlink #road-add .add-result .divider,
+#dialog-addlink #num-add .add-result .divider {
+  margin: 0;
+}
+#dialog-addlink #road-add .add-result .add-result-title,
+#dialog-addlink #num-add .add-result .add-result-title {
+  margin-bottom: 1rem;
+}
+#dialog-addlink #road-add .result-group,
+#dialog-addlink #num-add .result-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+#dialog-addlink #road-add .result-group .add-result-item,
+#dialog-addlink #num-add .result-group .add-result-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#dialog-addlink #road-add .result-group .add-result-item button,
+#dialog-addlink #num-add .result-group .add-result-item button {
+  font-weight: normal;
+  cursor: auto;
+  margin-right: 1rem;
+  width: 6rem;
+}
+#dialog-addlink #road-add .result-group .add-result-item button:hover,
+#dialog-addlink #num-add .result-group .add-result-item button:hover {
+  background: var(--secondary);
+}
+#dialog-addlink #road-add .result-group .add-result-item p,
+#dialog-addlink #num-add .result-group .add-result-item p {
+  color: var(--black);
+}
+#dialog-addlink #road-add .result-group .postnum-result-item p,
+#dialog-addlink #num-add .result-group .postnum-result-item p {
+  color: var(--black);
+  font-weight: 600;
+}
+#dialog-addlink #num-add .result-group .add-result-group {
+  width: 100%;
+}
+#dialog-addlink #num-add .result-group .add-result-item {
+  justify-content: space-between;
+}
+#dialog-addlink #num-add .result-group .add-result-item p:last-child {
+  font-weight: 600;
+}
+#dialog-addlink .button-group {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+}
+
+#trade .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 6.25rem;
 }
-#trade > .title h4 {
-  margin-bottom: 0.5rem;
+#trade .title .divider {
+  width: 5rem;
+  margin: 0.5rem 0;
 }
-#trade > .title .divider {
-  width: 4.5rem;
+#trade .title .divider .line {
   background: var(--primary);
-  margin: 0;
 }
-#trade > .subtitle {
-  margin-bottom: 6.25rem;
-}
-#trade #trade-banner {
+#trade .trade-banner {
   width: 100%;
   height: 25rem;
   background: var(--white);
@@ -1017,63 +1174,74 @@ section.active {
   box-shadow: var(--elevation-default);
   margin-bottom: 6.25rem;
 }
-#trade #trade-banner .img-group {
+#trade .trade-banner .img-group {
   width: 100%;
   height: 100%;
   background: var(--grey02);
   border-radius: var(--border-radius-sm);
 }
-#trade #trade-banner .text-group {
+#trade .trade-banner .text-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#trade #trade-banner .text-group p {
+#trade .trade-banner .text-group h5 {
   margin-bottom: 1.5rem;
 }
-#trade #trade-banner .text-group p:first-child {
-  color: var(--primary);
+#trade .trade-banner .text-group p {
+  margin-bottom: 1.5rem;
 }
-#trade #trade-banner .text-group button {
+#trade .trade-banner .text-group button {
   width: fit-content;
 }
-#trade #trade-form {
+#trade > .subtitle {
+  margin-bottom: 6.25rem;
+}
+#trade .trade-form {
   width: 100%;
   background: var(--white);
   border-radius: var(--border-radius-md);
   padding: 3.5rem;
   box-shadow: var(--elevation-default);
 }
-#trade #trade-form .input-group {
+#trade .trade-form .input-group {
   margin-bottom: 6.5rem;
 }
-#trade #trade-form .input-group:nth-child(3) {
+#trade .trade-form .input-group:last-child {
   margin-bottom: 2rem;
 }
-#trade #trade-form .input-group .subtitle {
+#trade .trade-form .input-group .divider {
+  padding: 0;
+}
+#trade .trade-form .input-group .subtitle {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#trade #trade-form .input-group .input-item.grid {
+#trade .trade-form .input-group .subtitle .checkbox-item span {
+  margin-left: 0.5rem;
+}
+#trade .trade-form .input-group .input-item.grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem;
 }
-#trade #trade-form .input-group .address-item.grid {
+#trade .trade-form .input-group .address-item.grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem;
 }
-#trade #trade-form .input-item {
+#trade .trade-form .input-item {
+  display: flex;
+  align-items: center;
   width: 50%;
 }
-#trade #trade-form .address-item {
+#trade .trade-form .address-item {
   width: 50%;
   align-items: center;
 }
-#trade #trade-form .address-item:last-child input {
+#trade .trade-form .address-item:last-child input {
   position: relative;
   border: 1px solid var(--grey02);
   padding: 1rem 1.5rem;
@@ -1082,12 +1250,12 @@ section.active {
   background: var(--white);
   margin: 0.25rem 0;
 }
-#trade #trade-form .address-item:last-child .address-input {
+#trade .trade-form .address-item:last-child .address-input {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
-#trade #trade-form .address-item input {
+#trade .trade-form .address-item > input {
   position: relative;
   border: 1px solid var(--grey02);
   padding: 1rem 1.5rem;
@@ -1096,17 +1264,87 @@ section.active {
   background: var(--white);
   margin: 1rem 0;
 }
-#trade #trade-form .address-item .address-input {
+#trade .trade-form .address-item .address-input {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   align-items: center;
   gap: 1rem;
+  margin: 1rem 0;
 }
-#trade #trade-form .trade-info {
+#trade .trade-form .trade-info {
   margin-bottom: 3rem;
 }
-#trade #trade-form .button-group button {
+#trade .trade-form .button-group button {
   width: 100%;
+}
+
+#trade.trade-check .trade-form .row .input-item,
+#trade.trade-withdraw .trade-form .row .input-item,
+#trade.trade-result .trade-form .row .input-item {
+  display: flex;
+  align-items: center;
+}
+#trade.trade-check .trade-form .row .input-item label,
+#trade.trade-withdraw .trade-form .row .input-item label,
+#trade.trade-result .trade-form .row .input-item label {
+  margin-right: 1rem;
+}
+#trade.trade-check .trade-form .input-item, #trade.trade-check .trade-form .address-item,
+#trade.trade-withdraw .trade-form .input-item,
+#trade.trade-withdraw .trade-form .address-item,
+#trade.trade-result .trade-form .input-item,
+#trade.trade-result .trade-form .address-item {
+  padding: 2rem 0;
+}
+#trade.trade-check .trade-form .input-item label.input-check,
+#trade.trade-check .trade-form .input-item label.input-result, #trade.trade-check .trade-form .address-item label.input-check,
+#trade.trade-check .trade-form .address-item label.input-result,
+#trade.trade-withdraw .trade-form .input-item label.input-check,
+#trade.trade-withdraw .trade-form .input-item label.input-result,
+#trade.trade-withdraw .trade-form .address-item label.input-check,
+#trade.trade-withdraw .trade-form .address-item label.input-result,
+#trade.trade-result .trade-form .input-item label.input-check,
+#trade.trade-result .trade-form .input-item label.input-result,
+#trade.trade-result .trade-form .address-item label.input-check,
+#trade.trade-result .trade-form .address-item label.input-result {
+  color: var(--black);
+  font-weight: 600;
+  display: block;
+  margin: 0.5rem 0;
+}
+#trade.trade-check .trade-form .button-group,
+#trade.trade-withdraw .trade-form .button-group,
+#trade.trade-result .trade-form .button-group {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+}
+
+#trade.trade-result .trade-form .button-group {
+  display: flex;
+}
+
+#dialog-trade-list .modal-dialog {
+  width: 62.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#dialog-trade-list .modal-header .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#dialog-trade-list .modal-header .title .btn-close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#dialog-trade-list .modal-footer .button-group {
+  display: flex;
+  justify-content: center;
 }
 
 #explore-search,
@@ -1224,33 +1462,32 @@ footer .copyright ul li a {
   border-radius: var(--border-radius-md);
   display: grid;
   grid-template-columns: 1fr 3fr;
+  display: flex;
+  padding: 1.5rem;
   margin-bottom: 2rem;
 }
 #my-info #user-thumb {
-  padding: 1.5rem;
+  width: 100%;
+  max-width: 16.5rem;
+  height: 16.5rem;
+  box-sizing: border-box;
 }
 #my-info .info-text {
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 1.5rem;
 }
-#my-info .info-text .description {
+#my-info .info-text .item-group {
   padding: 1.5rem;
   background: var(--grey01);
   border-radius: var(--border-radius-sm);
+  margin-bottom: 1rem;
 }
-#my-info .info-text .description p {
-  white-space: pre-line;
-}
-
-.detail-info .users-item {
+#my-info .info-text p {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
-}
-.detail-info #user-thumb, .detail-info #issuer-thumb {
-  margin-right: 1rem;
 }
 
 .board-menu ul li {
@@ -1269,6 +1506,68 @@ footer .copyright ul li a {
 .board-menu ul li p {
   padding: 0.75rem 1rem;
   color: var(--grey03);
+}
+
+.detail-info .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.detail-info .title .users-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail-info .title .users-item .users-item-inner {
+  display: flex;
+  align-items: center;
+}
+.detail-info .title #user-thumb {
+  margin-right: 1rem;
+}
+.detail-info .main-list {
+  cursor: pointer;
+}
+.detail-info .main-list i.icon-arrow {
+  transition: all ease 0.1s;
+}
+.detail-info .main-list.active i.icon-arrow {
+  transform: rotate(180deg);
+}
+.detail-info .sub-list {
+  display: none;
+  animation: opacityAni 0.3s;
+  margin-top: 1rem;
+}
+.detail-info .sub-list .divider {
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.detail-info .sub-list li {
+  padding: 0.5rem 0;
+}
+.detail-info .sub-list li p {
+  color: var(--grey03);
+}
+.detail-info .sub-list li button {
+  width: 100%;
+}
+.detail-info .sub-list .text-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail-info .sub-list .text-item p:nth-of-type(1) {
+  color: var(--grey03);
+}
+.detail-info .sub-list .text-item p:nth-of-type(2) {
+  color: var(--black);
+  font-weight: 600;
+}
+.detail-info .sub-list.active {
+  display: block;
 }
 
 .explore-menu ul li {
@@ -1307,10 +1606,26 @@ footer .copyright ul li a {
   display: block;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
 #nft-card {
   background: var(--white);
   border-radius: var(--border-radius-sm);
   box-shadow: var(--elevation-default);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  box-shadow: var(--elevation-default);
+  cursor: pointer;
+}
+#nft-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--elevation-default-hover);
 }
 #nft-card #user-thumb {
   margin-right: 0.5rem;
@@ -1321,7 +1636,13 @@ footer .copyright ul li a {
   align-items: center;
   padding: 1rem;
 }
-#nft-card .card-header .user-id {
+#nft-card .card-header .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--error);
+  margin-right: 0.5rem;
+}
+#nft-card .card-header .user-id, #nft-card .card-header .nft-condition {
   color: var(--black);
   font-weight: 700;
 }
@@ -1332,10 +1653,32 @@ footer .copyright ul li a {
   transform: translateY(-50%);
 }
 #nft-card .card-body {
+  padding: 0 1rem;
+}
+#nft-card .card-body .img-wrap {
+  position: relative;
   height: 10rem;
 }
-#nft-card .card-body img {
+#nft-card .card-body .img-wrap img {
   object-fit: cover;
+  border-radius: var(--border-radius-xs);
+}
+#nft-card .card-body .img-wrap span {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+#nft-card .card-body .img-wrap span i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+#nft-card .card-body .item-name {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 #nft-card .card-footer {
   padding: 1rem;
@@ -1356,11 +1699,22 @@ footer .copyright ul li a {
 }
 #nft-card .card-footer .like {
   display: flex;
+  align-items: center;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
   cursor: pointer;
+}
+#nft-card .card-footer .like button {
+  color: var(--grey03);
+  background: transparent;
+}
+#nft-card .card-footer .like button:hover {
+  background: var(--grey01);
+}
+#nft-card .card-footer .like button.active {
+  color: var(--error);
 }
 #nft-card .card-footer .like span {
   margin-right: 0.25rem;
@@ -1370,6 +1724,66 @@ footer .copyright ul li a {
 }
 #nft-card .card-footer p.description {
   font-size: 0.75rem;
+}
+
+#prod-card {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  background: var(--grey01);
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  box-shadow: var(--elevation-default);
+  cursor: pointer;
+}
+#prod-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: var(--elevation-default-hover);
+}
+#prod-card .divider {
+  padding: 0;
+}
+#prod-card #user-thumb {
+  position: absolute;
+  bottom: 35%;
+  left: 1.5rem;
+}
+#prod-card .prod-img img {
+  border-radius: var(--border-radius-md);
+}
+#prod-card .icon-share {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  outline: none;
+}
+#prod-card .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--white);
+}
+#prod-card .card-header {
+  text-align: right;
+}
+#prod-card .card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+#prod-card .card-footer .text-item:nth-of-type(1) {
+  text-align: left;
+}
+#prod-card .card-footer .text-item:nth-of-type(2) {
+  text-align: right;
+}
+#prod-card .card-footer .text-item p {
+  color: var(--black);
+  font-weight: 600;
 }
 
 .thumb-xs {
@@ -1395,6 +1809,9 @@ footer .copyright ul li a {
 .icon-circle {
   border-radius: 5rem;
   outline: 1px solid var(--grey02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-square {
@@ -1421,6 +1838,11 @@ footer .copyright ul li a {
 .icon-size-lg {
   width: 2rem;
   height: 2rem;
+}
+
+.icon-size-xl {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .rounded-xs {

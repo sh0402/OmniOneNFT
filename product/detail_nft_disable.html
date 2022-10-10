@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="../assets/css/reset.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/common.css" />
-  <link rel="stylesheet" href="../assets/fontello/css/fontello.css">
 
   <!-- IMPORT EXTERNAL CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -41,6 +40,7 @@
 
   <script defer src="../assets/js/main.js"></script>
   <script defer src="../assets/js/swiper.js"></script>
+  <script defer src="../assets/js/detail.js"></script>
 
 </head>
 
@@ -56,7 +56,7 @@
         </h1>
         <ul class="gnb">
           <li>
-            <a href="#" onclick="alert('click')">About</a>
+            <a href="#" onclick="return false">About</a>
           </li>
           <li>
             <a href="#" onclick="return false">마켓플레이스</a>
@@ -236,7 +236,7 @@
   </div>
 
   <!-- HEADER / 유저 로그인 -->
-  <div id="header" style="display: none">
+  <div id="header">
     <div class="header-container">
 
       <div class="nav">
@@ -282,8 +282,7 @@
 
         <div class="modal-body">
           <div class="user-info">
-            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
-              <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+            <div id="user-thumb" class="icon-circle thumb-lg">
             </div>
 
             <div class="text-group">
@@ -397,7 +396,7 @@
   </div>
 
   <!-- HEADER / 크리에이터 로그인 -->
-  <div id="header" style="display: none">
+  <div id="header" style="display: none;">
     <div class="header-container">
 
       <div class="nav">
@@ -449,12 +448,12 @@
 
         <div class="modal-body">
           <div class="user-info">
-            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+            <div id="issuer-thumb" class="icon-circle thumb-lg">
               <img src="../assets/image/user-thumb/business-thumb.png" alt="">
             </div>
 
             <div class="text-group">
-              <p class="subtit-sm user-name">김라온</p>
+              <p class="subtit-md user-name">김라온</p>
               <p class="fs-7">1938.04.01 / Male</p>
               <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
             </div>
@@ -552,396 +551,327 @@
   <section>
     <div class="container">
 
-      <!-- HERO SWIPER -->
-      <article id="hero-swiper">
-        <div class="swiper heroSwiper">
-          <div class="swiper-wrapper">
+      <article id="detail">
 
-            <div class="swiper-slide">
-              <div class="linear-overlay gold"></div>
-              <div class="content-group">
-                <div class="text-group text-center">
-                  <h1 class="h1">
-                    OmniOne NFT Marketplace
-                  </h1>
+        <div id="left">
+          <div class="item-thumb rounded-md disabled">
+            <img src="../assets/image/card/item-thumb-gold.png" alt="">
+          </div>
 
-                  <p>
-                    실물 금으로 교환할 수 있는 금 NFT 입니다. <br>
-                    한국조폐공사가 보증하는 실물 1:1 교환 금 NFT 입니다.
-                  </p>
-                </div>
+          <div class="item-group rounded-md">
 
-                <img src="../assets/image/hero/hero.png" alt="">
-              </div>
-            </div>
+            <div class="detail-info">
+              <ul>
+                <li>
+                  <div class="main-list title">
 
-            <div class="swiper-slide">
-              <div class="linear-overlay not"></div>
-              <div class="content-group">
-                <div class="text-group text-center">
-                  <h1 class="h1">
-                    Test Titlte - 02
-                  </h1>
+                    <div class="users-item">
+                      <div class="users-item-inner">
+                        <div id="user-thumb" class="icon-circle thumb-md"></div>
 
-                  <p>
-                    Test Container TEXT
-                  </p>
-                </div>
+                        <div class="txt-group">
+                          <span class="owner">소유자</span>
+                          <p class="h7 user-name">한국조폐공사</p>
+                        </div>
+                      </div>
 
-                <img src="../assets/image/hero/hero.png" alt="">
-              </div>
-            </div>
+                      <i class="icon-arrow icon-size-md"></i>
+                    </div>
 
-            <div class="swiper-slide">
-              <div class="linear-overlay not"></div>
-              <div class="content-group">
-                <div class="text-group text-center">
-                  <h1 class="h1">
-                    Test Titlte - 03
-                  </h1>
+                  </div>
 
-                  <p>
-                    Test Container TEXT
-                  </p>
-                </div>
+                  <ul class="sub-list">
+                    <div class="divider">
+                      <span class="line"></span>
+                    </div>
+                    <li class="text-item">
+                      <p class="royalty">로열티</p>
+                      <p class="royalty-cont">0%</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">발행일시</p>
+                      <p class="royalty-cont">2022-07-21 / 21:01:59%</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">발행 수</p>
+                      <p class="royalty-cont">1/1</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">Blockchain</p>
+                      <p class="royalty-cont">Omnione%</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">Contact</p>
+                      <p class="royalty-cont">Contact-Content</p>
+                    </li>
+                    <li class="text-item">
+                      <p class="royalty">Tocken ID</p>
+                      <p class="royalty-cont">30951</p>
+                    </li>
 
-                <img src="../assets/image/hero/hero.png" alt="">
-              </div>
+                  </ul>
+                </li>
+
+
+              </ul>
             </div>
 
           </div>
-
-          <div class="swiper-pagination"></div>
         </div>
-      </article>
 
-      <!-- ISSUER ITEM -->
-      <article id="issu-swiper">
-        <h5 class="h5">카테고리</h5>
+        <div id="right">
+          <div class="prod-option item-group rounded-md">
+            <div class="title-item">
+              <h4 class="h4 title">금 1g</h4>
+              <p class="category">카테고리</p>
+              <p class="subtitle subtit-lg">실물 금 1g으로 교환 가능한 금 NFT 상품입니다.</p>
+              <p class="info-description">
+                변동성이 큰 코인 투자 열풍과 함께 안전자산인 금에 투자하는 사람들이 늘어나고 있습니다.
+                에보골드는 한국조폐공사가 직접 블록체인 NFT로
+                발행하는 금 NFT 거래 플랫폼입니다.
+              </p>
 
-        <div class="swiper issuSwiper">
-          <div class="swiper-wrapper">
+              <div class="detail-setting">
+                <!-- <div id="switch">
+                  <input type="checkbox" id="switch-02" />
+                  <label class="switch" for="switch-02">
+                    <div class="slider">
+                      <div class="round">
+                        <p class="switch-txt">공개</p>
+                      </div>
+                    </div>
+                  </label>
+                </div> 구매불가 시 -->
 
-            <div id="issu-item" class="swiper-slide">
-              <div id="user-thumb" class="thumb-md rounded-sm"></div>
-
-              <div class="linear-overlay gold"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <h5 class="h5">KOMSCO</h5>
-                  <p class="fs-6">한국조폐공사가 발행하는
-                    실물로 교환 가능한 금 NFT
-                  </p>
-                </div>
-
+                <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
               </div>
             </div>
 
-            <div id="issu-item" class="swiper-slide">
-              <div id="user-thumb" class="thumb-md rounded-sm"></div>
+            <!-- <div class="users-item">
+              <div id="user-thumb" class="icon-circle thumb-md"></div>
 
-              <div class="linear-overlay gold"></div>
+              <div class="txt-group">
+                <span>소유자</span>
+                <p class="h7 user-name">한국조폐공사</p>
+              </div>
+            </div> 구매불가 -->
 
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
+            <!-- <div class="price-item rounded-sm">
+              <div class="stock-group">
+                <span>남은 수량</span>
+                <h4 class="h4">Number</h4>
+              </div>
+              <div class="price-group">
+                <span>가격</span>
+                <h4 class="h4">Number</h4>
+              </div>
+            </div> -->
 
-                <div class="text-group">
-                  <h5 class="h5">KOMSCO</h5>
-                  <p class="fs-6">한국조폐공사가 발행하는
-                    실물로 교환 가능한 금 NFT
-                  </p>
-                </div>
-
+            <div class="price-item rounded-sm disabled">
+              <!-- <div class="stock-group">
+                <span class="condition">남은 수량</span>
+                <h4 class="h4">Number</h4>
+              </div> -->
+              <div class="price-group">
+                <h4 class="h4">구매불가</h4>
               </div>
             </div>
 
-            <div id="issu-item" class="swiper-slide">
-              <div id="user-thumb" class="thumb-md rounded-sm"></div>
-
-              <div class="linear-overlay gold"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <h5 class="h5">KOMSCO</h5>
-                  <p class="fs-6">한국조폐공사가 발행하는
-                    실물로 교환 가능한 금 NFT
-                  </p>
-                </div>
-
-              </div>
+            <div class="button-group disabled">
+              <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-gold-buy" type="button"
+                disabled>
+                금 1g NFT 구매하기
+              </button>
             </div>
-
-            <div id="issu-item" class="swiper-slide">
-              <div id="user-thumb" class="thumb-md rounded-sm"></div>
-
-              <div class="linear-overlay gold"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <h5 class="h5">KOMSCO</h5>
-                  <p class="fs-6">한국조폐공사가 발행하는
-                    실물로 교환 가능한 금 NFT
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <div id="issu-item" class="swiper-slide">
-              <div id="user-thumb" class="thumb-md rounded-sm"></div>
-
-              <div class="linear-overlay gold"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <h5 class="h5">KOMSCO</h5>
-                  <p class="fs-6">한국조폐공사가 발행하는
-                    실물로 교환 가능한 금 NFT
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            <div id="issu-item" class="swiper-slide">
-              <div id="user-thumb" class="thumb-md rounded-sm"></div>
-
-              <div class="linear-overlay gold"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <h5 class="h5">KOMSCO</h5>
-                  <p class="fs-6">한국조폐공사가 발행하는
-                    실물로 교환 가능한 금 NFT
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
           </div>
 
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </article>
-
-      <!-- EVENT AREA -->
-      <article id="grid-banner">
-        <div class="banner-inner">
-          <div class="text-group">
-            <h4 class="h4">Event</h4>
-            <h2 class="h2">
-              OmniOne NFT Marketplace
-              OPEN EVENT
-            </h2>
-            <p class="fs-5">
-              한국조페공사가 보증하는 NFT 웹사이트입니다!
-              대망의 오픈을 맞아, 이벤트를 진행하고 있습니다.
-              자세한 사항은 아래 버튼을클릭해주세요.
+          <div class="subtitle">
+            <p class="subtit-lg">
+              상세페이지
             </p>
-            <button class="btn-primary btn-md default">자세히 보기</button>
           </div>
 
-          <div class="img-group">
-            <img src="../assets/image/content/banner-02.png" alt="">
+          <div class="detail-area item-group rounded-md">
+            <div class="detail-item">
+              <div class="sample rounded-sm">
+                <h4 class="h4">sample</h4>
+              </div>
+            </div>
+          </div>
+
+          <div id="float" class="fade">
+            <div class="button-group disabled">
+              <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-gold-buy" type="button"
+                disabled>
+                금 1g NFT 구매하기
+              </button>
+            </div>
           </div>
         </div>
+
       </article>
 
-      <!-- PRODUCT ITEM -->
-      <article id="prod-swiper">
-        <h5 class="h5">
-          필수 안전자산 금 <br>
-          위 • 변조가 불가능한 NFT로 소유하세요.
-        </h5>
+      <article id="recommend">
+        <div class="article-title text-center">
+          <h4 class="h4">You may also like</h4>
 
-        <div class="swiper prodSwiper">
-          <div class="swiper-wrapper">
-
-            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nft.html'">
-              <div id="user-thumb" class="thumb-lg rounded-md"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <div class="txt-header">
-                    <p class="fs-7">user-name</p>
-                  </div>
-
-                  <div class="txt-body">
-                    <h5 class="h5">item-title</h5>
-                  </div>
-
-                  <div class="txt-footer">
-                    <div class="txt-item-group">
-                      <span class="fs-7">가격</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                    <div class="txt-item-group">
-                      <span class="fs-7">수량</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nft.html'">
-              <div id="user-thumb" class="thumb-lg rounded-md"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <div class="txt-header">
-                    <p class="fs-7">user-name</p>
-                  </div>
-
-                  <div class="txt-body">
-                    <h5 class="h5">item-title</h5>
-                  </div>
-
-                  <div class="txt-footer">
-                    <div class="txt-item-group">
-                      <span class="fs-7">가격</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                    <div class="txt-item-group">
-                      <span class="fs-7">수량</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nft.html'">
-              <div id="user-thumb" class="thumb-lg rounded-md"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <div class="txt-header">
-                    <p class="fs-7">user-name</p>
-                  </div>
-
-                  <div class="txt-body">
-                    <h5 class="h5">item-title</h5>
-                  </div>
-
-                  <div class="txt-footer">
-                    <div class="txt-item-group">
-                      <span class="fs-7">가격</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                    <div class="txt-item-group">
-                      <span class="fs-7">수량</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nft.html'">
-              <div id="user-thumb" class="thumb-lg rounded-md"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <div class="txt-header">
-                    <p class="fs-7">user-name</p>
-                  </div>
-
-                  <div class="txt-body">
-                    <h5 class="h5">item-title</h5>
-                  </div>
-
-                  <div class="txt-footer">
-                    <div class="txt-item-group">
-                      <span class="fs-7">가격</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                    <div class="txt-item-group">
-                      <span class="fs-7">수량</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="prod-item" class="swiper-slide" onclick="location.href='../product/detail_nft.html'">
-              <div id="user-thumb" class="thumb-lg rounded-md"></div>
-
-              <div class="content-group">
-                <img src="../assets/image/card/gold.png" alt="">
-
-                <div class="text-group">
-                  <div class="txt-header">
-                    <p class="fs-7">user-name</p>
-                  </div>
-
-                  <div class="txt-body">
-                    <h5 class="h5">item-title</h5>
-                  </div>
-
-                  <div class="txt-footer">
-                    <div class="txt-item-group">
-                      <span class="fs-7">가격</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                    <div class="txt-item-group">
-                      <span class="fs-7">수량</span>
-                      <p class="fs-5">Number</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="divider">
+            <span class="line"></span>
           </div>
-
-          <div class="swiper-pagination"></div>
         </div>
 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </article>
+        <div class="row">
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
 
-      <!-- BANNER AREA -->
-      <article id="wide-banner">
-        <div class="banner-inner">
-          <div class="text-group">
-            <h5 class="h5">
-              지금 <span>OmniOne NFT</span> 앱을 다운로드 받아 <br>
-              안전하고 편리하게 로그인 하세요.
-            </h5>
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
 
-            <div class="button-group">
-              <button class="btn-secondary btn-md default">App Store</button>
-              <button class="btn-secondary btn-md default">Google play</button>
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
             </div>
           </div>
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
 
-          <div class="img-group">
-            <img src="../assets/image/content/wide-banner-01.png" alt="">
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="w-25">
+            <div id="prod-card">
+              <button class="icon-share icon-size-xl icon-circle fs-4" onclick="alert('준비중입니다.')"></button>
+
+              <div id="user-thumb" class="rounded-sm thumb-md"></div>
+
+              <div class="card-content">
+                <div class="card-header">
+                  <p class="user-name">user-name</p>
+                </div>
+
+                <div class="divider">
+                  <span class="line"></span>
+                </div>
+
+                <div class="card-body">
+                  <div class="title">
+                    <h5 class="h5">금 1g</h5>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="text-item">
+                    <span class="price-text fs-7">가격</span>
+                    <p class="price-num fs-5">Number</p>
+                  </div>
+                  <div class="text-item">
+                    <span class="stock-text fs-7">수량</span>
+                    <p class="stock-num fs-5">Number</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prod-img">
+                <img src="../assets/image/card/gold.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </article>
@@ -949,7 +879,235 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+
+  <!-- 금 NFT 구매하기 -->
+  <div id="dialog-gold-buy" class="modal">
+    <div class="modal-dialog">
+
+      <div class="modal-header">
+        <div class="title text-center">
+          <h5 class="h5">금 NFT 구매하기</h5>
+
+          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
+        </div>
+
+        <div class="subtitle text-center">
+          <p>몇 개 구매하시겠습니까?</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="item-thumb rounded-md">
+          <img src="../assets/image/card/item-thumb-gold.png" alt="">
+        </div>
+
+        <div class="price-item">
+          <div class="stock-group">
+            <span>남은 수량</span>
+            <h4 class="h4">Number</h4>
+          </div>
+
+          <div id="stepper" class="rounded-sm">
+            <button class="btn-minus icon-minus fs-4"></button>
+
+            <p class="count-num">0</p>
+
+            <button class="btn-plus icon-plus fs-4"></button>
+          </div>
+        </div>
+
+        <div class="divider">
+          <span class="line"></span>
+        </div>
+
+        <div class="txt-item text-center">
+          <p class="subtit-sm">
+            금1g NFT 1개를 50,000원에 구매합니다.
+          </p>
+
+          <div id="radioBtn">
+            <div class="radiobtn-group">
+              <input id="radio-01" type="radio" name="radio" />
+
+              <label class="radio-label" for="radio-01">
+                <span>
+                  <svg></svg>
+                </span>
+                <span>계좌이체</span>
+              </label>
+            </div>
+
+            <div class="radiobtn-group">
+              <input id="radio-02" type="radio" name="radio" />
+
+              <label class="radio-label" for="radio-02">
+                <span>
+                  <svg></svg>
+                </span>
+                <span>휴대폰 소액결제</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
+        <button type="button" class="btn-md btn-primary default">50,000원 결제하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUY NOW 금 판매하기 -->
+  <div id="dialog-gold-sell" class="modal">
+    <div class="modal-dialog">
+
+      <div class="modal-header">
+        <div class="title">
+          <h5 class="h5">Buy Now 금 판매하기</h5>
+
+          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
+        </div>
+
+        <div class="subtitle">
+          <p>금 1g NFT를 판매등록합니다.</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-item">
+          <p class="label-b">
+            판매가격
+          </p>
+
+          <div id="input">
+            <label for="default"></label>
+            <input type="text" placeholder="판매할 가격을 입력해주세요.">
+            <p class="subtit-sm">원</p>
+          </div>
+        </div>
+
+        <div class="txt-item">
+          <div class="error-message">
+            존재하지 않는 DID입니다. 다시 한 번 확인해주세요.
+          </div>
+
+          <span>&#183; 판매되지 않은 NFT는 판매 철회할 수 있습니다.</span>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
+        <button type="button" class="btn-md btn-primary default">판매하기</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 금 선물하기 STEP 01 -->
+  <div id="dialog-gold-gift-01" class="modal">
+    <div class="modal-dialog">
+
+      <div class="modal-header">
+        <div class="title">
+          <h5 class="h5">금 선물하기</h5>
+
+          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
+        </div>
+
+        <div class="subtitle">
+          <p>금 1g NFT를 선물합니다.</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-item">
+          <p class="label-b">
+            <span>선물 받을 분의 DID를 입력해주세요.</span> <span>0/30</span>
+          </p>
+
+          <div id="input">
+            <label for="default"></label>
+            <input type="text" placeholder="판매할 가격을 입력해주세요.">
+            <p class="subtit-sm">원</p>
+          </div>
+        </div>
+
+        <div class="txt-item">
+          <div class="error-message">
+            존재하지 않는 DID입니다. 다시 한 번 확인해주세요.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
+        <button type="button" class="btn-md btn-primary default" data-toggle="modal"
+          data-target="dialog-gold-gift-02">다음</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 금 선물하기 STEP 02 -->
+  <div id="dialog-gold-gift-02" class="modal">
+    <div class="modal-dialog">
+
+      <div class="modal-header">
+        <div class="title text-center">
+          <h5 class="h5">금 NFT 구매하기</h5>
+
+          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
+        </div>
+
+        <div class="subtitle text-center">
+          <p class="subtit-sm">
+            금 1g NFT를 <br>
+            달콤한미르_3901803님께 선물합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="item-thumb rounded-md">
+          <img src="../assets/image/card/gift-img.png" alt="">
+        </div>
+
+        <div class="divider">
+          <span class="line"></span>
+        </div>
+
+        <div class="users-item">
+          <div id="user-thumb" class="thumb-md rounded-sm"></div>
+
+          <div class="txt-group">
+            <p class="subtit-sm user-name">김라온</p>
+            <p class="subtit-lg user-nickname">달콤한미르_3901803</p>
+          </div>
+        </div>
+
+        <div class="txt-item">
+          <div class="error-message text-center">
+            금 선물하기는 취소할 수 없습니다. <br>
+            전달하실 분의 정보를 다시 한 번 확인해주세요.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn-md btn-secondary default" data-dismiss="modal">취소하기</button>
+        <button type="button" class="btn-md btn-primary default">금 선물하기</button>
+      </div>
+
+    </div>
+  </div>
+
   <footer>
     <div class="footer-lnb">
       <div class="container">
@@ -1005,6 +1163,27 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var openTriger = document.getElementsByClassName('main-list');
+    var i;
+
+    for (i = 0; i < openTriger.length; i++) {
+      openTriger[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+
+        var content = this.nextElementSibling;
+        if (content.classList.contains('active')) {
+          content.classList.remove('active');
+
+        } else {
+          content.classList.add('active');
+        }
+
+      })
+    }
+  </script>
+
 </body>
 
 </html>
