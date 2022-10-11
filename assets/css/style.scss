@@ -1851,13 +1851,21 @@ section.active {
       display: flex;
       justify-content: center;
     }
+    
+    .button-group {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .modal-footer {
     .button-group {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 100%;
+      }
     }
   }
 }
@@ -1898,6 +1906,13 @@ section.active {
 }
 
 #right {
+
+  #tab {
+    .tabnav {
+      margin-bottom: 2rem;
+    }
+  }
+
   .result-filter {
     width: 100%;
 
@@ -1911,15 +1926,15 @@ section.active {
     gap: 1rem;
     margin-bottom: 1.5rem;
     justify-content: right;
-  }
 
-  #select {
-    width: 10rem;
-
-    .selected {
-      padding: 0.75rem 1rem;
-      background: var(--grey01);
-      border: none;
+    > #select {
+      width: 10rem;
+  
+      .selected {
+        padding: 0.75rem 1rem;
+        background: var(--grey01);
+        border: none;
+      }
     }
   }
 }
@@ -2136,52 +2151,128 @@ footer {
     padding: 0;
   }
 
-  .input-item {
-    display: flex;
-    align-items: center;
-    // display: grid;
-    // grid-template-columns: 1fr 4fr 1fr;
-    // align-items: center;
-    gap: 2rem;
-    padding: 0.5rem 0;
+  .input-group {
+    margin-bottom: 2rem;
 
-    .input-title {
-      width: 20%;
+    .input-item {
       display: flex;
       align-items: center;
-      
-      span {
-        padding: 0 0.5rem;
-      }
-    }
-
-    .input-box {
-      width: 100%;
-
-      .item-wrap {
-        display: grid;
-        grid-template-columns: 4fr 1fr;
+      gap: 2rem;
+      padding: 0.5rem 0;
+  
+      .input-title {
+        width: 20%;
+        display: flex;
         align-items: center;
-        gap: 2rem;
+        
+        span {
+          padding: 0 0.5rem;
+        }
+      }
+  
+      .input-box {
+        width: 100%;
+  
+        .item-wrap {
+          display: grid;
+          grid-template-columns: 4fr 1fr;
+          align-items: center;
+          gap: 2rem;
+        }
+      }
+  
+      input, textarea {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  
+  .list-group {
+    .subtitle {
+      position: relative;
+
+      #switch {
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        transform: translateY(-50%);
       }
     }
 
-    input, textarea {
-      margin: 0.5rem 0;
+    .list-item {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0.5rem 0;
+      margin-bottom: 3rem;
+  
+      .list-title {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        
+        span {
+          padding: 0 0.5rem;
+        }
+      }
+  
+      .list-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        .item-wrap {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+  
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#trade-history { 
+
+  .trade-option {
+    margin-bottom: 2rem;
+  }
+
+  .trade-result {
+    .result-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid red;
+
+      .result-option-item {
+        display: flex;
+      }
     }
   }
 
-}
+  .button-group {
+    display: block;
+    margin: 0.5rem 0;
 
-#storage-check {
-  border: 1px solid var(--grey02);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem;
-
-  .divider {
-    padding: 0;
+    button {
+      width: 100%;
+    }
   }
 }
+
 
 .board-menu {
   ul {
@@ -2343,6 +2434,59 @@ footer {
 
   .sub-list.active {
     display: block;
+  }
+}
+
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+
+  .filter-title {
+    flex-basis: 4rem;
+  }
+
+  .date-picker-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    input {
+      width: 12.5rem;
+    }
+  }
+
+  #radioBtn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.drop-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+
+  .filter-title {
+    flex-basis: 4rem;
+  }
+
+  #select {
+    .selected {
+      width: 12.5rem;
+      padding: 1rem 1.5rem;
+      background: var(--grey01);
+    }
+    
+    ul {
+      width: 12.5rem;
+    }
   }
 }
 

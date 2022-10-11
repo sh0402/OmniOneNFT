@@ -5,7 +5,7 @@
 .icon-check:before { content: '\e803'; } /* '' */
 .icon-close:before { content: '\e804'; } /* '' */
 .icon-copy:before { content: '\e805'; } /* '' */
-.icon-down:before { content: '\e806'; } /* '' */
+.icon-eye-hidden:before { content: '\e806'; } /* '' */
 .icon-heart:before { content: '\e807'; } /* '' */
 .icon-search:before { content: '\e808'; } /* '' */
 .icon-share:before { content: '\e809'; } /* '' */
@@ -13,5 +13,10 @@
 .icon-minus:before { content: '\e80c'; } /* '' */
 .icon-email:before { content: '\e80d'; } /* '' */
 .icon-delete:before { content: '\e80f'; } /* '' */
+.icon-down:before { content: '\e810'; } /* '' */
+.icon-left:before { content: '\e811'; } /* '' */
+.icon-right:before { content: '\e812'; } /* '' */
+.icon-up:before { content: '\e813'; } /* '' */
+.icon-eye:before { content: '\e814'; } /* '' */
 .icon-picture:before { content: '\e818'; } /* '' */
 .icon-caution:before { content: '\e819'; } /* '' */

@@ -1480,10 +1480,16 @@ section.active {
   display: flex;
   justify-content: center;
 }
+#dialog-trade-list .modal-body .button-group {
+  display: flex;
+  justify-content: center;
+}
 #dialog-trade-list .modal-footer .button-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+}
+#dialog-trade-list .modal-footer .button-group button {
+  width: 100%;
 }
 
 #explore-search,
@@ -1515,6 +1521,9 @@ section.active {
   margin-right: 0.5rem;
 }
 
+#right #tab .tabnav {
+  margin-bottom: 2rem;
+}
 #right .result-filter {
   width: 100%;
 }
@@ -1527,10 +1536,10 @@ section.active {
   margin-bottom: 1.5rem;
   justify-content: right;
 }
-#right #select {
+#right .item-option > #select {
   width: 10rem;
 }
-#right #select .selected {
+#right .item-option > #select .selected {
   padding: 0.75rem 1rem;
   background: var(--grey01);
   border: none;
@@ -1716,40 +1725,97 @@ footer .copyright ul li a {
 #my-info-form .divider {
   padding: 0;
 }
-#my-info-form .input-item {
+#my-info-form .input-group {
+  margin-bottom: 2rem;
+}
+#my-info-form .input-group .input-item {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 0.5rem 0;
 }
-#my-info-form .input-item .input-title {
+#my-info-form .input-group .input-item .input-title {
   width: 20%;
   display: flex;
   align-items: center;
 }
-#my-info-form .input-item .input-title span {
+#my-info-form .input-group .input-item .input-title span {
   padding: 0 0.5rem;
 }
-#my-info-form .input-item .input-box {
+#my-info-form .input-group .input-item .input-box {
   width: 100%;
 }
-#my-info-form .input-item .input-box .item-wrap {
+#my-info-form .input-group .input-item .input-box .item-wrap {
   display: grid;
   grid-template-columns: 4fr 1fr;
   align-items: center;
   gap: 2rem;
 }
-#my-info-form .input-item input, #my-info-form .input-item textarea {
+#my-info-form .input-group .input-item input, #my-info-form .input-group .input-item textarea {
   margin: 0.5rem 0;
 }
-
-#storage-check {
-  border: 1px solid var(--grey02);
-  border-radius: var(--border-radius-md);
-  padding: 1.5rem;
+#my-info-form .list-group .subtitle {
+  position: relative;
 }
-#storage-check .divider {
-  padding: 0;
+#my-info-form .list-group .subtitle #switch {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#my-info-form .list-group .list-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+  margin-bottom: 3rem;
+}
+#my-info-form .list-group .list-item .list-title {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+#my-info-form .list-group .list-item .list-title span {
+  padding: 0 0.5rem;
+}
+#my-info-form .list-group .list-item .list-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#my-info-form .list-group .list-item .list-box .item-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#my-info-form .list-group .button-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#my-info-form .list-group .button-group button {
+  width: 100%;
+}
+
+#trade-history .trade-option {
+  margin-bottom: 2rem;
+}
+#trade-history .trade-result .result-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+#trade-history .trade-result .result-option .result-option-item {
+  display: flex;
+}
+#trade-history .button-group {
+  display: block;
+  margin: 0.5rem 0;
+}
+#trade-history .button-group button {
+  width: 100%;
 }
 
 .board-menu ul li {
@@ -1869,6 +1935,49 @@ footer .copyright ul li a {
 }
 .explore-menu .sub-list.active {
   display: block;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.date-filter .filter-title {
+  flex-basis: 4rem;
+}
+.date-filter .date-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.date-filter .date-picker-group input {
+  width: 12.5rem;
+}
+.date-filter #radioBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drop-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.drop-filter .filter-title {
+  flex-basis: 4rem;
+}
+.drop-filter #select .selected {
+  width: 12.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--grey01);
+}
+.drop-filter #select ul {
+  width: 12.5rem;
 }
 
 .w-100 {

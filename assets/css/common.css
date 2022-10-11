@@ -156,6 +156,11 @@ body {
   font-weight: 600 !important;
 }
 
+.issuer-name {
+  color: var(--black) !important;
+  font-weight: 800 !important;
+}
+
 .owner {
   color: var(--grey03);
   margin-bottom: 0.25rem;
@@ -269,6 +274,52 @@ input, textarea {
   background: transparent;
 }
 
+table {
+  width: 100%;
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  outline: 1px solid var(--grey04);
+}
+table thead th {
+  padding: 0.5rem;
+  background: var(--grey04);
+  color: var(--white);
+}
+table thead th button {
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+  color: var(--white);
+}
+table tbody tr {
+  border: 1px solid var(--grey02);
+}
+table tbody tr:hover {
+  background: var(--grey01);
+}
+table tbody tr:hover th, table tbody tr:hover td {
+  color: var(--grey05);
+}
+table tbody tr:last-child {
+  border: none;
+}
+table tbody th, table tbody td {
+  padding: 0.5rem;
+  text-align: center;
+}
+table tbody th button, table tbody td button {
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+}
+table tbody th button.active, table tbody td button.active {
+  transition: all 0.3s ease;
+  color: var(--black);
+}
+table tbody th button.active::before, table tbody td button.active::before {
+  content: "\e806";
+}
+
 .icon-close,
 .icon-bell,
 .icon-plus,
@@ -278,7 +329,9 @@ input, textarea {
 .icon-email,
 .icon-picture,
 .icon-caution,
-.icon-delete {
+.icon-delete,
+.icon-eye,
+.icon-eye-hidden {
   color: var(--grey04);
 }
 
@@ -784,6 +837,11 @@ button.btn-search:hover {
   transition: all 0.3s ease;
 }
 
+button.btn-table {
+  background: var(--grey05);
+  color: var(--white);
+}
+
 button.btn-close {
   position: absolute;
   top: 50%;
@@ -815,17 +873,20 @@ button.btn-more:hover {
 
 .btn-sm {
   height: 2.5rem;
-  padding: 0 1rem;
+  font-size: 0.75rem;
+  padding: 0 1.5rem;
 }
 
 .btn-md {
-  padding: 1rem 1.5rem;
+  height: 3rem;
   font-size: 1rem;
+  padding: 0 2rem;
 }
 
 .btn-lg {
   height: 3.5rem;
-  padding: 1.25rem 3rem;
+  font-size: 1.5rem;
+  padding: 0 2.5rem;
 }
 
 .btn-circle img {
