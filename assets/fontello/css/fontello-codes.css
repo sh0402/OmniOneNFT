@@ -12,3 +12,6 @@
 .icon-plus:before { content: '\e80b'; } /* '' */
 .icon-minus:before { content: '\e80c'; } /* '' */
 .icon-email:before { content: '\e80d'; } /* '' */
+.icon-delete:before { content: '\e80f'; } /* '' */
+.icon-picture:before { content: '\e818'; } /* '' */
+.icon-caution:before { content: '\e819'; } /* '' */

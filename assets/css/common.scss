@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@import url('/assets/fontello/css/fontello.css');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("/assets/fontello/css/fontello.css");
 
 @font-face {
-  font-family: 'Gothic A1', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  font-family: "Gothic A1", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 
@@ -34,13 +34,17 @@
   --elevation-default: 0 0.5rem 1rem rgba(9, 44, 76, 0.16);
   --elevation-default-hover: 0 1.5rem 2rem rgba(9, 44, 76, 0.26);
   --modalbg: rgba(0, 0, 0, 0.6);
-  --linear-gold: linear-gradient(360deg,
-      #846a3c 12%,
-      rgba(110, 120, 70, 0) 80%);
-  --linear-not: linear-gradient(360deg,
-      #3d3d3d 0%,
-      rgba(61, 61, 61, 0.8) 50%,
-      rgba(61, 61, 61, 0.4) 100%);
+  --linear-gold: linear-gradient(
+    360deg,
+    #846a3c 12%,
+    rgba(110, 120, 70, 0) 80%
+  );
+  --linear-not: linear-gradient(
+    360deg,
+    #3d3d3d 0%,
+    rgba(61, 61, 61, 0.8) 50%,
+    rgba(61, 61, 61, 0.4) 100%
+  );
   --border-radius-xs: 0.5rem;
   --border-radius-sm: 1rem;
   --border-radius-md: 1.5rem;
@@ -52,14 +56,14 @@
   box-sizing: border-box;
   font-size: 16px;
   font-weight: normal;
-  font-family: 'Inter', 'Gothic A1', Arial, sans-serif !important;
+  font-family: "Inter", "Gothic A1", Arial, sans-serif !important;
 }
 
 html,
 body {
   height: 100%;
   height: 100%;
-  font-family: 'Inter', 'Gothic A1', Arial, sans-serif !important;
+  font-family: "Inter", "Gothic A1", Arial, sans-serif !important;
   font-weight: 400;
   color: #727272;
   -ms-text-size-adjust: 100%;
@@ -200,6 +204,18 @@ body {
   font-size: 0.75rem;
 }
 
+.text-limit {
+  color: var(--grey03);
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
 .fs-1 {
   font-size: 2.5rem;
 }
@@ -253,7 +269,7 @@ span {
   }
 }
 
-input {
+input, textarea {
   border: 1px solid var(--grey02);
   padding: 1rem 1.5rem;
   border-radius: 0.75rem;
@@ -261,12 +277,21 @@ input {
   background: transparent;
 }
 
-.icon-close, .icon-bell, .icon-plus, .icon-minus, .icon-share, .icon-copy, .icon-email {
+.icon-close,
+.icon-bell,
+.icon-plus,
+.icon-minus,
+.icon-share,
+.icon-copy,
+.icon-email,
+.icon-picture,
+.icon-caution,
+.icon-delete {
   color: var(--grey04);
 }
 
 .icon-search {
-  color: var(--white)
+  color: var(--white);
 }
 
 i {
@@ -279,7 +304,7 @@ i {
 // }
 
 i.icon-arrow {
-  background: url('/assets/image/icon/icon-down.svg') no-repeat center center;
+  background: url("/assets/image/icon/icon-down.svg") no-repeat center center;
   background-size: cover;
 }
 
@@ -307,9 +332,7 @@ img {
   text-align: right !important;
 }
 
-
-
-.divider {  
+.divider {
   margin: 1rem 0;
   padding: 0 1rem;
 
@@ -334,17 +357,17 @@ img {
   -webkit-backdrop-filter: blur(0.125rem);
   z-index: 9999;
   animation: opacityAni 0.3s;
-  
 
   .modal-dialog {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: var(--border-radius-md);
     box-shadow: var(--elevation-default);
     padding: 1.5rem;
   }
 
-  .modal-header, .modal-body {
+  .modal-header,
+  .modal-body {
     margin-bottom: 1.5rem;
   }
 }
@@ -395,7 +418,7 @@ img {
   display: flex;
   flex-direction: column;
 
-  >input {
+  > input {
     position: relative;
     border: 1px solid var(--grey02);
     padding: 1rem 1.5rem;
@@ -512,7 +535,6 @@ img {
     }
 
     &:hover {
-
       span {
         border-color: var(--secondary);
         opacity: 0.5;
@@ -523,15 +545,16 @@ img {
   input {
     position: absolute;
     visibility: hidden;
+    display: none;
   }
 
-  input:checked+.checkbox span {
+  input:checked + .checkbox span {
     background: var(--secondary);
     border-color: var(--secondary);
     animation: scaleAni 0.3s ease;
   }
 
-  input:checked+.checkbox span i.icon-check {
+  input:checked + .checkbox span i.icon-check {
     color: var(--white);
     opacity: 1;
   }
@@ -588,12 +611,12 @@ img {
     visibility: hidden;
   }
 
-  input[type='radio']:checked+.radio-label span:first-child {
+  input[type="radio"]:checked + .radio-label span:first-child {
     border-color: var(--secondary);
     animation: scaleAni 0.3s ease;
   }
 
-  input[type='radio']:checked+.radio-label span:first-child svg {
+  input[type="radio"]:checked + .radio-label span:first-child svg {
     border-radius: 50%;
     background: var(--secondary);
     opacity: 1;
@@ -662,12 +685,12 @@ img {
     visibility: hidden;
   }
 
-  input:checked+.switch .slider {
+  input:checked + .switch .slider {
     background-color: var(--secondary);
     border-color: var(--secondary);
   }
 
-  input:checked+.switch .slider .round {
+  input:checked + .switch .slider .round {
     transform: translateX(1.5rem);
   }
 
@@ -699,7 +722,7 @@ img {
   }
 
   p.count-num {
-    font-family: 'Inter', 'Gothic A1', Arial, sans-serif;
+    font-family: "Inter", "Gothic A1", Arial, sans-serif;
     font-weight: bold;
     padding: 0 1.5rem;
     width: 4rem;
@@ -715,12 +738,14 @@ img {
 }
 
 #user-thumb {
-  background: url('/assets/image/user-thumb/user-thumb.png') no-repeat center center;
+  background: url("/assets/image/user-thumb/user-thumb.png") no-repeat center
+    center;
   background-size: cover;
 }
 
 #issuer-thumb {
-  background: url('/assets/image/user-thumb/business-thumb.png') no-repeat center center;
+  background: url("/assets/image/user-thumb/business-thumb.png") no-repeat
+    center center;
   background-size: cover;
 }
 
@@ -737,7 +762,7 @@ button[disabled] {
   background-color: var(--grey02) !important;
   color: var(--grey03) !important;
   // Cursor: not-allowed;
-  Button: disabled;
+  button: disabled;
 }
 
 button.default {
@@ -835,7 +860,6 @@ button.btn-minimal {
   }
 
   &:focus {
-
     svg,
     p {
       color: var(--primary);
@@ -879,7 +903,7 @@ button.btn-close {
 button.btn-more {
   padding: 1rem 2rem;
   border-radius: 5rem;
-  
+
   &:hover {
     opacity: 0.6;
     transition: all 0.3s ease;
@@ -941,7 +965,6 @@ button.btn-more {
   width: 3.5rem;
   height: 3.5rem;
 }
-
 
 #progress {
   z-index: 10;
@@ -1010,12 +1033,12 @@ button.btn-more {
     border: 1px solid var(--grey02);
     padding: 1rem;
 
-    &:last-child {}
+    &:last-child {
+    }
   }
 }
 
 #tab {
-
   .tabnav {
     display: flex;
     margin-bottom: 3rem;
@@ -1129,8 +1152,6 @@ button.btn-more {
   opacity: 0;
 }
 
-
-
 // #modalContainer {
 //   background-color:rgba(0, 0, 0, 0.3);
 //   position:absolute;
@@ -1233,7 +1254,5 @@ button.btn-more {
 // code span {
 //   color:green;
 // }
-
-
 
 /*# sourceMappingURL=common.scss.map */

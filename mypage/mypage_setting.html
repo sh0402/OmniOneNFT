@@ -553,23 +553,53 @@
     <div class="container">
       <article id="my-info">
 
-        <div id="user-thumb" class="rounded-sm"></div>
+        <div id="user-thumb" class="rounded-sm">
+          <button class="icon-delete fs-4"></button>
+        </div>
 
         <div class="info-text">
           <div class="text-group">
             <div class="title">
-              <h5 class="h5">달콤한미르_3901803</h5>
+              <h5 class="h5">김라온</h5>
+
+              <div id="switch">
+                <input type="checkbox" id="switch-02" />
+                <label class="switch" for="switch-02">
+                  <div class="slider">
+                    <div class="round">
+                      <p class="switch-txt">공개</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
               <p>
-                <i class="icon-email fs-4"></i>
-                raonsequre@raonkorp.com
+                다른 사용자들에게 실명이 공개됩니다.
               </p>
             </div>
 
-            <div class="item-group">
-              <p class="description">
-                소개하겠습니다. 제 실명은 김라온이고 닉네임은 정하지 않았습니다. <br>
-                제 DID 복사해서 NFT 소유권 이전 많이 해주세요.
+            <div class="divider">
+              <span class="line"></span>
+            </div>
+          </div>
+
+
+
+          <div class="did-info">
+            <div class="did">
+              <p>DID</p>
+            </div>
+
+            <div class="did-id">
+              <p>
+                did:raon:0000000000000000000000000039djvvse
               </p>
+
+              <button class="copy btn-secondary btn-md default">
+                <span class="icon-size-sm">
+                  <i class="icon-copy"></i>
+                </span>
+              </button>
             </div>
           </div>
 
@@ -581,587 +611,98 @@
         </div>
       </article>
 
-      <article id="explore">
-        <div id="left">
-          <div class="board-menu">
-            <ul>
-              <li>
-                <a href="#" onclick="return false">소유한 NFT</a>
-              </li>
-              <li>
-                <a href="#" onclick="return false">생성한 NFT</a>
-              </li>
-              <li>
-                <a href="#" onclick="return false">판매중인 NFT</a>
-              </li>
-              <li>
-                <a href="#" onclick="return false">좋아요 한 NFT</a>
-              </li>
-            </ul>
+      <article id="my-info-form">
 
-            <div class="divider">
-              <span class="line"></span>
-            </div>
+        <div class="input-group">
+          <div class="subtitle">
+            <p class="subtit-md">개인정보 설정</p>
+          </div>
 
-            <ul>
-              <li>
-                <a href="#" onclick="return false">거래 및 정산 내역</a>
-              </li>
-            </ul>
+          <div class="divider">
+            <span class="line"></span>
+          </div>
 
-            <div class="divider">
-              <span class="line"></span>
+          <div class="input-item">
+            <div class="input-title">닉네임 <span class="warning">*</span></div>
+
+            <div class="input-box">
+              <label for="default">
+                <div class="text-label text-right">
+                  <span class="text-limit">0/30 최대30자</span>
+                </div>
+
+                <input type="text" placeholder="닉네임" value="">
+
+                <div class="text-label">
+                  <span class="warning">유효성 오류 메세지 </span>
+                </div>
+              </label>
             </div>
           </div>
 
-          <div class="explore-menu">
-            <ul>
-              <li>
-                <div class="main-list title">
-                  <h7 class="h7">Status</h7>
-                  <span class="icon-size-md">
-                    <i class="icon-arrow"></i>
-                  </span>
+          <div class="input-item">
+            <div class="input-title">Email</div>
+
+            <div class="input-box">
+              <div class="item-wrap">
+                <label for="default">
+                  <div class="text-label text-right">
+                    <span class="text-limit">0/30 최대30자</span>
+                  </div>
+                  <input type="text" placeholder="이메일을 입력해주세요." value="">
+                  <div class="text-label">
+                    <span class="warning">유효성 오류 메세지 </span>
+                  </div>
+                </label>
+                <div class="checkbox-item">
+                  <input id="check-address" type="checkbox" />
+                  <label class="checkbox" for="check-address">
+                    <p class="subtit-sm">마케팅 수신동의 </p>
+                    <span class="icon-square icon-size-md">
+                      <i class="icon-check"></i>
+                    </span>
+                    <p>Email</p>
+                  </label>
                 </div>
-
-                <ul class="sub-list">
-                  <li>
-                    <div class="checkbox-item">
-                      <input id="nft-all" type="checkbox" />
-
-                      <label class="checkbox" for="nft-all">
-                        <p>NFT 유형 전체</p>
-
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="checkbox-item">
-                      <input id="trade" type="checkbox" />
-
-                      <label class="checkbox" for="trade">
-                        <p>실물 교환 가능</p>
-
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </li>
-
-                  <li>
-                    <div class="checkbox-item">
-                      <input id="digital-cont" type="checkbox" />
-
-                      <label class="checkbox" for="digital-cont">
-                        <p>디지털 콘텐츠</p>
-
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-
-              <div class="divider">
-                <span class="line"></span>
               </div>
-
-              <li>
-                <div class="main-list title">
-                  <h7 class="h7">금 NFT 실물 교환</h7>
-                  <span class="icon-size-md">
-                    <i class="icon-arrow"></i>
-                  </span>
-                </div>
-
-                <ul class="sub-list">
-                  <li>
-                    <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-trade">실물로
-                      교환하기</button>
-                  </li>
-                </ul>
-
-              </li>
-            </ul>
+            </div>
           </div>
 
-          <div class="button-group">
-            <button class="btn-secondary btn-sm btn-circle btn-backup" data-toggle="modal" data-target="dialog-backup">
-              꼭 백업해주세요!<i class="icon-caution icon-size-md"></i>
-            </button>
+          <div class="input-item">
+            <div class="input-title">상세소개</div>
+
+            <div class="input-box">
+              <label for="default">
+                <div class="text-label text-right">
+                  <span class="text-limit">0/500 최대 500자</span>
+                </div>
+
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+
+                <div class="text-label">
+                  <span class="warning">유효성 오류 메세지 </span>
+                </div>
+
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article id="storage-check">
+        <div class="input-group">
+          <div class="subtitle">
+            <p class="subtit-md">보관함 공개 여부</p>
+          </div>
+
+          <div class="divider">
+            <span class="line"></span>
           </div>
         </div>
 
-        <div id="right">
-          <div class="item-option">
-            <div id="select">
-              <div class="selected">
-                <span class="selected-value">크리에이터</span>
-                <i>
-                  <img src="/assets/image/icon/icon-down.svg" alt="" />
-                </i>
-              </div>
 
-              <ul>
-                <li class="option">none</li>
-                <li class="option">option 1</li>
-                <li class="option">option 2</li>
-                <li class="option">option 3</li>
-              </ul>
-            </div>
-
-            <div id="select">
-              <div class="selected">
-                <span class="selected-value">최신순</span>
-                <i>
-                  <img src="/assets/image/icon/icon-down.svg" alt="" />
-                </i>
-              </div>
-
-              <ul>
-                <li class="option">none</li>
-                <li class="option">option 1</li>
-                <li class="option">option 2</li>
-                <li class="option">option 3</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="result-filter">
-
-            <div class="row">
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-25">
-                <div id="nft-card">
-                  <div class="card-header">
-                    <div id="user-thumb" class="thumb-xs rounded-xs"></div>
-
-                    <p class="user-id fs-7">달콤한미르_3901803</p>
-
-                    <div class="checkbox-item">
-                      <input id="check-01" type="checkbox" />
-                      <label class="checkbox" for="check-01">
-                        <span class="icon-square icon-size-md">
-                          <i class="icon-check"></i>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <div class="img-wrap">
-                      <img src="../assets/image/card/gold.png" alt="" />
-
-                      <span class="icon-circle icon-size-md">
-                        <i class="icon-share"></i>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="title">
-                      <p class="item-name">금 1g</p>
-
-                      <div class="like">
-                        <button class="icon-heart round icon-size-md"></button>
-
-                        <p class="like-num">1</p>
-                      </div>
-                    </div>
-
-                    <div class="divider">
-                      <span class="line"></span>
-                    </div>
-
-                    <div class="">
-                      <p class="description">
-                        NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                        초과영역은 이...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
       </article>
     </div>
   </section>
@@ -1835,7 +1376,8 @@
     </div>
   </footer>
 
-  <script>
+
+  <!-- <script>
     var openTriger = document.getElementsByClassName('main-list');
     var i;
 
@@ -1862,7 +1404,7 @@
         this.classList.toggle('active');
       });
     }
-  </script>
+  </script> -->
 
 </body>
 
