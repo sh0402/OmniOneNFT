@@ -1500,14 +1500,6 @@ section.active {
   gap: 1.5rem;
 }
 
-#explore #left > .button-group {
-  padding: 0 1rem;
-}
-#explore #left > .button-group .btn-backup {
-  color: var(--grey05);
-  font-weight: normal;
-}
-
 #explore-search {
   align-items: center;
   margin-bottom: 2rem;
@@ -1670,6 +1662,11 @@ footer .copyright ul li a {
   border-radius: var(--border-radius-sm);
   margin-bottom: 1rem;
 }
+#my-info .info-text .button-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 #my-info .info-text p {
   display: flex;
   align-items: center;
@@ -1801,20 +1798,153 @@ footer .copyright ul li a {
 #trade-history .trade-option {
   margin-bottom: 2rem;
 }
+#trade-history .trade-option .filter-title {
+  display: flex;
+  width: 100%;
+}
+#trade-history .trade-option .filter-title p {
+  width: 6rem;
+}
+#trade-history .trade-option .date-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+#trade-history .trade-option .date-filter .date-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#trade-history .trade-option .date-filter .date-picker-group input {
+  width: 12.5rem;
+}
+#trade-history .trade-option .date-filter #radioBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#trade-history .trade-option .drop-filter #select .selected {
+  width: 12.5rem;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  background: var(--grey01);
+}
+#trade-history .trade-option .drop-filter #select ul {
+  width: 12.5rem;
+}
 #trade-history .trade-result .result-option {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid red;
+  margin-bottom: 1rem;
 }
 #trade-history .trade-result .result-option .result-option-item {
   display: flex;
+}
+#trade-history .trade-result .result-option .result-option-item button.btn-download {
+  color: var(--grey05);
+  font-weight: normal;
+}
+#trade-history .trade-result .result-option .result-option-item #select .selected {
+  width: 10rem;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  background: var(--grey01);
+}
+#trade-history .trade-result .result-option .result-option-item #select ul {
+  width: 10rem;
 }
 #trade-history .button-group {
   display: block;
   margin: 0.5rem 0;
 }
 #trade-history .button-group button {
+  width: 100%;
+}
+
+#adjustment-history .adjustment-option {
+  margin-bottom: 2rem;
+}
+#adjustment-history .adjustment-option .filter-title {
+  display: flex;
+  width: 100%;
+}
+#adjustment-history .adjustment-option .filter-title p {
+  width: 6rem;
+}
+#adjustment-history .adjustment-option .date-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+#adjustment-history .adjustment-option .date-filter .date-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#adjustment-history .adjustment-option .date-filter .date-picker-group input {
+  width: 12.5rem;
+}
+#adjustment-history .adjustment-option .date-filter #radioBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#adjustment-history .adjustment-option .drop-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+#adjustment-history .adjustment-option .drop-filter #select {
+  width: fit-content;
+}
+#adjustment-history .adjustment-option .drop-filter #select .selected {
+  width: 12.5rem;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  background: var(--grey01);
+}
+#adjustment-history .adjustment-option .drop-filter #select ul {
+  width: 12.5rem;
+}
+#adjustment-history .adjustment-option .drop-filter #radioBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#adjustment-history .adjustment-result .result-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#adjustment-history .adjustment-result .result-option .result-option-item {
+  display: flex;
+}
+#adjustment-history .adjustment-result .result-option .result-option-item button.btn-download {
+  color: var(--grey05);
+  font-weight: normal;
+}
+#adjustment-history .adjustment-result .result-option .result-option-item #select .selected {
+  width: 10rem;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  background: var(--grey01);
+}
+#adjustment-history .adjustment-result .result-option .result-option-item #select ul {
+  width: 10rem;
+}
+#adjustment-history .button-group {
+  display: block;
+  margin: 0.5rem 0;
+}
+#adjustment-history .button-group button {
   width: 100%;
 }
 
@@ -1937,28 +2067,8 @@ footer .copyright ul li a {
   display: block;
 }
 
-.date-filter {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 0;
-  width: 100%;
-}
 .date-filter .filter-title {
   flex-basis: 4rem;
-}
-.date-filter .date-picker-group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.date-filter .date-picker-group input {
-  width: 12.5rem;
-}
-.date-filter #radioBtn {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
 }
 
 .drop-filter {
@@ -1970,14 +2080,6 @@ footer .copyright ul li a {
 }
 .drop-filter .filter-title {
   flex-basis: 4rem;
-}
-.drop-filter #select .selected {
-  width: 12.5rem;
-  padding: 1rem 1.5rem;
-  background: var(--grey01);
-}
-.drop-filter #select ul {
-  width: 12.5rem;
 }
 
 .w-100 {

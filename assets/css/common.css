@@ -274,14 +274,29 @@ input, textarea {
   background: transparent;
 }
 
-table {
-  width: 100%;
+#table {
+  border: 1px solid var(--grey04);
   border-radius: var(--border-radius-xs);
   overflow: hidden;
-  outline: 1px solid var(--grey04);
+  background: transparent;
+}
+
+table {
+  width: 100%;
+  font-size: 0.75rem;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+table tr {
+  border-bottom: 1px solid var(--grey04);
+}
+table tr:last-child {
+  border: none;
 }
 table thead th {
   padding: 0.5rem;
+  height: 2.25rem;
+  vertical-align: middle;
   background: var(--grey04);
   color: var(--white);
 }
@@ -290,9 +305,6 @@ table thead th button {
   vertical-align: middle;
   background: transparent;
   color: var(--white);
-}
-table tbody tr {
-  border: 1px solid var(--grey02);
 }
 table tbody tr:hover {
   background: var(--grey01);
@@ -305,6 +317,8 @@ table tbody tr:last-child {
 }
 table tbody th, table tbody td {
   padding: 0.5rem;
+  height: 2.75rem;
+  vertical-align: middle;
   text-align: center;
 }
 table tbody th button, table tbody td button {
@@ -318,6 +332,44 @@ table tbody th button.active, table tbody td button.active {
 }
 table tbody th button.active::before, table tbody td button.active::before {
   content: "\e806";
+}
+table tbody td button {
+  font-size: 1.25rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.pagination .pagination-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.pagination .pagination-wrap a {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-xs);
+  font-size: 1rem;
+  line-height: 0;
+}
+.pagination .pagination-wrap a:first-child, .pagination .pagination-wrap a:last-child {
+  font-size: 1.5rem;
+}
+.pagination .pagination-wrap a::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pagination .pagination-wrap a:hover {
+  background: var(--secondary);
+  color: var(--white);
+  transition: all 0.3s ease;
 }
 
 .icon-close,
@@ -478,9 +530,6 @@ img {
   display: inline-block;
   width: 100%;
 }
-#select i {
-  transition: all ease 0.1s;
-}
 #select .selected {
   display: flex;
   justify-content: space-between;
@@ -490,6 +539,12 @@ img {
   border-radius: 0.75rem;
   padding: 1rem 1.5rem;
   cursor: pointer;
+}
+#select .selected span {
+  color: var(--grey05);
+}
+#select .selected i {
+  transition: all ease 0.1s;
 }
 #select ul {
   position: absolute;
@@ -841,6 +896,20 @@ button.btn-table {
   background: var(--grey05);
   color: var(--white);
 }
+button.btn-table:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+button.btn-backup {
+  background: var(--white);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+button.btn-backup:hover {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
 
 button.btn-close {
   position: absolute;
@@ -959,15 +1028,6 @@ button.btn-more:hover {
   color: var(--white);
 }
 
-#table {
-  width: 100%;
-  text-align: left;
-}
-#table th,
-#table td {
-  border: 1px solid var(--grey02);
-  padding: 1rem;
-}
 #tab .tabnav {
   display: flex;
   margin-bottom: 3rem;

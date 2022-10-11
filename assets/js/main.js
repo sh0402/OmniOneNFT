@@ -105,6 +105,22 @@ document.addEventListener('keydown', (e) => {
   }
 }); //ESC로 모달 닫기
 
+
+//TAB
+function openTab(e, tabName) {
+  var i, tabcontents, tablinks;
+  tabcontents = document.getElementsByClassName("tabcontent"); // 컨텐츠를 불러옵니다.
+  for (i = 0; i < tabcontents.length; i++) {
+    tabcontents[i].style.display = "none"; //컨텐츠를 모두 숨깁니다.
+  }
+  tablinks = document.getElementsByClassName("tablink"); //탭을 불러옵니다.
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", ""); //탭을 초기화시킵니다.
+  }
+  document.getElementById(tabName).style.display = "block"; //해당되는 컨텐츠만 보여줍니다.
+  e.currentTarget.className += " active"; //클릭한 탭을 활성화시킵니다.
+}
+
 // document.addEventListener('click', function (e) {\
 // if(e.target.classList.contains('open')) {
 //   e.target.classList.remove('open');

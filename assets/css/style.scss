@@ -1878,19 +1878,6 @@ section.active {
   gap: 1.5rem;
 }
 
-#explore {
-  #left {
-    >.button-group {
-      padding: 0 1rem;
-      
-      .btn-backup {
-        color: var(--grey05);
-        font-weight: normal;
-      }
-    }
-  }
-}
-
 #explore-search {
   align-items: center;
   margin-bottom: 2rem;
@@ -2087,6 +2074,12 @@ footer {
       margin-bottom: 1rem;
     }
 
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
     p {
       display: flex;
       align-items: center;
@@ -2245,9 +2238,56 @@ footer {
 }
 
 #trade-history { 
-
   .trade-option {
     margin-bottom: 2rem;
+
+    .filter-title {
+      display: flex;
+      width: 100%;
+
+      p {
+        width: 6rem;
+      }
+    }
+
+    .date-filter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+      width: 100%;
+
+      .date-picker-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    
+        input {
+          width: 12.5rem;
+        }
+      }
+
+      #radioBtn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    .drop-filter {
+      #select {
+        .selected {
+          width: 12.5rem;
+          height: 3rem;
+          padding: 1rem 1.5rem;
+          background: var(--grey01);
+        }
+        
+        ul {
+          width: 12.5rem;
+        }
+      }
+    }
   }
 
   .trade-result {
@@ -2255,10 +2295,28 @@ footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border: 1px solid red;
+      margin-bottom: 1rem;
 
       .result-option-item {
         display: flex;
+
+        button.btn-download {
+          color: var(--grey05);
+          font-weight: normal;
+        }
+
+        #select {
+          .selected {
+            width: 10rem;
+            height: 3rem;
+            padding: 1rem 1.5rem;
+            background: var(--grey01);
+          }
+          
+          ul {
+            width: 10rem;
+          }
+        }
       }
     }
   }
@@ -2273,6 +2331,113 @@ footer {
   }
 }
 
+#adjustment-history {
+  .adjustment-option {
+    margin-bottom: 2rem;
+
+    .filter-title {
+      display: flex;
+      width: 100%;
+
+      p {
+        width: 6rem;
+      }
+    }
+
+    .date-filter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+      width: 100%;
+
+      .date-picker-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    
+        input {
+          width: 12.5rem;
+        }
+      }
+
+      #radioBtn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    .drop-filter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+      width: 100%;
+
+      #select {
+        width: fit-content;
+
+        .selected {
+          width: 12.5rem;
+          height: 3rem;
+          padding: 1rem 1.5rem;
+          background: var(--grey01);
+        }
+        
+        ul {
+          width: 12.5rem;
+        }
+      }
+
+      #radioBtn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .adjustment-result {
+    .result-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .result-option-item {
+        display: flex;
+
+        button.btn-download {
+          color: var(--grey05);
+          font-weight: normal;
+        }
+
+        #select {
+          .selected {
+            width: 10rem;
+            height: 3rem;
+            padding: 1rem 1.5rem;
+            background: var(--grey01);
+          }
+          
+          ul {
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+
+  .button-group {
+    display: block;
+    margin: 0.5rem 0;
+
+    button {
+      width: 100%;
+    }
+  }
+}
 
 .board-menu {
   ul {
@@ -2439,31 +2604,15 @@ footer {
 
 
 .date-filter {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 0;
-  width: 100%;
+  
 
   .filter-title {
     flex-basis: 4rem;
   }
 
-  .date-picker-group {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  
 
-    input {
-      width: 12.5rem;
-    }
-  }
-
-  #radioBtn {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+  
 }
 
 .drop-filter {
@@ -2475,18 +2624,6 @@ footer {
 
   .filter-title {
     flex-basis: 4rem;
-  }
-
-  #select {
-    .selected {
-      width: 12.5rem;
-      padding: 1rem 1.5rem;
-      background: var(--grey01);
-    }
-    
-    ul {
-      width: 12.5rem;
-    }
   }
 }
 

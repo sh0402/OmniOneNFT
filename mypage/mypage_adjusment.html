@@ -577,6 +577,11 @@
             <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-user-info">
               자세히 보기
             </button>
+
+            <button class="btn-backup btn-md default" data-toggle="modal" data-target="dialog-backup">
+              꼭 백업해주세요
+              <i class="icon-info"></i>
+            </button>
           </div>
         </div>
       </article>
@@ -691,64 +696,24 @@
               </li>
             </ul>
           </div>
-
-          <div class="button-group">
-            <button class="btn-secondary btn-sm btn-circle btn-backup" data-toggle="modal" data-target="dialog-backup">
-              꼭 백업해주세요!<i class="icon-caution icon-size-md"></i>
-            </button>
-          </div>
         </div>
 
         <div id="right">
-          <!-- <div class="item-option">
-            <div id="select">
-              <div class="selected">
-                <span class="selected-value">크리에이터</span>
-                <i>
-                  <img src="/assets/image/icon/icon-down.svg" alt="" />
-                </i>
-              </div>
-
-              <ul>
-                <li class="option">none</li>
-                <li class="option">option 1</li>
-                <li class="option">option 2</li>
-                <li class="option">option 3</li>
-              </ul>
-            </div>
-
-            <div id="select">
-              <div class="selected">
-                <span class="selected-value">최신순</span>
-                <i>
-                  <img src="/assets/image/icon/icon-down.svg" alt="" />
-                </i>
-              </div>
-
-              <ul>
-                <li class="option">none</li>
-                <li class="option">option 1</li>
-                <li class="option">option 2</li>
-                <li class="option">option 3</li>
-              </ul>
-            </div>
-          </div> -->
-
           <div id="tab">
             <div class="tabnav">
               <button class="tablink active" onclick="openTab(event, 'trade-history')">거래내역</button>
               <button class="tablink" onclick="openTab(event, 'adjustment-history')">지번주소</button>
             </div>
 
-            <div id="trade-history">
-
+            <div id="trade-history" class="tabcontent" style="display: block;">
               <div class="trade-option">
+
                 <div class="date-filter">
                   <div class="filter-title">
                     <p>거래일자</p>
                   </div>
 
-                  <div class="date-picker-group" style="display: flex;">
+                  <div class="date-picker-group" class="tabcontent" style="display: flex;">
                     <input class="btn-md" type="date" value="2017-06-01">
                     <span class="subtit-md">to</span>
                     <input class="btn-md" type="date" value="2017-06-01">
@@ -773,7 +738,18 @@
                         <span>
                           <svg></svg>
                         </span>
-                        <span>2개월</span>
+                        <span>3개월</span>
+                      </label>
+                    </div>
+
+                    <div class="radiobtn-group">
+                      <input id="radio-03" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-03">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>6개월</span>
                       </label>
                     </div>
                   </div>
@@ -781,12 +757,12 @@
 
                 <div class="drop-filter">
                   <div class="filter-title">
-                    <p>거래일자</p>
+                    <p>수익유형</p>
                   </div>
 
                   <div id="select">
-                    <div class="selected btn-md">
-                      <span class="selected-value">거래유형</span>
+                    <div class="selected">
+                      <span class="selected-value">유형전체</span>
                       <i>
                         <img src="/assets/image/icon/icon-down.svg" alt="">
                       </i>
@@ -809,16 +785,14 @@
               <div class="trade-result">
                 <div class="result-option">
                   <div class="result-option-item">
-                    <button class="btn-secondary btn-md default">파일(Excel)로 다운로드</button>
+                    <button class="btn-secondary btn-md default btn-download">파일(Excel)로 다운로드</button>
                   </div>
 
                   <div class="result-option-item">
                     <div id="select">
-                      <div class="selected btn-md">
+                      <div class="selected">
                         <span class="selected-value">거래유형</span>
-                        <i>
-                          <img src="/assets/image/icon/icon-down.svg" alt="">
-                        </i>
+                        <i class="icon-down fs-5"></i>
                       </div>
                       <ul>
                         <li class="option">none</li>
@@ -830,68 +804,271 @@
                   </div>
                 </div>
 
-                <table>
-                  <thead>
-                    <tr>
-                      <th scope="col">no <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">거래일시 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">NFT 상품명 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">금액 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">수익유형 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">판매자 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">구매자 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                      <th scope="col">거래가격 <button class="icon-sqaure icon-down default fs-5"></button></th>
-                    </tr>
-                  </thead>
+                <div id="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">no <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">거래일시 <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">NFT 상품명 <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">금액 <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">수익유형 <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">판매자 <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">구매자 <button class="icon-sqaure icon-down default"></button></th>
+                        <th scope="col">거래가격 <button class="icon-sqaure icon-down default"></button></th>
+                      </tr>
+                    </thead>
 
-                  <tbody>
-                    <tr>
-                      <th scope="row">04</th>
-                      <td>2022-07-21 21:01:59</td>
-                      <td>금 20g</td>
-                      <td>200,000원</td>
-                      <td>거래</td>
-                      <td>이라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>감라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>1,000,000원</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">03</th>
-                      <td>2022-07-21 21:01:59</td>
-                      <td>금 20g</td>
-                      <td>200,000원</td>
-                      <td>거래</td>
-                      <td>이라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>감라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>1,000,000원</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">02</th>
-                      <td>2022-07-21 21:01:59</td>
-                      <td>금 20g</td>
-                      <td>200,000원</td>
-                      <td>거래</td>
-                      <td>이라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>감라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>1,000,000원</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">01</th>
-                      <td>2022-07-21 21:01:59</td>
-                      <td>금 20g</td>
-                      <td>200,000원</td>
-                      <td>거래</td>
-                      <td>이라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>감라온<button class="icon-sqaure icon-eye default fs-5"></button></td>
-                      <td>1,000,000원</td>
-                    </tr>
-                  </tbody>
-                </table>
+                    <tbody>
+                      <tr>
+                        <th scope="row">04</th>
+                        <td>2022-07-21 21:01:59</td>
+                        <td>금 20g</td>
+                        <td>200,000원</td>
+                        <td>거래</td>
+                        <td>이라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>감라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>1,000,000원</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">03</th>
+                        <td>2022-07-21 21:01:59</td>
+                        <td>금 20g</td>
+                        <td>200,000원</td>
+                        <td>거래</td>
+                        <td>이라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>감라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>1,000,000원</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">02</th>
+                        <td>2022-07-21 21:01:59</td>
+                        <td>금 20g</td>
+                        <td>200,000원</td>
+                        <td>거래</td>
+                        <td>이라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>감라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>1,000,000원</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>2022-07-21 21:01:59</td>
+                        <td>금 20g</td>
+                        <td>200,000원</td>
+                        <td>거래</td>
+                        <td>이라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>감라온<button class="icon-sqaure icon-eye default"></button></td>
+                        <td>1,000,000원</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
+              <div class="pagination">
+                <div class="pagination-wrap">
+                  <a href="" class="icon-left"></a>
+                  <a href="">1</a>
+                  <a href="">2</a>
+                  <a href="">3</a>
+                  <a href="">4</a>
+                  <a href="">5</a>
+                  <a href="">6</a>
+                  <a href="">7</a>
+                  <a href="">8</a>
+                  <a href="">9</a>
+                  <a href="" class="icon-right"></a>
+                </div>
+              </div>
             </div>
 
-            <div id="adjustment-history"></div>
+            <div id="adjustment-history" class="tabcontent" style="display: none;">
+              <div class="adjustment-option">
+                <div class="date-filter">
+                  <div class="filter-title">
+                    <p>거래일자</p>
+                  </div>
+
+                  <div class="date-picker-group" class="tabcontent" style="display: flex;">
+                    <input class="btn-md" type="date" value="2017-06-01">
+                    <span class="subtit-md">to</span>
+                    <input class="btn-md" type="date" value="2017-06-01">
+                  </div>
+
+                  <div id="radioBtn">
+                    <div class="radiobtn-group">
+                      <input id="radio-01" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-01">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>1개월</span>
+                      </label>
+                    </div>
+
+                    <div class="radiobtn-group">
+                      <input id="radio-02" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-02">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>3개월</span>
+                      </label>
+                    </div>
+
+                    <div class="radiobtn-group">
+                      <input id="radio-03" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-03">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>6개월</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="drop-filter">
+                  <div class="filter-title">
+                    <p>수익유형</p>
+                  </div>
+
+                  <div id="select">
+                    <div class="selected">
+                      <span class="selected-value">유형전체</span>
+                      <i>
+                        <img src="/assets/image/icon/icon-down.svg" alt="">
+                      </i>
+                    </div>
+
+                    <ul>
+                      <li class="option">none</li>
+                      <li class="option">option 1</li>
+                      <li class="option">option 2</li>
+                      <li class="option">option 3</li>
+                    </ul>
+                  </div>
+
+                  <div id="radioBtn">
+                    <div class="radiobtn-group">
+                      <input id="radio-01" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-01">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>1개월</span>
+                      </label>
+                    </div>
+
+                    <div class="radiobtn-group">
+                      <input id="radio-02" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-02">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>3개월</span>
+                      </label>
+                    </div>
+
+                    <div class="radiobtn-group">
+                      <input id="radio-03" type="radio" name="radio" />
+
+                      <label class="radio-label" for="radio-03">
+                        <span>
+                          <svg></svg>
+                        </span>
+                        <span>6개월</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <button class="btn-table btn-md default">조회</button>
+                </div>
+              </div>
+
+              <div class="adjustment-result">
+                <div class="result-option">
+                  <div class="result-option-item">
+                    <button class="btn-secondary btn-md default btn-download">파일(Excel)로 다운로드</button>
+                  </div>
+
+                  <div class="result-option-item">
+                    <div id="select">
+                      <div class="selected">
+                        <span class="selected-value">거래유형</span>
+                        <i class="icon-down fs-5"></i>
+                      </div>
+                      <ul>
+                        <li class="option">none</li>
+                        <li class="option">option 1</li>
+                        <li class="option">option 2</li>
+                        <li class="option">option 3</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">no</th>
+                        <th scope="col">정산일자</th>
+                        <th scope="col">정산구분</th>
+                        <th scope="col">정산대상액</th>
+                        <th scope="col">공급가</th>
+                        <th scope="col">부가세</th>
+                        <th scope="col">수수료(공급가 + 부가세)</th>
+                        <th scope="col">실지급액</th>
+                        <th scope="col">은행명</th>
+                        <th scope="col">계좌번호</th>
+                        <th scope="col">예금주</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>2022-07-25</td>
+                        <td>정상</td>
+                        <td>200,000원</td>
+                        <td>100,000원</td>
+                        <td>1,000원</td>
+                        <td>1,000원</td>
+                        <td>100,000원</td>
+                        <td>국민은행</td>
+                        <td>123-456789-01-012</td>
+                        <td>김라온</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="pagination">
+                <div class="pagination-wrap">
+                  <a href="" class="icon-left"></a>
+                  <a href="">1</a>
+                  <a href="">2</a>
+                  <a href="">3</a>
+                  <a href="">4</a>
+                  <a href="">5</a>
+                  <a href="">6</a>
+                  <a href="">7</a>
+                  <a href="">8</a>
+                  <a href="">9</a>
+                  <a href="" class="icon-right"></a>
+                </div>
+              </div>
+            </div>
           </div>
 
 
