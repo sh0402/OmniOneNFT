@@ -56,7 +56,7 @@
         </h1>
         <ul class="gnb">
           <li>
-            <a href="#" onclick="return false">About</a>
+            <a href="#" onclick="alert('click')">About</a>
           </li>
           <li>
             <a href="#" onclick="return false">마켓플레이스</a>
@@ -236,7 +236,7 @@
   </div>
 
   <!-- HEADER / 유저 로그인 -->
-  <div id="header">
+  <div id="header" style="display: none">
     <div class="header-container">
 
       <div class="nav">
@@ -282,7 +282,8 @@
 
         <div class="modal-body">
           <div class="user-info">
-            <div id="user-thumb" class="icon-circle thumb-lg">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
+              <img src="../assets/image/user-thumb/user-thumb.png" alt="">
             </div>
 
             <div class="text-group">
@@ -293,7 +294,7 @@
           </div>
 
           <div class="info-item button-group">
-            <button class="btn-primary btn-md default" onclick="location.href='../mypage/mypage.html'">
+            <button class="btn-primary btn-md default" onclick="location.href='../user/user.html'">
               내 정보 보기
             </button>
           </div>
@@ -396,7 +397,7 @@
   </div>
 
   <!-- HEADER / 크리에이터 로그인 -->
-  <div id="header" style="display: none;">
+  <div id="header" style="display: none">
     <div class="header-container">
 
       <div class="nav">
@@ -448,12 +449,12 @@
 
         <div class="modal-body">
           <div class="user-info">
-            <div id="issuer-thumb" class="icon-circle thumb-lg">
+            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
               <img src="../assets/image/user-thumb/business-thumb.png" alt="">
             </div>
 
             <div class="text-group">
-              <p class="subtit-md user-name">김라온</p>
+              <p class="subtit-sm user-name">김라온</p>
               <p class="fs-7">1938.04.01 / Male</p>
               <p class="subtit-sm user-nickname">달콤한미르_3901803</p>
             </div>
@@ -547,6 +548,7 @@
       </div>
     </div>
   </div>
+
 
   <section>
     <div class="container">

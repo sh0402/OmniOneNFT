@@ -106,7 +106,7 @@ document.addEventListener('keydown', (e) => {
 }); //ESC로 모달 닫기
 
 
-//TAB
+// TAB
 function openTab(e, tabName) {
   var i, tabcontents, tablinks;
   tabcontents = document.getElementsByClassName("tabcontent"); // 컨텐츠를 불러옵니다.
@@ -120,6 +120,17 @@ function openTab(e, tabName) {
   document.getElementById(tabName).style.display = "block"; //해당되는 컨텐츠만 보여줍니다.
   e.currentTarget.className += " active"; //클릭한 탭을 활성화시킵니다.
 }
+
+
+// ACCORDION MENU
+var lists = document.querySelectorAll('.accordion-menu > ul > li');
+var i;
+
+for (i = 0; i < lists.length; i++) {
+  lists[i].addEventListener('click', function () {
+    this.classList.toggle('show');
+  });
+};
 
 // document.addEventListener('click', function (e) {\
 // if(e.target.classList.contains('open')) {

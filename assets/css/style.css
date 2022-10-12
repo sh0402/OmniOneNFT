@@ -1233,6 +1233,48 @@ section.active {
   width: 100%;
 }
 
+#dialog-inquiry-write .modal-dialog {
+  width: 48rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#dialog-inquiry-write .modal-header .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#dialog-inquiry-write .modal-header .title .btn-close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#dialog-inquiry-write .modal-body .input-box textarea {
+  border: 1px solid var(--grey02);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: var(--grey01);
+  margin-bottom: 1rem;
+}
+#dialog-inquiry-write .modal-body .input-box .text-label {
+  display: flex;
+  gap: 1rem;
+}
+#dialog-inquiry-write .modal-body .input-box .text-label span {
+  font-size: 0.75rem;
+}
+#dialog-inquiry-write .modal-footer .button-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#dialog-inquiry-write .modal-footer .button-group button {
+  width: 100%;
+}
+
 #trade .title {
   display: flex;
   flex-direction: column;
@@ -1646,7 +1688,7 @@ footer .copyright ul li a {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: 0 1.5rem;
+  padding-left: 1.5rem;
 }
 #my-info .info-text #switch {
   position: absolute;
@@ -1655,6 +1697,22 @@ footer .copyright ul li a {
 }
 #my-info .info-text .title {
   position: relative;
+}
+#my-info .info-text .title .profile-setting {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#my-info .info-text .title .profile-setting .button-group {
+  display: flex;
+  gap: 1rem;
+}
+#my-info .info-text .title .profile-setting .button-group button {
+  background: var(--grey01);
+  color: var(--grey05);
+}
+#my-info .info-text .title .profile-setting .button-group button:hover {
+  opacity: 0.6;
 }
 #my-info .info-text .item-group {
   padding: 1.5rem;
@@ -1793,6 +1851,43 @@ footer .copyright ul li a {
 }
 #my-info-form .list-group .button-group button {
   width: 100%;
+}
+
+#mypage .title {
+  margin-bottom: 2rem;
+}
+#mypage .title h4 {
+  margin-bottom: 2rem;
+}
+#mypage .title .breadcrumb {
+  font-size: 0.75rem;
+}
+#mypage .title .breadcrumb .past {
+  color: var(--grey03);
+}
+#mypage .title .breadcrumb .current {
+  color: var(--black);
+  font-weight: 600;
+}
+#mypage .result-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+#mypage .result-option .result-option-item {
+  display: flex;
+}
+#mypage .result-option .result-option-item .date-picker-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#mypage .result-option .result-option-item #select .selected {
+  width: 10rem;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  background: var(--grey01);
 }
 
 #trade-history .trade-option {
@@ -1948,22 +2043,38 @@ footer .copyright ul li a {
   width: 100%;
 }
 
-.board-menu ul li {
+.board-menu > ul li {
   padding: 0.25rem 0;
 }
-.board-menu ul li a {
+.board-menu > ul li a {
   display: block;
   padding: 0.75rem 1rem;
   border-radius: var(--border-radius-xs);
   color: var(--grey03);
 }
-.board-menu ul li a:focus, .board-menu ul li a:hover, .board-menu ul li a:active {
+.board-menu > ul li a:focus, .board-menu > ul li a:hover, .board-menu > ul li a:active {
   color: var(--black);
   background: var(--grey01);
 }
-.board-menu ul li p {
+.board-menu > ul li p {
   padding: 0.75rem 1rem;
   color: var(--grey03);
+}
+.board-menu > ul li > ul li {
+  padding: 0 2rem;
+}
+.board-menu > ul li > ul li:last-child {
+  padding: 1rem 0;
+}
+.board-menu > ul li > ul li a {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+.board-menu > ul li.write-btn-item {
+  padding: 1rem;
+}
+.board-menu > ul li.write-btn-item button {
+  width: 100%;
 }
 
 .detail-info .title {

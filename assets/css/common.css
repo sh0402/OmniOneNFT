@@ -130,6 +130,10 @@ body {
   color: var(--success) !important;
 }
 
+.info {
+  color: var(--info) !important;
+}
+
 .focus {
   color: var(--primary) !important;
 }
@@ -210,10 +214,6 @@ body {
   font-weight: 600;
 }
 
-.text-underline {
-  text-decoration: underline;
-}
-
 .fs-1 {
   font-size: 2.5rem;
 }
@@ -274,67 +274,243 @@ input, textarea {
   background: transparent;
 }
 
+input::placeholder, textarea::placeholder {
+  color: var(--grey03);
+}
+
 #table {
   border: 1px solid var(--grey04);
   border-radius: var(--border-radius-xs);
   overflow: hidden;
   background: transparent;
 }
-
-table {
+#table table {
   width: 100%;
   font-size: 0.75rem;
   letter-spacing: -0.06em;
   line-height: 1;
 }
-table tr {
+#table table tr {
   border-bottom: 1px solid var(--grey04);
 }
-table tr:last-child {
+#table table tr:last-child {
   border: none;
 }
-table thead th {
+#table table thead th {
   padding: 0.5rem;
   height: 2.25rem;
   vertical-align: middle;
   background: var(--grey04);
   color: var(--white);
 }
-table thead th button {
+#table table thead th button {
   display: inline-block;
   vertical-align: middle;
   background: transparent;
   color: var(--white);
 }
-table tbody tr:hover {
+#table table tbody tr:hover {
   background: var(--grey01);
 }
-table tbody tr:hover th, table tbody tr:hover td {
+#table table tbody tr:hover th, #table table tbody tr:hover td {
   color: var(--grey05);
 }
-table tbody tr:last-child {
+#table table tbody tr:last-child {
   border: none;
 }
-table tbody th, table tbody td {
+#table table tbody th, #table table tbody td {
   padding: 0.5rem;
   height: 2.75rem;
   vertical-align: middle;
   text-align: center;
 }
-table tbody th button, table tbody td button {
+#table table tbody th button, #table table tbody td button {
   display: inline-block;
   vertical-align: middle;
   background: transparent;
 }
-table tbody th button.active, table tbody td button.active {
+#table table tbody th button.active, #table table tbody td button.active {
   transition: all 0.3s ease;
   color: var(--black);
 }
-table tbody th button.active::before, table tbody td button.active::before {
+#table table tbody th button.active::before, #table table tbody td button.active::before {
   content: "\e806";
 }
-table tbody td button {
+#table table tbody td button {
   font-size: 1.25rem;
+}
+
+#my-table {
+  overflow: hidden;
+  background: transparent;
+}
+#my-table table {
+  width: 100%;
+  font-size: 0.75rem;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+#my-table table tr:last-child {
+  border: none;
+}
+#my-table table thead th {
+  padding: 0.5rem;
+  height: 3.5rem;
+  vertical-align: middle;
+  background: var(--secondary);
+  color: var(--white);
+}
+#my-table table thead th:first-child {
+  border-top-left-radius: var(--border-radius-xs);
+  border-bottom-left-radius: var(--border-radius-xs);
+}
+#my-table table thead th:last-child {
+  border-top-right-radius: var(--border-radius-xs);
+  border-bottom-right-radius: var(--border-radius-xs);
+}
+#my-table table thead th button {
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+  color: var(--white);
+}
+#my-table table tbody tr:hover {
+  background: var(--grey01);
+}
+#my-table table tbody tr:hover th, #my-table table tbody tr:hover td {
+  color: var(--grey05);
+}
+#my-table table tbody tr:hover th:first-child, #my-table table tbody tr:hover td:first-child {
+  border-top-left-radius: var(--border-radius-xs);
+  border-bottom-left-radius: var(--border-radius-xs);
+}
+#my-table table tbody tr:hover th:last-child, #my-table table tbody tr:hover td:last-child {
+  border-top-right-radius: var(--border-radius-xs);
+  border-bottom-right-radius: var(--border-radius-xs);
+}
+#my-table table tbody tr:last-child {
+  border: none;
+}
+#my-table table tbody th, #my-table table tbody td {
+  padding: 0.5rem;
+  height: 2.75rem;
+  vertical-align: middle;
+  text-align: center;
+}
+#my-table table tbody th button, #my-table table tbody td button {
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+}
+#my-table table tbody th button.active, #my-table table tbody td button.active {
+  transition: all 0.3s ease;
+  color: var(--black);
+}
+#my-table table tbody th button.active::before, #my-table table tbody td button.active::before {
+  content: "\e806";
+}
+#my-table table tbody td button {
+  font-size: 1.25rem;
+}
+
+#accordion .thead {
+  display: grid;
+  grid-template-columns: 1fr 7fr 2fr;
+  align-items: center;
+  background: var(--secondary);
+  height: 3.5rem;
+  border-radius: var(--border-radius-xs);
+}
+#accordion .thead p {
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+}
+#accordion .tbody > ul li a {
+  display: grid;
+  grid-template-columns: 1fr 7fr 2fr;
+  align-items: center;
+  height: 3.5rem;
+}
+#accordion .tbody > ul li a:hover {
+  background: var(--grey01);
+  border-radius: var(--border-radius-xs);
+  transition: all 0.3s ease;
+}
+#accordion .tbody > ul li a P {
+  padding: 0.5rem;
+  text-align: center;
+}
+#accordion .tbody > ul li a P:nth-of-type(2) {
+  text-align: left;
+}
+#accordion .tbody > ul li > ul li {
+  width: 100%;
+  background: var(--grey01);
+  padding: 2rem 6.5rem;
+}
+#accordion .tbody > ul li > ul li .board-title {
+  margin-bottom: 1rem;
+}
+
+#accordion.board-faq .thead,
+#accordion.board-inquiry .thead {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  align-items: center;
+  background: var(--secondary);
+  height: 3.5rem;
+  border-radius: var(--border-radius-xs);
+}
+#accordion.board-faq .thead p,
+#accordion.board-inquiry .thead p {
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+}
+#accordion.board-faq .tbody > ul li a,
+#accordion.board-inquiry .tbody > ul li a {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+#accordion.board-faq .tbody > ul li a p i,
+#accordion.board-inquiry .tbody > ul li a p i {
+  transition: all 0.3s ease;
+}
+#accordion.board-faq .tbody > ul li > ul li,
+#accordion.board-inquiry .tbody > ul li > ul li {
+  width: 100%;
+  background: var(--grey01);
+  padding: 2rem 6.5rem;
+}
+#accordion.board-faq .tbody > ul li > ul li .board-title,
+#accordion.board-inquiry .tbody > ul li > ul li .board-title {
+  margin-bottom: 1rem;
+}
+#accordion.board-faq .tbody > ul li > ul li .questions, #accordion.board-faq .tbody > ul li > ul li .answer,
+#accordion.board-inquiry .tbody > ul li > ul li .questions,
+#accordion.board-inquiry .tbody > ul li > ul li .answer {
+  margin-bottom: 1rem;
+}
+#accordion.board-faq .tbody > ul li > ul li .questions .board-title, #accordion.board-faq .tbody > ul li > ul li .answer .board-title,
+#accordion.board-inquiry .tbody > ul li > ul li .questions .board-title,
+#accordion.board-inquiry .tbody > ul li > ul li .answer .board-title {
+  margin-bottom: 1rem;
+}
+
+.accordion-menu > ul li > ul {
+  display: none;
+}
+.accordion-menu > ul li > ul li button {
+  width: 100%;
+}
+.accordion-menu > ul li.show a p i {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+.accordion-menu > ul li.show ul {
+  display: block;
+  animation: opacityAni 0.3s;
 }
 
 .pagination {
@@ -383,7 +559,8 @@ table tbody td button {
 .icon-caution,
 .icon-delete,
 .icon-eye,
-.icon-eye-hidden {
+.icon-eye-hidden,
+.icon-setting {
   color: var(--grey04);
 }
 
@@ -417,6 +594,10 @@ img {
 
 .text-right {
   text-align: right !important;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
 
 .divider {
@@ -539,6 +720,7 @@ img {
   border-radius: 0.75rem;
   padding: 1rem 1.5rem;
   cursor: pointer;
+  background: var(--grey01);
 }
 #select .selected span {
   color: var(--grey05);
@@ -779,6 +961,9 @@ button {
   align-items: center;
   font-weight: 800;
   cursor: pointer;
+}
+button:hover {
+  transition: all 0.3s ease;
 }
 
 button:disabled,
@@ -1086,6 +1271,36 @@ button.btn-more:hover {
 }
 .input-item input::placeholder {
   color: var(--grey03);
+}
+
+#not-found {
+  height: calc(100vh - 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#not-found .page-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#not-found .page-wrap img {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin-bottom: 3rem;
+}
+#not-found .page-wrap .text-group {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#not-found .page-wrap .text-group h5 {
+  margin-bottom: 1rem;
+}
+#not-found .page-wrap .button-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @keyframes opacityAni {

@@ -21,9 +21,10 @@
   <!-- <link rel="shortcut icon" type="image⁄x-icon" href="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
 
   <!-- IMPORT INTERNAL CSS -->
-  <link rel="stylesheet" href="../assets/css/reset.css" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/fontello/css/fontello.css">
 
   <!-- IMPORT EXTERNAL CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -36,10 +37,10 @@
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
 
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/swiper.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/swiper.js"></script>
 
 </head>
 
@@ -51,7 +52,7 @@
 
       <div class="nav">
         <h1 class="logo" onclick="location.href='/'">
-          <img src="../assets/image/logo-symbol.svg" alt="">
+          <img src="assets/image/logo-symbol.svg" alt="">
         </h1>
         <ul class="gnb">
           <li>
@@ -96,7 +97,7 @@
         <div class="modal-body">
           <div class="login-info step-01">
             <div class="step-img">
-              <img src="../assets/image/content/signin-step-01.png" alt="">
+              <img src="assets/image/content/signin-step-01.png" alt="">
             </div>
 
             <div class="step-text">
@@ -109,15 +110,15 @@
               </div>
 
               <div class="step-qr">
-                <img src="../assets/image/content/signin-app-store.png" alt="">
-                <img src="../assets/image/content/signin-google-play.png" alt="">
+                <img src="assets/image/content/signin-app-store.png" alt="">
+                <img src="assets/image/content/signin-google-play.png" alt="">
               </div>
             </div>
           </div>
 
           <div class="login-info step-02">
             <div class="step-img">
-              <img src="../assets/image/content/signin-step-02.png" alt="">
+              <img src="assets/image/content/signin-step-02.png" alt="">
             </div>
 
             <div class="step-text">
@@ -133,7 +134,7 @@
 
           <div class="login-info step-03">
             <div class="step-img">
-              <img src="../assets/image/content/signin-step-03.png" alt="">
+              <img src="assets/image/content/signin-step-03.png" alt="">
             </div>
 
             <div class="step-text">
@@ -149,7 +150,7 @@
 
           <div class="login-info step-04">
             <div class="step-img">
-              <img src="../assets/image/content/signin-step-04.png" alt="">
+              <img src="assets/image/content/signin-step-04.png" alt="">
             </div>
 
             <div class="step-text">
@@ -187,49 +188,48 @@
             옴니원 앱으로 가입하기
           </button>
         </div>
-      </div>
 
+      </div>
     </div>
 
     <!-- QR로그인 모달 -->
     <div id="dialog-qrLogin" class="modal">
       <div class="modal-dialog">
-        <div class="modal-content">
 
-          <div class="modal-header text-center">
-            <div class="title text-center">
-              <h5 class="h5">QR 로그인</h5>
+        <div class="modal-header text-center">
+          <div class="title text-center">
+            <h5 class="h5">QR 로그인</h5>
 
-              <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
-            </div>
-          </div>
-
-          <div class="modal-body">
-            <div class="login-info">
-              <div class="txt-item">
-                <p>OmniOne 모바일 앱으로 아래 QR코드를 스캔해주세요.</p>
-              </div>
-
-              <div class="step-img">
-                <img src="../assets/image/content/signin-step-01.png" alt="">
-              </div>
-            </div>
-
-            <div class="login-info">
-              <img src="../assets/image/content/login-qr.png" alt="">
-            </div>
-
-            <div class="qr-count text-center">
-              <p>남은시간 <span class="count-time">02:00</span></p>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button class="btn-primary btn-md default" data-dismiss="modal">
-              닫기
-            </button>
+            <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
           </div>
         </div>
+
+        <div class="modal-body">
+          <div class="login-info">
+            <div class="txt-item">
+              <p>OmniOne 모바일 앱으로 아래 QR코드를 스캔해주세요.</p>
+            </div>
+
+            <div class="step-img">
+              <img src="assets/image/content/signin-step-01.png" alt="">
+            </div>
+          </div>
+
+          <div class="login-info">
+            <img src="assets/image/content/login-qr.png" alt="">
+          </div>
+
+          <div class="qr-count text-center">
+            <p>남은시간 <span class="count-time">02:00</span></p>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-primary btn-md default" data-dismiss="modal">
+            닫기
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
@@ -240,7 +240,7 @@
 
       <div class="nav">
         <h1 class="logo" onclick="location.href='/'">
-          <img src="../assets/image/logo-symbol.svg" alt="">
+          <img src="assets/image/logo-symbol.svg" alt="">
         </h1>
         <ul class="gnb">
           <li>
@@ -282,7 +282,7 @@
         <div class="modal-body">
           <div class="user-info">
             <div id="user" class="btn-secondary btn-circle btn-circle-lg">
-              <img src="../assets/image/user-thumb/user-thumb.png" alt="">
+              <img src="assets/image/user-thumb/user-thumb.png" alt="">
             </div>
 
             <div class="text-group">
@@ -293,7 +293,7 @@
           </div>
 
           <div class="info-item button-group">
-            <button class="btn-primary btn-md default" onclick="location.href='../user/user.html'">
+            <button class="btn-primary btn-md default" onclick="location.href='mypage/mypage.html'">
               내 정보 보기
             </button>
           </div>
@@ -301,7 +301,7 @@
           <div class="info-item user-type">
             <div class="user-type-item">
               <button class="btn-secondary btn-md default">
-                <img src="../assets/image/icon/icon-search.svg" alt="">
+                <img src="assets/image/icon/icon-search.svg" alt="">
               </button>
 
               <p class="fs-7">히스토리</p>
@@ -309,7 +309,7 @@
 
             <div class="user-type-item">
               <button class="btn-secondary btn-md default">
-                <img src="../assets/image/icon/icon-search.svg" alt="">
+                <img src="assets/image/icon/icon-search.svg" alt="">
               </button>
 
               <p class="fs-7">공지사항</p>
@@ -317,7 +317,7 @@
 
             <div class="user-type-item">
               <button class="btn-secondary btn-md default">
-                <img src="../assets/image/icon/icon-search.svg" alt="">
+                <img src="assets/image/icon/icon-search.svg" alt="">
               </button>
 
               <p class="fs-7">FAQ</p>
@@ -325,7 +325,7 @@
 
             <div class="user-type-item">
               <button class="btn-secondary btn-md default">
-                <img src="../assets/image/icon/icon-search.svg" alt="">
+                <img src="assets/image/icon/icon-search.svg" alt="">
               </button>
 
               <p class="fs-7">1:1 문의</p>
@@ -401,7 +401,7 @@
 
       <div class="nav">
         <h1 class="logo" onclick="location.href='/'">
-          <img src="../assets/image/logo-symbol.svg" alt="">
+          <img src="assets/image/logo-symbol.svg" alt="">
         </h1>
         <ul class="gnb">
           <li>
@@ -449,7 +449,7 @@
         <div class="modal-body">
           <div class="user-info">
             <div id="user" class="btn-secondary btn-circle btn-circle-lg">
-              <img src="../assets/image/user-thumb/business-thumb.png" alt="">
+              <img src="assets/image/user-thumb/business-thumb.png" alt="">
             </div>
 
             <div class="text-group">
@@ -468,7 +468,7 @@
           <div class="info-item issuer-type">
             <div class="user-type-item">
               <button class="btn-secondary btn-md default">
-                <img src="../assets/image/icon/icon-search.svg" alt="">
+                <img src="assets/image/icon/icon-search.svg" alt="">
               </button>
 
               <p class="fs-7">히스토리</p>
@@ -548,316 +548,30 @@
     </div>
   </div>
 
-
   <section>
     <div class="container">
+      <article id="not-found">
+        <div class="page-wrap">
 
-      <article id="trade" class="trade-result">
-
-        <div class="title text-center">
-          <h4 class="h4">금 실물 교환 완료</h4>
-
-          <div class="divider">
-            <span class="line"></span>
-          </div>
-        </div>
-
-        <div class="trade-banner">
-
-          <div class="img-group"></div>
+          <img src="assets/image/content/img_empty_web.png" alt="">
 
           <div class="text-group">
-            <p class="subtit-md success">완료 : 금 1g NFT</p>
-            <h5 class="h5">
-              실물 금 1g NFT 교환 완료되었습니다.
-            </h5>
-            <button class="btn-primary btn-md default" data-toggle="modal" data-target="dialog-trade-list">
-              교환 NFT 보기
-            </button>
-          </div>
-
-        </div>
-
-        <!-- <div class="subtitle text-center">
-          <p>
-            실물 배송 후에는 철회할 수 없사오니
-            정보를 다시 한 번 확인해주세요.
-          </p>
-        </div> -->
-
-        <div class="trade-form">
-
-          <div class="input-group applicant">
-            <div class="subtitle">
-              <p class="subtit-md">신청인 정보</p>
-            </div>
-
-            <div class="divider">
-              <span class="line"></span>
-            </div>
-
-            <div class="input-item grid">
-              <label for="default">신청인</label>
-              <label class="input-result" for="default">신청인</label>
-              <!-- <input type="text" placeholder="신청하는 분의 실명"> -->
-            </div>
-
-            <div class="input-item grid">
-              <label for="default">신청인 연락처</label>
-              <label class="input-result" for="default">01012645678</label>
-            </div>
-          </div>
-
-          <div class="input-group recipient">
-            <div class="subtitle">
-              <p class="subtit-md">수령인 정보</p>
-            </div>
-
-            <div class="divider">
-              <span class="line"></span>
-            </div>
-
-            <div class="input-item grid">
-              <label for="default">수령인</label>
-              <label class="input-result" for="default">수령인</label>
-            </div>
-
-            <div class="input-item grid">
-              <label for="default">수령인 연락처</label>
-              <label class="input-result" for="default">01012645678</label>
-            </div>
-          </div>
-
-          <div class="input-group address">
-            <div class="subtitle">
-              <p class="subtit-md">배송지 주소</p>
-            </div>
-
-            <div class="divider">
-              <span class="line"></span>
-            </div>
-
-            <div class="address-item">
-              <label class="input-result" for="default">01148 서울특별시 송파구 신천동 엘스리버 220동 2022호</label>
-              <label class="input-result" for="default">지번 : 서울특별시 송파구 신천동 17</label>
-            </div>
-          </div>
-
-          <div class="input-group other-info">
-            <div class="subtitle">
-              <p class="subtit-md">기타 정보</p>
-            </div>
-
-            <div class="divider">
-              <span class="line"></span>
-            </div>
-
-            <div class="row">
-              <div class="input-item">
-                <label for="default">교환일시정보</label>
-                <label class="input-result" for="default">2022-07-21 12:04:09</label>
-              </div>
-              <div class="input-item">
-                <label for="default">우체국택배 송장번호</label>
-                <label class="input-result" for="default">00000100293901</label>
-              </div>
-              <div class="input-item">
-                <label for="default" class="focus">교환완료일시</label>
-                <label class="input-result" for="default">2022-07-21 12:04:09</label>
-              </div>
-            </div>
+            <h5 class="h5">빈 페이지를 발견하셨습니다!</h5>
+            <p>URL을 잘못 입력하셨거나, 변경 혹은 삭제됐을 수 있습니다.</p>
           </div>
 
           <div class="button-group">
-            <button class="btn-secondary btn-md default" onclick="location.href='trade_form_check.html'">이전으로</button>
+            <button class="btn-secondary btn-md default">이전으로</button>
+            <button class="btn-primary btn-md default">메인화면으로</button>
           </div>
 
         </div>
-
       </article>
-
     </div>
+
   </section>
 
-  <div id="dialog-trade-list" class="modal">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <div class="title text-center">
-          <h5 class="h5">교환 신청한 NFT</h5>
-
-          <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
-        </div>
-      </div>
-
-      <div class="modal-body">
-        <div class="row">
-          <div class="w-25">
-            <div id="nft-card">
-              <div class="card-header">
-                <div class="dot icon-circle"></div>
-
-                <p class="nft-condition fs-7">실물 교환 신청</p>
-              </div>
-
-              <div class="card-body">
-
-                <div class="img-wrap">
-                  <img src="../assets/image/card/gold.png" alt="" />
-
-                  <span class="icon-circle icon-size-md">
-                    <i class="icon-share"></i>
-                  </span>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="title">
-                  <p class="item-name">금 1g</p>
-                </div>
-
-                <div class="divider">
-                  <span class="line"></span>
-                </div>
-
-                <div class="">
-                  <p class="description">
-                    NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                    초과영역은 이...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-25">
-            <div id="nft-card">
-              <div class="card-header">
-                <div class="dot icon-circle"></div>
-
-                <p class="nft-condition fs-7">실물 교환 신청</p>
-              </div>
-
-              <div class="card-body">
-
-                <div class="img-wrap">
-                  <img src="../assets/image/card/gold.png" alt="" />
-
-                  <span class="icon-circle icon-size-md">
-                    <i class="icon-share"></i>
-                  </span>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="title">
-                  <p class="item-name">금 1g</p>
-                </div>
-
-                <div class="divider">
-                  <span class="line"></span>
-                </div>
-
-                <div class="">
-                  <p class="description">
-                    NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                    초과영역은 이...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-25">
-            <div id="nft-card">
-              <div class="card-header">
-                <div class="dot icon-circle"></div>
-
-                <p class="nft-condition fs-7">실물 교환 신청</p>
-              </div>
-
-              <div class="card-body">
-
-                <div class="img-wrap">
-                  <img src="../assets/image/card/gold.png" alt="" />
-
-                  <span class="icon-circle icon-size-md">
-                    <i class="icon-share"></i>
-                  </span>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="title">
-                  <p class="item-name">금 1g</p>
-                </div>
-
-                <div class="divider">
-                  <span class="line"></span>
-                </div>
-
-                <div class="">
-                  <p class="description">
-                    NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                    초과영역은 이...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-25">
-            <div id="nft-card">
-              <div class="card-header">
-                <div class="dot icon-circle"></div>
-
-                <p class="nft-condition fs-7">실물 교환 신청</p>
-              </div>
-
-              <div class="card-body">
-
-                <div class="img-wrap">
-                  <img src="../assets/image/card/gold.png" alt="" />
-
-                  <span class="icon-circle icon-size-md">
-                    <i class="icon-share"></i>
-                  </span>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="title">
-                  <p class="item-name">금 1g</p>
-                </div>
-
-                <div class="divider">
-                  <span class="line"></span>
-                </div>
-
-                <div class="">
-                  <p class="description">
-                    NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌.
-                    초과영역은 이...
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="button-group">
-          <button class="btn-secondary btn-md btn-more">더보기</button>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <div class="button-group">
-          <button class="btn-primary btn-md default">확인</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+  <!-- FOOTER -->
   <footer>
     <div class="footer-lnb">
       <div class="container">
@@ -913,7 +627,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>
