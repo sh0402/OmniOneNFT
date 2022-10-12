@@ -293,13 +293,13 @@ section.active {
   }
 
   .swiper-button-next {
-    background: url("/assets/image/icon/icon-arrow-right.svg") no-repeat center
+    background: url("../assets/image/icon/icon-arrow-right.svg") no-repeat center
         center,
       var(--secondary);
   }
 
   .swiper-button-prev {
-    background: url("/assets/image/icon/icon-arrow-left.svg") no-repeat center
+    background: url("../assets/image/icon/icon-arrow-left.svg") no-repeat center
         center,
       var(--secondary);
   }

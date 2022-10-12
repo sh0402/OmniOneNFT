@@ -264,11 +264,11 @@ section.active {
 }
 #issu-swiper .swiper-button-next,
 #prod-swiper .swiper-button-next {
-  background: url("/assets/image/icon/icon-arrow-right.svg") no-repeat center center, var(--secondary);
+  background: url("../assets/image/icon/icon-arrow-right.svg") no-repeat center center, var(--secondary);
 }
 #issu-swiper .swiper-button-prev,
 #prod-swiper .swiper-button-prev {
-  background: url("/assets/image/icon/icon-arrow-left.svg") no-repeat center center, var(--secondary);
+  background: url("../assets/image/icon/icon-arrow-left.svg") no-repeat center center, var(--secondary);
 }
 
 #issu-swiper .swiper-slide {

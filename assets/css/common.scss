@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
-@import url("/assets/fontello/css/fontello.css");
+@import url("../assets/fontello/css/fontello.css");
 
 @font-face {
   font-family: "Gothic A1", sans-serif;
@@ -689,17 +689,17 @@ i {
 }
 
 // i.icon-heart {
-//   background: url('/assets/image/icon/icon-heart.svg') no-repeat center center;
+//   background: url('../assets/image/icon/icon-heart.svg') no-repeat center center;
 //   background-size: cover;
 // }
 
 i.icon-arrow {
-  background: url("/assets/image/icon/icon-down.svg") no-repeat center center;
+  background: url("../assets/image/icon/icon-down.svg") no-repeat center center;
   background-size: cover;
 }
 
 // i.icon-copy {
-//   background: url('/assets/image/icon/icon-copy.svg') no-repeat center center;
+//   background: url('../assets/image/icon/icon-copy.svg') no-repeat center center;
 //   background-size: cover;
 // }
 
@@ -1137,13 +1137,13 @@ img {
 }
 
 #user-thumb {
-  background: url("/assets/image/user-thumb/user-thumb.png") no-repeat center
+  background: url("../assets/image/user-thumb/user-thumb.png") no-repeat center
     center;
   background-size: cover;
 }
 
 #issuer-thumb {
-  background: url("/assets/image/user-thumb/business-thumb.png") no-repeat
+  background: url("../assets/image/user-thumb/business-thumb.png") no-repeat
     center center;
   background-size: cover;
 }
@@ -1335,7 +1335,7 @@ button.btn-more {
 }
 
 // button.btn-close {
-//   background: url('/assets/image/icon/icon-close.svg') no-repeat center center;
+//   background: url('../assets/image/icon/icon-close.svg') no-repeat center center;
 //   border-radius: 50%;
 //   height: 100%;
 //   padding: 0.25rem;
