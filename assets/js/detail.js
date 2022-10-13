@@ -38,3 +38,4 @@ decrease.onclick = () => {
     counterText.innerText = current - 1;
   }
 }
+

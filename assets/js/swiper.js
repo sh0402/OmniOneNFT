@@ -12,6 +12,21 @@ new Swiper('.heroSwiper', {
     nextEl: '#hero-swiper .swiper-button-next',
     prevEl: '#hero-swiper .swiper-button-prev'
   }
+
+});
+new Swiper('.storeSwiper', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: '#store-swiper .swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '#store-swiper .swiper-button-next',
+    prevEl: '#store-swiper .swiper-button-prev'
+  }
 });
 
 new Swiper('.issuSwiper', {

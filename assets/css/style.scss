@@ -134,7 +134,8 @@ section.active {
   padding-top: 9rem;
 }
 
-#hero-swiper {
+//** 221013 수정
+#hero-swiper, #store-swiper {
   margin-bottom: 6rem;
 
   .swiper-slide {
@@ -177,6 +178,17 @@ section.active {
     }
   }
 }
+//** 221013 수정 **//
+
+//** 221013 추가
+#store-swiper {
+  margin-bottom: 4rem;
+
+  .swiper-slide {
+    height: 25rem;
+  }
+}
+//** 221013 추가
 
 .linear-overlay {
   position: absolute;
@@ -501,6 +513,23 @@ section.active {
   }
 }
 
+//** 221013 추가
+#store {
+  .title {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .store-prod-list {
+    margin-bottom: 4rem;
+  }
+}
+//** 221013 추가 **//
+
 #detail {
   position: relative;
   display: grid;
@@ -526,6 +555,7 @@ section.active {
       height: fit-content;
       border: 1px solid var(--grey02);
       padding: 1.5rem;
+      margin-bottom: 1rem;
 
       .txt-item {
         display: flex;
@@ -541,6 +571,16 @@ section.active {
         }
       }
     }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        width: 100%;
+      }
+    }
   }
 
   #right {
@@ -551,6 +591,36 @@ section.active {
 
       img {
         border-radius: var(--border-radius-sm);
+      }
+    }
+
+    .digital-description {
+      margin-bottom: 2rem;
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      > .button-group {
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+          width: 100%;
+          font-size: 0.75rem;
+          font-weight: normal;
+          color: var(--grey05);
+
+          &:first-child {
+            font-weight: 600;
+          }
+        }
+      }
+
+      >.button-group.fill {
+        display: block
       }
     }
 
@@ -605,20 +675,31 @@ section.active {
         background: var(--grey01);
         padding: 1.5rem;
         margin-bottom: 2rem;
+
+        .stock-group {
+          text-align: left;
+        }
+        .price-group {
+          text-align: right;
+        }
       }
 
       .price-item.disabled {
         justify-content: flex-end;
       }
 
-      .button-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+      > .button-group {
+        display: flex;
+        align-items: center;
         gap: 1rem;
 
         button {
           width: 100%;
         }
+      }
+
+      >.button-group.fill {
+        display: block
       }
       
       .button-group.disabled {
@@ -636,6 +717,16 @@ section.active {
       }
     }
   }
+}
+
+#detail.digital-prod {
+  #right {
+    .item-group{
+      .price-item {
+        justify-content: flex-end;
+      }
+    }
+  } 
 }
 
 #float {
@@ -674,11 +765,16 @@ section.active {
   box-shadow: none;
 }
 
+// 221013 수정
 #side-menu-user, #side-menu-issuer {
   .modal-dialog {
-    top: 3rem;
-    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
     width: 24.5rem;
+    height: calc(100% - 2rem);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
   }
 
   .modal-header {
@@ -740,15 +836,20 @@ section.active {
     }
 
     .user-type, .issuer-type {
-      .user-type-item {
+      .type-item {
         display: flex;
         flex-direction: column;
         align-items: center;
 
         button {
-          width: 3rem;
-          height: 3rem;
+          width: 4rem;
+          height: 4rem;
+          color: var(--grey04);
           margin-bottom: 0.5rem;
+
+          &:hover {
+            color: var(--black);
+          }
         }
       }
 
@@ -769,8 +870,8 @@ section.active {
           margin-bottom: 1rem;
 
           a {
-            font-weight: 500;
-            padding: 0.75rem 0;
+            font-size: 1rem;
+            padding: 0.5rem 0;
 
             &:hover,
             &:focus {
@@ -783,17 +884,50 @@ section.active {
   }
 
   .modal-footer {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: 1rem;
+    .button-group {
+      display: flex;
+      flex-direction: column;
 
-    button {
-      width: 100%;
+      > button {
+        margin-bottom: 1rem;
+      }
+
+      .type-change {
+        padding: 1rem;
+        border: 1px solid var(--grey02);
+        border-radius: var(--border-radius-sm);
+
+        .user-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+
+          .row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+  
+            p {
+              font-size: 1rem;
+            }
+          }
+
+          span {
+            font-size: 1rem;
+            color: var(--grey04);
+          }
+        }
+
+        > button {
+          width: 100%;
+        }
+      }
     }
   }
 }
 
-#dialog-gold-buy {
+#dialog-gold-buy, #dialog-buynow  {
   .divider {
     padding: 0;
     margin: 1.5rem 0;
@@ -852,6 +986,107 @@ section.active {
     justify-content: space-between;
   }
 }
+
+#dialog-withdraw {
+  .modal-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+  }
+
+  .modal-header {
+    .title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+  
+      .btn-close {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .modal-body {
+    .subtitle {
+      text-align: center;
+
+      p {
+        margin-bottom: 0.5rem;
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+#dialog-digital-history {
+  .modal-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48rem;
+  }
+
+  .modal-header {
+    .title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+  
+      .btn-close {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .modal-body {
+    .table-option {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+
+      > #select {
+        width: 10rem;
+    
+        .selected {
+          padding: 0.75rem 1rem;
+          background: var(--grey01);
+          border: none;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: block;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+// 221013 수정 ** //
 
 #dialog-gold-sell {
   .modal-dialog {
@@ -2613,6 +2848,13 @@ footer {
         width: 100%;
       }
     }
+
+    li.active {
+      a {
+        color: var(--black);
+        background: var(--grey01);
+      }
+    }
   }
 }
 
@@ -2754,15 +2996,10 @@ footer {
 
 
 .date-filter {
-  
 
   .filter-title {
     flex-basis: 4rem;
   }
-
-  
-
-  
 }
 
 .drop-filter {
@@ -2780,6 +3017,10 @@ footer {
 
 .w-100 {
   width: 100%;
+}
+
+.w-33 {
+  width: 33.33%;
 }
 
 .w-25 {
@@ -2995,6 +3236,107 @@ footer {
   }
 }
 
+//** 221013 추가
+#prod-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--grey01);
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  box-shadow: var(--elevation-default);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--elevation-default-hover);
+  }
+  
+  .top-button-group {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+
+    button.icon-share {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--white);
+      outline: none;
+
+      &:hover {
+        opacity: 0.6;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  #user-thumb {
+    position: absolute;
+    bottom: 26%;
+    left: 1.5rem;
+  }
+
+  .prod-item-img {
+    .item-img {
+      width: 100%;
+      object-position: center center;
+    }
+  }
+
+  .text-group {
+    background: var(--grey01);
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+
+    .txt-header {
+      border-bottom: 1px solid var(--grey02);
+
+      p.user-name {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-align: right;
+        padding: 1rem 0;
+      }
+    }
+
+    .txt-body {
+      padding: 1rem 0;
+    }
+
+    .txt-footer {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+
+      .txt-item-group {
+        display: flex;
+        flex-direction: column;
+
+        &:last-child {
+          text-align: right;
+        }
+
+        span {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+          color: var(--black);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+//** 221013 추가 **/
 
 .thumb-xs {
   width: 2.5rem;
@@ -3002,8 +3344,8 @@ footer {
 }
 
 .thumb-sm {
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .thumb-md {

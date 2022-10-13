@@ -46,6 +46,7 @@
 
 <body>
 
+  <!-- 221013 수정 -->
   <!-- HEADER / DEFAULT -->
   <div id="header">
     <div class="header-container">
@@ -62,7 +63,7 @@
             <a href="#" onclick="return false">마켓플레이스</a>
           </li>
           <li>
-            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+            <a href="#" onclick="location.href='store/store.html'">한국조폐공사 금 NFT</a>
           </li>
         </ul>
       </div>
@@ -234,8 +235,9 @@
     </div>
   </div>
 
+  <!-- 221013 수정 -->
   <!-- HEADER / 유저 로그인 -->
-  <div id="header" style="display: none">
+  <div id="header" style="display: none;">
     <div class="header-container">
 
       <div class="nav">
@@ -250,20 +252,20 @@
             <a href="#" onclick="return false">마켓플레이스</a>
           </li>
           <li>
-            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+            <a href="#" onclick="location.href='store/store.html'">한국조폐공사 금 NFT</a>
           </li>
         </ul>
       </div>
 
       <div class="button-group">
         <div class="button-item">
-          <button class="alarm btn-circle btn-circle-md icon-bell fs-4" onclick="return false"></button>
+          <button class="icon-bell icon-circle thumb-sm fs-4" onclick="return false"></button>
 
           <span class="alarm-mark"></span>
         </div>
 
         <div class="button-item">
-          <button id="user-thumb" class="btn-circle btn-circle-md" data-toggle="modal"
+          <button id="user-thumb" class="thumb-sm icon-circle" data-toggle="modal"
             data-target="side-menu-user"></button>
         </div>
       </div>
@@ -274,16 +276,17 @@
       <div class="modal-dialog">
 
         <div class="modal-header">
-          <h5 class="h5">NFT Marketplace</h5>
+          <h5 class="h5">
+            <img src="assets/image/logo-full.svg" alt="">
+          </h5>
 
           <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
         </div>
 
         <div class="modal-body">
+
           <div class="user-info">
-            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
-              <img src="assets/image/user-thumb/user-thumb.png" alt="">
-            </div>
+            <div id="user-thumb" class="thumb-lg icon-circle"></div>
 
             <div class="text-group">
               <p class="subtit-md user-name">김라온</p>
@@ -293,40 +296,32 @@
           </div>
 
           <div class="info-item button-group">
-            <button class="btn-primary btn-md default" onclick="location.href='mypage/mypage.html'">
+            <button class="btn-primary btn-md default" onclick="location.href='user/user.html'">
               내 정보 보기
             </button>
           </div>
 
           <div class="info-item user-type">
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-history fs-4"></button>
 
               <p class="fs-7">히스토리</p>
             </div>
 
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-bell fs-4"></button>
 
               <p class="fs-7">공지사항</p>
             </div>
 
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-faq fs-4"></button>
 
               <p class="fs-7">FAQ</p>
             </div>
 
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-chat fs-4"></button>
 
               <p class="fs-7">1:1 문의</p>
             </div>
@@ -345,7 +340,7 @@
                 <a href="#" onclick="return false">마켓플레이스</a>
               </li>
               <li>
-                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+                <a href="#" onclick="location.href='store/store.html'">한국조폐공사 금 NFT</a>
               </li>
             </ul>
 
@@ -376,9 +371,19 @@
               <li>
                 <a href="#" onclick="return false">금 NFT 실물 교환</a>
               </li>
+
+              <div class="divider">
+                <span class="line"></span>
+              </div>
+
               <li>
                 <a href="#" onclick="return false">NFT 발급 받기</a>
               </li>
+
+              <div class="divider">
+                <span class="line"></span>
+              </div>
+
               <li>
                 <a href="#" onclick="return false">거래 및 정산</a>
               </li>
@@ -387,8 +392,22 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn-md btn-secondary default">로그아웃</button>
-          <button type="button" class="btn-md btn-primary default">이슈어로 전환</button>
+          <div class="button-group">
+
+            <button type="button" class="btn-secondary btn-md default">로그아웃</button>
+
+            <div class="type-change">
+              <div class="user-info">
+                <div class="row">
+                  <div id="issuer-thumb" class="thumb-xs icon-circle"></div>
+                  <p class="issuer-name">한국조폐공사</p>
+                </div>
+              </div>
+
+              <button class="btn-primary btn-md default">관리자로 전환</button>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -396,7 +415,7 @@
   </div>
 
   <!-- HEADER / 크리에이터 로그인 -->
-  <div id="header" style="display: none">
+  <div id="header" style="display: none;">
     <div class="header-container">
 
       <div class="nav">
@@ -411,7 +430,7 @@
             <a href="#" onclick="return false">마켓플레이스</a>
           </li>
           <li>
-            <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+            <a href="#" onclick="location.href='store/store.html'">한국조폐공사 금 NFT</a>
           </li>
         </ul>
       </div>
@@ -424,13 +443,13 @@
         </div>
 
         <div class="button-item">
-          <button class="alarm btn-circle btn-circle-md icon-bell fs-4" onclick="return false"></button>
+          <button class="icon-bell icon-circle thumb-sm fs-4" onclick="return false"></button>
 
           <span class="alarm-mark"></span>
         </div>
 
         <div class="button-item">
-          <button id="issuer-thumb" class="btn-circle btn-circle-md" data-toggle="modal"
+          <button id="issuer-thumb" class="thumb-sm icon-circle" data-toggle="modal"
             data-target="side-menu-issuer"></button>
         </div>
       </div>
@@ -441,16 +460,16 @@
       <div class="modal-dialog position-right">
 
         <div class="modal-header">
-          <h5 class="h5">NFT Marketplace</h5>
+          <h5 class="h5">
+            <img src="assets/image/logo-full.svg" alt="">
+          </h5>
 
           <button class="btn-close icon-close fs-4" data-dismiss="modal"></button>
         </div>
 
         <div class="modal-body">
           <div class="user-info">
-            <div id="user" class="btn-secondary btn-circle btn-circle-lg">
-              <img src="assets/image/user-thumb/business-thumb.png" alt="">
-            </div>
+            <div id="issuer-thumb" class="thumb-lg icon-circle"></div>
 
             <div class="text-group">
               <p class="subtit-sm user-name">김라온</p>
@@ -466,26 +485,20 @@
           </div>
 
           <div class="info-item issuer-type">
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-history fs-4"></button>
 
               <p class="fs-7">히스토리</p>
             </div>
 
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="./assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-bell fs-4"></button>
 
               <p class="fs-7">공지사항</p>
             </div>
 
-            <div class="user-type-item">
-              <button class="btn-secondary btn-md default">
-                <img src="./assets/image/icon/icon-search.svg" alt="">
-              </button>
+            <div class="type-item">
+              <button class="btn-secondary default icon-faq fs-4"></button>
 
               <p class="fs-7">FAQ</p>
             </div>
@@ -504,7 +517,7 @@
                 <a href="#" onclick="return false">마켓플레이스</a>
               </li>
               <li>
-                <a href="#" onclick="return false">한국조폐공사 금 NFT</a>
+                <a href="#" onclick="location.href='store/store.html'">한국조폐공사 금 NFT</a>
               </li>
             </ul>
 
@@ -540,13 +553,31 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn-md btn-secondary default">로그아웃</button>
-          <button type="button" class="btn-md btn-primary default">개인회원으로 전환</button>
+          <div class="button-group">
+
+            <button type="button" class="btn-secondary btn-md default">로그아웃</button>
+
+            <div class="type-change">
+              <div class="user-info">
+                <div class="row">
+                  <div id="user-thumb" class="thumb-xs icon-circle"></div>
+                  <p class="user-name">김라온</p>
+                </div>
+
+                <span class="birthday">1938.04.01</span>
+              </div>
+
+              <button class="btn-primary btn-md default">개인회원으로 전환</button>
+            </div>
+
+          </div>
         </div>
 
       </div>
     </div>
   </div>
+  <!-- // 221013 수정 -->
+
 
   <section>
     <div class="container">
@@ -616,7 +647,7 @@
 
       <!-- ISSUER ITEM -->
       <article id="issu-swiper">
-        <h5 class="h5">카테고리</h5>
+        <h5 class="h5">Partners</h5>
 
         <div class="swiper issuSwiper">
           <div class="swiper-wrapper">

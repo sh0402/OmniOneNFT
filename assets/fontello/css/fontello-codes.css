@@ -9,9 +9,11 @@
 .icon-heart:before { content: '\e807'; } /* '' */
 .icon-search:before { content: '\e808'; } /* '' */
 .icon-share:before { content: '\e809'; } /* '' */
+.icon-faq:before { content: '\e80a'; } /* '' */
 .icon-plus:before { content: '\e80b'; } /* '' */
 .icon-minus:before { content: '\e80c'; } /* '' */
 .icon-email:before { content: '\e80d'; } /* '' */
+.icon-history:before { content: '\e80e'; } /* '' */
 .icon-delete:before { content: '\e80f'; } /* '' */
 .icon-down:before { content: '\e810'; } /* '' */
 .icon-left:before { content: '\e811'; } /* '' */
@@ -19,5 +21,9 @@
 .icon-up:before { content: '\e813'; } /* '' */
 .icon-eye:before { content: '\e814'; } /* '' */
 .icon-setting:before { content: '\e815'; } /* '' */
+.icon-info:before { content: '\e816'; } /* '' */
+.icon-chat:before { content: '\e817'; } /* '' */
 .icon-picture:before { content: '\e818'; } /* '' */
 .icon-caution:before { content: '\e819'; } /* '' */
+.icon-edit:before { content: '\e81a'; } /* '' */
+.icon-link:before { content: '\e81b'; } /* '' */

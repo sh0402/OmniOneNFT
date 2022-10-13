@@ -560,7 +560,11 @@ input::placeholder, textarea::placeholder {
 .icon-delete,
 .icon-eye,
 .icon-eye-hidden,
-.icon-setting {
+.icon-setting,
+.icon-info,
+.icon-history,
+.icon-faq,
+.icon-chat {
   color: var(--grey04);
 }
 
@@ -581,6 +585,11 @@ img {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  object-position: center center;
+}
+
+img.item-img {
+  aspect-ratio: 1/1;
 }
 
 .text-center {
@@ -948,11 +957,13 @@ img {
 #user-thumb {
   background: url("../image/user-thumb/user-thumb.png") no-repeat center center;
   background-size: cover;
+  outline: 1px solid var(--grey02);
 }
 
 #issuer-thumb {
   background: url("../image/user-thumb/business-thumb.png") no-repeat center center;
   background-size: cover;
+  outline: 1px solid var(--grey02);
 }
 
 button {
@@ -1044,6 +1055,14 @@ button.btn-warning {
 button.btn-warning:hover {
   opacity: 0.8;
   transition: all 0.3s ease;
+}
+
+button.btn-delete {
+  background: var(--error);
+  color: var(--white);
+}
+button.btn-delete i {
+  color: var(--white);
 }
 
 button.btn-minimal {
