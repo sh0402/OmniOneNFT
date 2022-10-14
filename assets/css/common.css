@@ -588,8 +588,12 @@ img {
   object-position: center center;
 }
 
-img.item-img {
+.prod-item-img img.item-img, .hist-item-img img.item-img {
   aspect-ratio: 1/1;
+}
+
+.nft-item-img img.item-img {
+  aspect-ratio: 4/3;
 }
 
 .text-center {
@@ -1261,18 +1265,6 @@ button.btn-more:hover {
   object-fit: fill;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-}
-
 .input-item {
   display: block;
 }
@@ -1356,6 +1348,69 @@ button.btn-more:hover {
 
 .fade:not(.show) {
   opacity: 0;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ed671b;
+}
+footer .footer-lnb {
+  padding-top: 2rem;
+}
+footer .footer-lnb .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr;
+  margin-bottom: 7.5rem;
+}
+footer .footer-lnb h1 {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+footer .footer-lnb ul li {
+  color: #fff;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+footer .footer-lnb ul li a {
+  color: #fff;
+  opacity: 0.8;
+}
+footer .footer-lnb .col-group {
+  margin-bottom: 2rem;
+}
+footer .footer-lnb .col-group:last-child {
+  margin-bottom: 0;
+}
+footer .copyright {
+  border-top: 1px solid #fff;
+  opacity: 0.4;
+  padding: 2rem 0;
+}
+footer .copyright .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .copyright p {
+  color: #fff;
+  opacity: 0.8;
+}
+footer .copyright ul {
+  display: flex;
+}
+footer .copyright ul li {
+  margin-right: 1.5rem;
+}
+footer .copyright ul li:last-child {
+  margin-right: 0;
+}
+footer .copyright ul li a {
+  color: #fff;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=common.scss.map */

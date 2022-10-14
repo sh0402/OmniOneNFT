@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <!-- <meta property="lo:image" content="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
+  <meta name="description" content="OmniOne NFT Flatform" />
+  <meta property="og:type" content="OmniOne NFT Flatform" />
+  <meta property="og:title" content="OmniOne NFT Flatform" />
+  <meta property="og:description" content="OmniOne NFT Flatform" />
+  <!-- <meta property="og:image" content="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
+  <meta property="og:url" content="" />
+
+  <title>OmniOne NFT Flatform</title>
+
+  <!-- FAVICON -->
+  <!-- <link rel="shortcut icon" type="image⁄x-icon" href="https://www.raoncorp.com/common/ko/img/common/favicon.ico" /> -->
+
+  <!-- IMPORT INTERNAL CSS -->
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/common.css" />
+  <link rel="stylesheet" href="../assets/fontello/css/fontello.css" />
+
+  <!-- IMPORT EXTERNAL CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+  <!-- IMPORT WEB FONT -->
+
+  <!-- IMPORT JAVASCRIPT -->
+  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/swiper.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="grid">
+      <div class="col-4">
+        <div id="prod-item">
+          <div class="overlay"></div>
+          <div id="user-thumb" class="thumb-lg rounded-md"></div>
+
+          <div class="img-button-group">
+            <button class="icon-share icon-size-xl icon-circle"></button>
+          </div>
+
+          <div class="prod-item-img">
+            <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+          </div>
+
+          <div class="text-group">
+            <div class="txt-header">
+              <p class="user-name">user-name</p>
+            </div>
+
+            <div class="txt-body">
+              <h5 class="h5 item-title">item-title</h5>
+            </div>
+
+            <div class="txt-footer">
+              <div class="txt-item-group">
+                <span class="prod-price-text">가격</span>
+                <p class="prod-price-num">Number</p>
+              </div>
+              <div class="txt-item-group">
+                <span class="prod-stock-text">수량</span>
+                <p class="prod-stock-num">Number</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 상품 아이템 카드 -->
+      </div>
+
+      <div class="col-4">
+        <div id="prod-item" class="disabled">
+          <div class="overlay"></div>
+
+          <div id="user-thumb" class="thumb-lg rounded-md"></div>
+
+          <div class="img-button-group">
+            <button class="icon-share icon-size-xl icon-circle"></button>
+          </div>
+
+          <div class="prod-item-img">
+            <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+          </div>
+
+          <div class="text-group">
+            <div class="txt-header">
+              <p class="user-name">user-name</p>
+            </div>
+
+            <div class="txt-body">
+              <h5 class="h5 item-title">item-title</h5>
+            </div>
+
+            <div class="txt-footer">
+              <div class="txt-item-group">
+                <span class="prod-stock-text">수량</span>
+                <p class="prod-stock-num">구매불가</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 상품 아이템 카드 / DISABLED -->
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-3">
+        <div id="nft-item">
+          <div class="txt-header">
+            <div class="title">
+              <div id="user-thumb" class="thumb-xs icon-circle"></div>
+              <p class="user-id fs-7">달콤한미르_3901803</p>
+            </div>
+
+            <div class="img-button-group">
+              <button class="icon-share icon-size-md icon-circle"></button>
+
+              <div class="checkbox-item">
+                <input id="check-01" type="checkbox" />
+                <label class="checkbox" for="check-01">
+                  <span class="icon-square icon-size-md">
+                    <i class="icon-check"></i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-body">
+            <div class="img-wrap">
+              <div class="img-button-group">
+                <button class="icon-picture icon-size-md icon-circle"></button>
+              </div>
+
+              <div class="nft-item-img">
+                <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-footer">
+            <div class="title">
+              <p class="item-name">금 1g</p>
+
+              <div class="like">
+                <button class="icon-heart icon-circle icon-size-md"></button>
+
+                <p class="like-num">1</p>
+              </div>
+            </div>
+
+            <div class="divider">
+              <span class="line"></span>
+            </div>
+
+            <div class="txt-item-group show-disc">
+              <p class="description">
+                NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌. 초과영역은
+                이...
+              </p>
+            </div>
+
+            <div class="txt-item-group show-price">
+              <span class="prod-price-text">가격</span>
+              <p class="prod-price-num">Number</p>
+            </div>
+          </div>
+        </div>
+        <!-- NFT 아이템 카드 / DEFAULT -->
+      </div>
+
+      <div class="col-3">
+        <div id="nft-item" class="sell">
+          <div class="txt-header">
+            <div class="title">
+              <div id="user-thumb" class="thumb-xs icon-circle"></div>
+              <p class="user-id fs-7">달콤한미르_3901803</p>
+            </div>
+
+            <div class="img-button-group">
+              <button class="icon-share icon-size-md icon-circle"></button>
+
+              <div class="checkbox-item">
+                <input id="check-02" type="checkbox" />
+                <label class="checkbox" for="check-02">
+                  <span class="icon-square icon-size-md">
+                    <i class="icon-check"></i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-body">
+            <div class="img-wrap">
+              <div class="img-button-group">
+                <button class="icon-picture icon-size-md icon-circle"></button>
+              </div>
+
+              <div class="nft-item-img">
+                <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-footer">
+            <div class="title">
+              <p class="item-name">금 1g</p>
+
+              <div class="like">
+                <button class="icon-heart icon-circle icon-size-md"></button>
+
+                <p class="like-num">1</p>
+              </div>
+            </div>
+
+            <div class="divider">
+              <span class="line"></span>
+            </div>
+
+            <div class="txt-item-group show-disc">
+              <p class="description">
+                NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌. 초과영역은
+                이...
+              </p>
+            </div>
+
+            <div class="txt-item-group show-price">
+              <span class="prod-price-text">가격</span>
+              <p class="prod-price-num">Number</p>
+            </div>
+          </div>
+        </div>
+        <!-- NFT 아이템 카드 / SELL -->
+      </div>
+
+      <div class="col-3">
+        <div id="nft-item" class="select">
+          <div class="txt-header">
+            <div class="title">
+              <div id="user-thumb" class="thumb-xs icon-circle"></div>
+              <p class="user-id fs-7">달콤한미르_3901803</p>
+            </div>
+
+            <div class="img-button-group">
+              <button class="icon-share icon-size-md icon-circle"></button>
+
+              <div class="checkbox-item">
+                <input id="check-03" type="checkbox" />
+                <label class="checkbox" for="check-03">
+                  <span class="icon-square icon-size-md">
+                    <i class="icon-check"></i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-body">
+            <div class="img-wrap">
+              <div class="img-button-group">
+                <button class="icon-picture icon-size-md icon-circle"></button>
+              </div>
+
+              <div class="nft-item-img">
+                <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-footer">
+            <div class="title">
+              <p class="item-name">금 1g</p>
+
+              <div class="like">
+                <button class="icon-heart icon-circle icon-size-md"></button>
+
+                <p class="like-num">1</p>
+              </div>
+            </div>
+
+            <div class="divider">
+              <span class="line"></span>
+            </div>
+
+            <div class="txt-item-group show-disc">
+              <p class="description">
+                NFT 상세설명 일부분 미리보기를 최대 2행으로 보여줌. 초과영역은
+                이...
+              </p>
+            </div>
+
+            <div class="txt-item-group show-price">
+              <span class="prod-price-text">가격</span>
+              <p class="prod-price-num">Number</p>
+            </div>
+          </div>
+        </div>
+        <!-- NFT 아이템 카드 / SELECT -->
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-3">
+        <div id="hist-item">
+          <div id="user-thumb" class="thumb-md rounded-xs"></div>
+
+          <div class="img-wrap">
+            <div class="img-button-group">
+              <button class="icon-picture icon-size-md icon-circle"></button>
+            </div>
+            <div class="hist-item-img">
+              <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+            </div>
+          </div>
+
+          <div class="text-group">
+            <div class="txt-header">
+              <p class="user-name">한국조폐공사</p>
+            </div>
+
+            <div class="txt-body">
+              <p class="item-title">금 1g</p>
+            </div>
+
+            <div class="txt-footer default">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 신청</p>
+              </div>
+            </div>
+
+            <div class="txt-footer delivery">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 배송중</p>
+              </div>
+            </div>
+
+            <div class="txt-footer complete">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 완료</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 교환 히스토리 카드 / DEFAULT-->
+      </div>
+
+      <div class="col-3">
+        <div id="hist-item" class="delivery">
+          <div id="user-thumb" class="thumb-md rounded-xs"></div>
+
+          <div class="img-wrap">
+            <div class="img-button-group">
+              <button class="icon-picture icon-size-md icon-circle"></button>
+            </div>
+            <div class="hist-item-img">
+              <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+            </div>
+          </div>
+
+          <div class="text-group">
+            <div class="txt-header">
+              <p class="user-name">한국조폐공사</p>
+            </div>
+
+            <div class="txt-body">
+              <p class="item-title">금 1g</p>
+            </div>
+
+            <div class="txt-footer default">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 신청</p>
+              </div>
+            </div>
+
+            <div class="txt-footer delivery">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 배송중</p>
+              </div>
+            </div>
+
+            <div class="txt-footer complete">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 완료</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 교환 히스토리 카드 / DELIVERY-->
+      </div>
+
+      <div class="col-3">
+        <div id="hist-item" class="complete">
+          <div id="user-thumb" class="thumb-md rounded-xs"></div>
+
+          <div class="img-wrap">
+            <div class="img-button-group">
+              <button class="icon-picture icon-size-md icon-circle"></button>
+            </div>
+            <div class="hist-item-img">
+              <img src="../assets/image/card/gold.png" alt="" class="item-img" />
+            </div>
+          </div>
+
+          <div class="text-group">
+            <div class="txt-header">
+              <p class="user-name">한국조폐공사</p>
+            </div>
+
+            <div class="txt-body">
+              <p class="item-title">금 1g</p>
+            </div>
+
+            <div class="txt-footer default">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 신청</p>
+              </div>
+            </div>
+
+            <div class="txt-footer delivery">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 배송중</p>
+              </div>
+            </div>
+
+            <div class="txt-footer complete">
+              <div class="txt-item-group">
+                <i class="dot"></i>
+                <p class="condition-txt">실물 교환 완료</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 교환 히스토리 카드 / COMPLETE-->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
